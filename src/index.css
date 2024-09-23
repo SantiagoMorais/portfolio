@@ -13,3 +13,7 @@ html {
 body {
     @apply text-small
 }
+
+.ReactCollapse--collapse {
+    @apply transition-all duration-500
+ }
