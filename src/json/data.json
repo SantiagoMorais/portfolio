@@ -1,0 +1,7 @@
+{
+  "navbar": [
+    { "id": "portfolio", "name": "Portfólio" },
+    { "id": "blog", "name": "Blog" },
+    { "id": "contact", "name": "Entre em contato" }
+  ]
+}
