@@ -14,9 +14,9 @@ export const Navbar = () => {
         <ul className="flex gap-4 wrap items-center justify-center">
           {navbar.map((item) => (
             <li key={item.id} className="flex flex-1">
-                <button className="whitespace-nowrap break-normal px-2 py-1 bg-blue-500 rounded-md text-white duration-300 hover:bg-blue-300">
-                    {item.name}
-                </button>
+              <button className="whitespace-nowrap break-normal px-2 py-1 bg-blue-500 rounded-md text-white duration-300 hover:bg-blue-300">
+                {item.name}
+              </button>
             </li>
           ))}
         </ul>
