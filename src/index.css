@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    @apply font-fontFamily
+    @apply font-fontFamily text-textColor
 }
 
 html {

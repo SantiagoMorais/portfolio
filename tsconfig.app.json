@@ -27,7 +27,8 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
-      "@json/*": ["json/*"]
+      "@json/*": ["json/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": ["src"]

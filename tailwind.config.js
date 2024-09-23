@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -8,7 +9,8 @@ export default {
         secondary: "#21997f",
         bg: "#303135",
         panel: "#20272F",
-        secondaryPanel: "#171C22"
+        secondaryPanel: "#171C22",
+        textColor: "#ffffff"
       },
       fontFamily: {
         fontFamily: "Roboto, sans-serif"
