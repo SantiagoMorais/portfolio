@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#00BD95",
-        secondary: "#21997f",
+        secondary: "#19584F",
         bg: "#303135",
         panel: "#20272F",
         secondaryPanel: "#171C22",
@@ -21,7 +21,8 @@ export default {
         medium: "2.4rem",
         large: "3rem",
         extraLarge: "4.5rem",
-      }
+        giant: "6rem"
+      },
     },
   },
   plugins: [],
