@@ -18,7 +18,7 @@ body {
   @apply transition-all duration-500;
 }
 
-:root {
+.light {
   --primary: #00bd95;
   --secondary: #19584f;
   --bg: #D8D2C2;
@@ -29,7 +29,7 @@ body {
 }
 
 /* Tema Escuro */
-.dark {
+:root {
   --primary: #00bd95;
   --secondary: #19584f;
   --bg: #303135;
