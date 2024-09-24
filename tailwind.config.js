@@ -2,15 +2,17 @@
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primary: "#00BD95",
-        secondary: "#19584F",
-        bg: "#303135",
-        panel: "#20272F",
-        secondaryPanel: "#171C22",
-        textColor: "#ffffff"
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        bg: "var(--bg)",
+        panel: "var(--panel)",
+        secondaryPanel: "var(--secondaryPanel)",
+        textColor: "var(--textColor)",
+        hoverEffect: "var(--hoverEffect)"
       },
       fontFamily: {
         fontFamily: "Roboto, sans-serif"

@@ -3,17 +3,38 @@
 @tailwind utilities;
 
 * {
-    @apply font-fontFamily
+  @apply font-fontFamily;
 }
 
 html {
-    @apply scroll-smooth text-[62.5%] font-normal
+  @apply scroll-smooth text-[62.5%] font-normal;
 }
 
 body {
-    @apply text-small
+  @apply text-small;
 }
 
 .ReactCollapse--collapse {
-    @apply transition-all duration-500
- }
+  @apply transition-all duration-500;
+}
+
+:root {
+  --primary: #00bd95;
+  --secondary: #19584f;
+  --bg: #D8D2C2;
+  --panel: #F3EEEA;
+  --secondaryPanel: #dfd6c6;
+  --textColor: #000000;
+  --hoverEffect: #dadada;
+}
+
+/* Tema Escuro */
+.dark {
+  --primary: #00bd95;
+  --secondary: #19584f;
+  --bg: #303135;
+  --panel: #20272f;
+  --secondaryPanel: #171c22;
+  --textColor: #ffffff;
+  --hoverEffect: #ffffff;
+}

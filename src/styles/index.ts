@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const button = tv({
-  base: "whitespace-nowrap break-normal px-2 py-1 text-white duration-300 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center",
+  base: "whitespace-nowrap break-normal px-2 py-1 text-textColor duration-300 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center",
   variants: {
     afterHover: {
       primary:
@@ -12,7 +12,7 @@ export const button = tv({
     },
     withBackground: {
       primaryColor:
-        "bg-primary rounded-3xl shadow-secondary shadow-lg w-fit px-10 py-6 focus:ring focus:ring-secondary duration-500 hover:bg-textColor hover:shadow-xl hover:shadow-secondary",
+        "bg-primary rounded-3xl shadow-secondary shadow-lg w-fit px-10 py-6 focus:ring focus:ring-secondary duration-500 hover:bg-hoverEffect hover:shadow-xl hover:shadow-secondary",
     },
   },
 });
