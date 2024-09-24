@@ -23,7 +23,7 @@ export const Navbar = () => {
       <div className="max-w-screen-2xl w-full flex items-center flex-col gap-4 md:flex-row md:justify-between">
         <Logo />
 
-        <div className="flex flex-col items-center gap-4 md:flex-row">
+        <nav className="flex flex-col items-center gap-4 md:flex-row">
           {isAccordion ? (
             <AccordionMenu isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
           ) : (
@@ -33,7 +33,7 @@ export const Navbar = () => {
               ))}
             </ul>
           )}
-        </div>
+        </nav>
       </div>
     </section>
   );

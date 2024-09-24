@@ -1,12 +1,24 @@
 import { MessageCircleCode } from "lucide-react";
+import { twMerge } from "tailwind-merge";
 
-export const Logo = () => {
+type LogoProps = {
+  className?: string;
+  iconSize?: string;
+  padding?: string
+};
+
+export const Logo = ({ className, iconSize, padding }: LogoProps) => {
   return (
-    <div className="flex">
-      <p className="text-medium first-letter:text-large font-extrabold mt-2 cursor-default select-none">
+    <div className={twMerge("flex", padding)}>
+      <p
+        className={twMerge(
+          "text-medium first-letter:text-large font-extrabold mt-2 cursor-default select-none",
+          className
+        )}
+      >
         FS<span className="text-primary">.</span>
       </p>
-      <MessageCircleCode className="size-8" />
+      <MessageCircleCode className={twMerge("size-8", iconSize)} />
     </div>
   );
 };

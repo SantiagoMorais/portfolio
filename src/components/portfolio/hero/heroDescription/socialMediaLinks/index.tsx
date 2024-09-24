@@ -8,8 +8,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "./link";
+import { twMerge } from "tailwind-merge";
 
-export const SocialMediaLinks = () => {
+type SocialMediaLinksProps = {
+  className?: string;
+};
+
+export const SocialMediaLinks = ({ className }: SocialMediaLinksProps) => {
   const socialMedia: {
     id: string;
     title: string;
@@ -33,11 +38,11 @@ export const SocialMediaLinks = () => {
   ];
 
   return (
-    <div className="flex gap-5 mt-5 items-center flex-wrap">
-      <p className="text-textColor mr-5 text-small md:text-base">
+    <div className={twMerge("flex gap-5 mt-5 items-center flex-wrap", className)}>
+      <p className="text-textColor mr-5 text-small text-center md:text-base">
         Cheque minhas redes:
       </p>
-      <ul className="flex gap-5 items-center flex-wrap">
+      <ul className="flex gap-2 items-center flex-wrap md:gap-5">
         {socialMedia.map((link) => (
           <Link link={link} />
         ))}
