@@ -3,5 +3,19 @@
     { "id": "portfolio", "name": "Portfólio" },
     { "id": "blog", "name": "Blog" },
     { "id": "contact", "name": "Entre em contato" }
+  ],
+  "aboutMeDescription": [
+    {
+      "id": 1,
+      "text": "Comecei minha jornada na programação em julho de 2023, focando em HTML, CSS, JavaScript e React JS. Desde então, tenho desenvolvido projetos pessoais e trabalhos freelancers para aprimorar minhas habilidades."
+    },
+    {
+      "id": 2,
+      "text": "A inclusão do TypeScript elevou a qualidade do meu código, reduzindo bugs e fortalecendo a segurança dos projetos. Minha estilização também melhorou com o TailwindCSS, e percebo que ainda tenho muito a aprender sobre essa ferramenta."
+    },
+    {
+      "id": 3,
+      "text": "Meu interesse em programação cresceu, motivado por usar tecnologias emergentes para resolver desafios e simplificar rotinas. Assim, para aprimorar minhas aplicações atualmente integro tecnologias de backend, como PostgreSQL, Docker, Node.js e muito mais."
+    }
   ]
 }

@@ -28,7 +28,8 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@json/*": ["json/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@docs/*": ["docs/*"]
     }
   },
   "include": ["src"]
