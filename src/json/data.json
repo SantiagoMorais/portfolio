@@ -17,5 +17,75 @@
       "id": 3,
       "text": "Meu interesse em programação cresceu, motivado por usar tecnologias emergentes para resolver desafios e simplificar rotinas. Assim, para aprimorar minhas aplicações atualmente integro tecnologias de backend, como PostgreSQL, Docker, Node.js e muito mais."
     }
+  ],
+  "skills": [
+    {
+      "category": "Tecnologias Frontend",
+      "icon": "code",
+      "list": [
+        "React JS",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Redux",
+        "Context API",
+        "NextJS"
+      ]
+    },
+    {
+      "category": "Tecnologias Backend",
+      "icon": "backend",
+      "list": [
+        "JavaScript",
+        "TypeScript",
+        "NodeJS",
+        "ExpressJS",
+        "Fastify",
+        "Docker",
+        "SQL",
+        "Prisma / Drizzle-ORM"
+      ]
+    },
+    {
+      "category": "Ferramentas",
+      "icon": "tools",
+      "list": [
+        "Visual Studio Code",
+        "GitHub",
+        "Git",
+        "Figma",
+        "Jest",
+        "Testing Library",
+        "Vitest",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "category": "Bibliotecas React",
+      "icon": "book",
+      "list": [
+        "Styled-Components",
+        "Axios",
+        "React-Query",
+        "React-Hook-Form",
+        "React-Router-Dom",
+        "Tailwind Merge / Variants",
+        "ESLint / Prettier"
+      ]
+    },
+    {
+      "category": "Atributos Chave",
+      "icon": "key",
+      "list": [
+        "Organizado",
+        "Bom recebendo feedbacks",
+        "Colaboração proativa",
+        "Rápido aprendizado",
+        "Adaptabilidade",
+        "Resiliência",
+        "Atento aos detalhes"
+      ]
+    }
   ]
 }

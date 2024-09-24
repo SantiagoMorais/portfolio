@@ -51,7 +51,7 @@ export const WhatIDo = () => {
         {list.map((item) => (
           <div
             key={item.id}
-            className="flex-1 w-full flex items-center gap-5 min-w-[20rem] pb-5 md:min-w-[40rem] max-w-[50rem]"
+            className="flex-1 w-full flex items-center gap-5 min-w-[20rem] max-w-[50rem] pb-5 md:min-w-[30rem]"
           >
             <FontAwesomeIcon
               icon={item.icon}

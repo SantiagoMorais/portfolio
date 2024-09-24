@@ -41,6 +41,7 @@ export const subtitle = tv({
     afterContent: {
       primary:
         "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-secondaryPanel",
+        primaryOnCleanBg: "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-panel",
       secondary: "relative after:absolute after:h-[.2rem] after:w-2/3 after:bg-primary after:left-[16.5%] after:bottom-0 after:bg-gradient-to-r from-secondaryPanel via-primary to-secondaryPanel"
     },
     size: {
