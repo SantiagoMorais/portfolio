@@ -8,10 +8,10 @@ export const ThemeToggleButton = () => {
   
 
   return (
-    <button onClick={toggleTheme} className="size-10 cursor-pointer duration-300 bg-none border-none">
+    <button onClick={toggleTheme} className="size-10 cursor-pointer bg-none border-none">
       <FontAwesomeIcon
         data-testid="themeIcon"
-        className={`duration-300 transition-transform text-medium text-textColor ${themeIsLight ? "rotate-180" : "rotate-0"}`}
+        className={`transition-all duration-100 text-medium text-textColor hover:text-primary  ${themeIsLight ? "rotate-180" : "rotate-0"}`}
         icon={faAdjust}
       />
     </button>

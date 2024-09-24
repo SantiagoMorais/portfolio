@@ -18,7 +18,7 @@ export const button = tv({
 });
 
 export const icon = tv({
-  base: "stroke-textColor group-hover:stroke-primary duration-300",
+  base: "stroke-textColor group-hover:stroke-primary duration-300 size-12",
   variants: {
     selectedButton: {
       highlight: "stroke-primary",
