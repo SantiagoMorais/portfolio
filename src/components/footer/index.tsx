@@ -11,7 +11,7 @@ export const Footer = () => {
       <ul className="rounded-lg border w-full border-primary py-5 flex flex-col items-center md:w-fit md:items-end md:px-5">
         {navbar.map((item) => (
           <li key={item.id} className="w-min">
-            <a href="" className={button({ afterHover: "primary" })}>
+            <a href="" className={button({ afterHover: "primary", className: "text-textColor" })}>
               {item.name}
             </a>
           </li>

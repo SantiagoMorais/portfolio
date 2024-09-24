@@ -22,7 +22,7 @@ body {
   --primary: #00bd95;
   --secondary: #19584f;
   --bg: #D8D2C2;
-  --panel: #F3EEEA;
+  --panel: #f3eeeab0;
   --secondaryPanel: #dfd6c6;
   --textColor: #000000;
   --hoverEffect: #dadada;
@@ -32,7 +32,7 @@ body {
   --primary: #00bd95;
   --secondary: #19584f;
   --bg: #303135;
-  --panel: #20272f;
+  --panel: #20272fc7;
   --secondaryPanel: #171c22;
   --textColor: #ffffff;
   --hoverEffect: #ffffff;

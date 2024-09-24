@@ -15,7 +15,7 @@ export const AccordionMenu = ({
   <>
     <div className="flex items-center justify-center gap-5">
       <ThemeToggleButton />
-      <button onClick={toggle} className={button({ iconContent: "primary" })}>
+      <button onClick={toggle} className={button({ iconContent: "primary", className: "text-textColor" })}>
         <SquareMenu
           className={isOpen ? icon({ selectedButton: "highlight" }) : icon()}
         />

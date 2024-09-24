@@ -1,13 +1,15 @@
-import { AboutMe } from "./aboutMe"
-import { Hero } from "./hero"
-import { Skills } from "./skills"
+import { AboutMe } from "./aboutMe";
+import { Hero } from "./hero";
+import { Projects } from "./projects";
+import { Skills } from "./skills";
 
 export const Home = () => {
-    return (
-        <div className="flex-1 flex flex-col items-center">
-        <Hero />
-        <AboutMe />
-        <Skills />
-        </div>
-    )
-}
+  return (
+    <div className="flex-1 flex flex-col items-center">
+      <Hero />
+      <AboutMe />
+      <Skills />
+      <Projects />
+    </div>
+  );
+};

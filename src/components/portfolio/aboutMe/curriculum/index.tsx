@@ -17,14 +17,14 @@ export const Curriculum = () => {
 
       <div className="flex gap-8 w-full justify-center flex-wrap md:gap-10">
         <a
-          className={button({ withBackground: "primaryColor" })}
+          className={button({ withBackground: "primaryColor", className: "text-textColor" })}
           href={curriculumPT}
           download="Curriculum Vitae pt-BR - Felipe Santiago Morais"
         >
           pt-BR
         </a>
         <a
-          className={button({ withBackground: "primaryColor" })}
+          className={button({ withBackground: "primaryColor", className: "text-textColor" })}
           href={curriculumEN}
           download="Curriculum Vitae eu-EN - Felipe Santiago Morais"
         >

@@ -22,7 +22,7 @@ export const HeroDescription = () => {
         sociais!
       </p>
 
-      <button className={button({ withBackground: "primaryColor" })}>
+      <button className={button({ withBackground: "primaryColor", className: "text-textColor" })}>
         Vamos conversar
       </button>
 

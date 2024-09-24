@@ -2,15 +2,15 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ILink {
-    link: {
-        id: string;
-        title: string;
-        link: string;
-        icon: IconDefinition;
-    }
+  link: {
+    id: string;
+    title: string;
+    link: string;
+    icon: IconDefinition;
+  };
 }
 
-export const Link: React.FC<ILink> = ({link}) => {
+export const Link: React.FC<ILink> = ({ link }) => {
   return (
     <li key={link.id} title={link.title}>
       <a
@@ -22,7 +22,10 @@ export const Link: React.FC<ILink> = ({link}) => {
             "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
         }}
       >
-        <FontAwesomeIcon icon={link.icon} className="text-base md:text-medium" />
+        <FontAwesomeIcon
+          icon={link.icon}
+          className="text-base md:text-medium"
+        />
       </a>
     </li>
   );
