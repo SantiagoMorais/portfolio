@@ -17,7 +17,7 @@ export const Logo = ({ className, iconSize, padding }: LogoProps) => {
       >
         FS<span className="text-primary">.</span>
       </p>
-      <MessageCircleCode className={twMerge("size-12 text-textColor", iconSize)} />
+      <MessageCircleCode className={twMerge("size-12 text-textColor duration-0", iconSize)} />
     </div>
   );
 };

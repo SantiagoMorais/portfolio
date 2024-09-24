@@ -1,11 +1,11 @@
 import { tv } from "tailwind-variants";
 
 export const button = tv({
-  base: "whitespace-nowrap break-normal px-2 py-1 text-textColor duration-300 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center",
+  base: "whitespace-nowrap break-normal transition-all  px-2 py-1 text-textColor duration-0 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center",
   variants: {
     afterHover: {
       primary:
-        "relative after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-100 hover:after:origin-left after:origin-right",
+        "relative duration-300 after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-100 hover:after:origin-left after:origin-right",
     },
     iconContent: {
       primary: "group",
@@ -40,7 +40,7 @@ export const subtitle = tv({
   variants: {
     afterContent: {
       primary:
-        "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-secondaryPanel",
+        "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-secondaryPanel duration-300",
         primaryOnCleanBg: "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-panel",
       secondary: "relative after:absolute after:h-[.2rem] after:w-2/3 after:bg-primary after:left-[16.5%] after:bottom-0 after:bg-gradient-to-r from-secondaryPanel via-primary to-secondaryPanel"
     },

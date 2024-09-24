@@ -29,7 +29,8 @@
       "@components/*": ["components/*"],
       "@json/*": ["json/*"],
       "@styles/*": ["styles/*"],
-      "@docs/*": ["docs/*"]
+      "@docs/*": ["docs/*"],
+      "@contexts/*": ["contexts/*"]
     }
   },
   "include": ["src"]

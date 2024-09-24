@@ -13,7 +13,7 @@ export const App = () => {
         }}
         className="w-full h-full fixed z-0 opacity-40 top-0"
       ></div>
-      <div className="z-10 w-full max-w-screen-2xl h-full bg-panel shadow-lg shadow-black ring-1 ring-secondaryPanel flex flex-col min-h-dvh">
+      <div className="z-10 w-full max-w-screen-2xl h-full bg-panel transition-all shadow-lg shadow-black ring-1 ring-secondaryPanel flex flex-col min-h-dvh">
         <Navbar />
         <Home />
         <Footer />

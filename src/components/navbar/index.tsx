@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./logo";
 import { AccordionMenu } from "./accordionMenu";
 import { MenuItem } from "./menuItem";
+import { ThemeToggleButton } from "./themeTogglerButton";
 
 export const Navbar = () => {
   const [isAccordion, setIsAccordion] = useState<boolean>(false);
@@ -27,7 +28,8 @@ export const Navbar = () => {
           {isAccordion ? (
             <AccordionMenu isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
           ) : (
-            <ul className="flex gap-4">
+            <ul className="flex gap-4 items-center">
+              <ThemeToggleButton />
               {navbar.map((item) => (
                 <MenuItem key={item.id} name={item.name} />
               ))}
