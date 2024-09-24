@@ -12,12 +12,12 @@ export const Logo = ({ className, iconSize, padding }: LogoProps) => {
     <div className={twMerge("flex", padding)}>
       <p
         className={twJoin(
-          "font-extrabold mt-2 cursor-default select-none text-textColor",
+          "font-extrabold mt-2 cursor-default select-none text-textColor transition-colors duration-150",
           className)}
       >
         FS<span className="text-primary">.</span>
       </p>
-      <MessageCircleCode className={twMerge("size-12 text-textColor duration-0", iconSize)} />
+      <MessageCircleCode className={`transition-colors duration-150 ${twMerge("size-12 text-textColor duration-0", iconSize)}`} />
     </div>
   );
 };

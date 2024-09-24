@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply font-fontFamily duration-150;
+  @apply font-fontFamily;
 }
 
 html {

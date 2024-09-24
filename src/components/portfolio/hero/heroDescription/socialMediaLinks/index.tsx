@@ -39,7 +39,7 @@ export const SocialMediaLinks = ({ className }: SocialMediaLinksProps) => {
 
   return (
     <div className={twMerge("flex gap-5 mt-5 items-center flex-wrap", className)}>
-      <p className="text-textColor mr-5 text-small text-center md:text-base">
+      <p className="text-textColor mr-5 text-small text-center transition-colors duration-150 md:text-base">
         Cheque minhas redes:
       </p>
       <ul className="flex gap-2 items-center flex-wrap md:gap-5">
