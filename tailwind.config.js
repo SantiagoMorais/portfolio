@@ -25,6 +25,9 @@ export default {
         extraLarge: "4.5rem",
         giant: "6rem"
       },
+      boxShadow: {
+        allAround: "0 0 20px"
+      }
     },
   },
   plugins: [],
