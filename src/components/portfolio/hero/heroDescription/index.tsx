@@ -16,7 +16,7 @@ export const HeroDescription = () => {
         </h3>
       </div>
 
-      <p className="font-normal text-small opacity-70 text-textColor mb-5 transition-colors duration-150 md:text-base ">
+      <p className="font-normal text-small opacity-70 text-textColor mb-5 transition-colors duration-150 md:text-base max-w-[70rem]">
         Sou apaixonado por criar interfaces amigáveis com React.js e TypeScript.
         Veja meus projetos aqui e entre em contato comigo nas minhas redes
         sociais!

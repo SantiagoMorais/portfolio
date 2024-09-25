@@ -28,11 +28,13 @@ export const icon = tv({
 });
 
 export const paragraph = tv({
-  base: "indent-10 last-of-type:mb-0 flex-1 min-w-[30rem] md:text-justify",
+  base: "w-full text-small text-textColor",
   variants: {
-    border: {
-      basic: "px-5 pb-5 md:max-w-[50rem] md:px-10",
-    },
+    sections: {
+      aboutMe: "md:text-justify indent-16 sm:flex-1 sm:min-w-[30rem] px-5 pb-5 md:max-w-[50rem] md:px-10",
+      myProjects: "md:text-justify indent-16",
+      githubRepository: "text-center"
+    }
   },
 });
 
