@@ -1,7 +1,8 @@
 import { Navbar } from "@components/navbar";
 import customBg from "@assets/custom-background.png";
-import { Home } from "@components/portfolio";
+import { Portfolio } from "@components/portfolio";
 import { Footer } from "@components/footer";
+import { ScrollButton } from "@components/scrollButton";
 
 export const App = () => {
   return (
@@ -15,8 +16,9 @@ export const App = () => {
       ></div>
       <div className="z-10 w-full max-w-screen-2xl h-full bg-panel shadow-lg shadow-black ring-1 ring-secondaryPanel flex flex-col min-h-dvh" style={{transition: "background-color .15s,box-shadow .15s"}}>
         <Navbar />
-        <Home />
+        <Portfolio />
         <Footer />
+        <ScrollButton />
       </div>
     </section>
   );
