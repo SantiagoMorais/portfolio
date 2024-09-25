@@ -1,8 +1,9 @@
-import { button, subtitle } from "@styles/index";
+import { subtitle } from "@styles/index";
 import { useState } from "react";
 import { categoryList, TCategory } from "utils/projectsCategories";
 import { useGitHubAutomatedRepos } from "github-automated-repos";
 import { ProjectsList } from "../projectsList";
+import { CategoryItem } from "./categoryItem";
 
 export const ProjectsCategories = () => {
   const [currentCategory, setCurrentCategory] =
@@ -21,18 +22,16 @@ export const ProjectsCategories = () => {
       </h3>
       <ul className="flex flex-wrap gap-5 w-full items-center mb-5 justify-center">
         {categoryList.map((category) => (
-          <li key={category.id} className="flex-1 min-w-fit max-w-80">
-            <button
-              onClick={() => handleCategory(category.topic)}
-              className={`${button({ withBackground: "secondaryColor" })} ${category.topic === currentCategory ? "bg-hoverEffect text-primary" : "bg-primary text-textColor"}`}
-            >
-              {category.name}
-            </button>
-          </li>
+          <CategoryItem
+            category={category}
+            handleCategory={handleCategory}
+            key={category.id}
+            currentCategory={currentCategory}
+          />
         ))}
       </ul>
 
-      <ProjectsList data={data}/>
+      <ProjectsList data={data} />
     </div>
   );
 };
