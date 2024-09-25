@@ -1,8 +1,8 @@
 {
   "navbar": [
-    { "id": "portfolio", "name": "Portfólio" },
-    { "id": "blog", "name": "Blog" },
-    { "id": "contact", "name": "Entre em contato" }
+    { "id": "portfolio", "name": "Portfólio", "path": "" },
+    { "id": "blog", "name": "Blog", "path": "blog" },
+    { "id": "contact", "name": "Entre em contato", "path": "contact" }
   ],
   "aboutMeDescription": [
     {

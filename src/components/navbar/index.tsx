@@ -31,7 +31,7 @@ export const Navbar = () => {
             <ul className="flex gap-4 items-center">
               <ThemeToggleButton />
               {navbar.map((item) => (
-                <MenuItem key={item.id} name={item.name} />
+                <MenuItem key={item.id} navbarInfo={item} />
               ))}
             </ul>
           )}

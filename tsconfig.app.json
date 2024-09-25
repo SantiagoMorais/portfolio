@@ -30,7 +30,8 @@
       "@json/*": ["json/*"],
       "@styles/*": ["styles/*"],
       "@docs/*": ["docs/*"],
-      "@contexts/*": ["contexts/*"]
+      "@contexts/*": ["contexts/*"],
+      "@pages/*": ["pages/*"]
     }
   },
   "include": ["src"]
