@@ -12,7 +12,7 @@ export type TCategory =
   | "css3"
   | "redux"
   | "tailwindcss"
-  | "node";
+  | "nodejs";
 
 export const categoryList: { name: string; topic: TCategory; id: string }[] = [
   { name: "Ver todos", topic: "portfolio", id: createId() },
@@ -21,5 +21,5 @@ export const categoryList: { name: string; topic: TCategory; id: string }[] = [
   { name: "Context API", topic: "context-api", id: createId() },
   { name: "Redux", topic: "redux", id: createId() },
   { name: "Tailwind CSS", topic: "tailwindcss", id: createId() },
-  { name: "Node JS", topic: "node", id: createId() },
+  { name: "Node JS", topic: "nodejs", id: createId() },
 ];
