@@ -28,10 +28,10 @@ export const icon = tv({
 });
 
 export const paragraph = tv({
-  base: "indent-10 last-of-type:mb-0 flex-1 md:min-w-[30rem] md:text-justify",
+  base: "indent-10 last-of-type:mb-0 flex-1 min-w-[30rem] md:text-justify",
   variants: {
     border: {
-      basic: "md:border md:rounded-md md:p-5 md:border-primary",
+      basic: "px-5 pb-5 md:max-w-[50rem] md:px-10",
     },
   },
 });
