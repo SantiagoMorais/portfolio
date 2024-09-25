@@ -6,13 +6,13 @@ function greetingsHour() {
   const date = new Date();
   const hour = date.getHours();
   const inTheMorning = hour >= 6 && hour < 12;
-  const inTheAfternon = hour >= 12 && hour < 18;
+  const inTheAfternoon = hour >= 12 && hour < 18;
   const inTheNight = hour >= 18 && hour < 24;
 
   switch (true) {
     case inTheMorning:
       return "Bom dia";
-    case inTheAfternon:
+    case inTheAfternoon:
       return "Boa tarde";
     case inTheNight:
       return "Boa noite";

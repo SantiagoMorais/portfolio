@@ -1,5 +1,6 @@
 import { button } from "@styles/index";
 import { SocialMediaLinks } from "./socialMediaLinks";
+import { whatsAppLink } from "utils/variables";
 
 export const HeroDescription = () => {
   return (
@@ -22,9 +23,9 @@ export const HeroDescription = () => {
         sociais!
       </p>
 
-      <button className={button({ withBackground: "primaryColor", className: "text-textColor" })}>
+      <a href={whatsAppLink} target="_blank" className={button({ withBackground: "primaryColor", className: "text-textColor" })}>
         Vamos conversar
-      </button>
+      </a>
 
       <SocialMediaLinks />
     </div>
