@@ -22,7 +22,7 @@ export const ImageDialog = ({
               "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
           }}
         >
-          <FontAwesomeIcon icon={faImage} title="Ver imagem" />
+          <FontAwesomeIcon icon={faImage} title="Ver imagem" className="text-medium" />
         </button>
       </Dialog.Trigger>
 
