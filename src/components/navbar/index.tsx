@@ -4,6 +4,8 @@ import { Logo } from "./logo";
 import { AccordionMenu } from "./accordionMenu";
 import { MenuItem } from "./menuItem";
 import { ThemeToggleButton } from "./themeTogglerButton";
+import { Link } from "react-router-dom";
+import { button } from "@styles/index";
 
 export const Navbar = () => {
   const [isAccordion, setIsAccordion] = useState<boolean>(false);
@@ -30,9 +32,10 @@ export const Navbar = () => {
           ) : (
             <ul className="flex gap-4 items-center">
               <ThemeToggleButton />
-              {navbar.map((item) => (
-                <MenuItem key={item.id} navbarInfo={item} />
-              ))}
+              {navbar &&
+                navbar.map((item) => (
+                  <MenuItem navbarInfo={item}/>
+                ))}
             </ul>
           )}
         </nav>

@@ -15,7 +15,13 @@ export const AccordionMenu = ({
   <>
     <div className="flex items-center justify-center gap-5">
       <ThemeToggleButton />
-      <button onClick={toggle} className={button({ iconContent: "primary", className: "text-textColor" })}>
+      <button
+        onClick={toggle}
+        className={button({
+          iconContent: "primary",
+          className: "text-textColor",
+        })}
+      >
         <SquareMenu
           className={isOpen ? icon({ selectedButton: "highlight" }) : icon()}
         />
@@ -28,7 +34,7 @@ export const AccordionMenu = ({
     >
       <Collapse isOpened={isOpen}>
         {navbar.map((item) => (
-          <MenuItem key={item.id} name={item.name} />
+          <MenuItem key={item.id} navbarInfo={item} />
         ))}
       </Collapse>
     </ul>
