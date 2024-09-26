@@ -4,6 +4,7 @@ import { PageNotFound } from "./pageNotFound";
 import { Navbar } from "@components/navbar";
 import { Footer } from "@components/footer";
 import { BlogPage } from "./blogPage";
+import { PostPage } from "./postPage";
 
 export const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ export const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:id" element={<PostPage />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />

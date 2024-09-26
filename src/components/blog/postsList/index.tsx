@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IPostsData } from "@utils/types";
 import { Link } from "react-router-dom";
 
-type ArticlesListProps = {
+type PostsListProps = {
   data: IPostsData | undefined;
 };
 
-export const ArticlesList: React.FC<ArticlesListProps> = ({ data }) => {
+export const PostsList: React.FC<PostsListProps> = ({ data }) => {
   return (
     <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5 py-16 md:px-10 md:py-20 gap-8">
       {data?.postsConnection.edges.map((post) => (
@@ -32,7 +32,11 @@ export const ArticlesList: React.FC<ArticlesListProps> = ({ data }) => {
             )}
             <div className="flex justify-center">
               <p className="text-small text=cemter text-white uppercase transition-opacity inline-block font-medium bg-secondary rounded-full px-5 py-2 text-center">
-                Ler publicação <FontAwesomeIcon icon={faHandPointer} className="sm:inline hidden" />
+                Ler publicação{" "}
+                <FontAwesomeIcon
+                  icon={faHandPointer}
+                  className="sm:inline hidden"
+                />
               </p>
             </div>
           </div>

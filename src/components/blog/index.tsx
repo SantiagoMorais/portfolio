@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { ArticlesList } from "./articlesList";
+import { PostsList } from "./postsList";
 import { BlogBanner } from "./blogBanner";
 import { useQuery } from "@apollo/client";
 import { IPostsData } from "utils/types";
@@ -10,14 +10,11 @@ import { NotFound } from "@components/notFound";
 
 export const Blog = () => {
   // const [loadingMore, setLoadingMore] = useState<boolean>(false);
-  const { loading, error, data } = useQuery<IPostsData>(
-    GET_POSTS_QUERY,
-    {
-      variables: {
-        first: 10,
-      },
-    }
-  );
+  const { loading, error, data } = useQuery<IPostsData>(GET_POSTS_QUERY, {
+    variables: {
+      first: 10,
+    },
+  });
 
   // const loadMorePosts = () => {
   //   if (loading || !data) return;
@@ -56,7 +53,7 @@ export const Blog = () => {
       ) : error ? (
         <NotFound pageType="postsList" />
       ) : data && data?.postsConnection.edges.length > 0 ? (
-        <ArticlesList data={data} />
+        <PostsList data={data} />
       ) : (
         <EmptyBlog />
       )}
