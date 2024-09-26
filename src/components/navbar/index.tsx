@@ -34,7 +34,7 @@ export const Navbar = () => {
               <ThemeToggleButton />
               {navbar &&
                 navbar.map((item) => (
-                  <MenuItem navbarInfo={item}/>
+                  <MenuItem key={item.id} navbarInfo={item}/>
                 ))}
             </ul>
           )}

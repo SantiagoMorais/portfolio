@@ -1,5 +1,5 @@
 import { button } from "@styles/index";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 type MenuItemProps = {
   navbarInfo: {
@@ -12,15 +12,17 @@ type MenuItemProps = {
 export const MenuItem = ({ navbarInfo }: MenuItemProps) => {
   return (
     <li className="flex flex-1">
-      <Link
+      <NavLink
         to={navbarInfo.path}
-        className={button({
-          afterHover: "primary",
-          className: "text-textColor",
-        })}
+        className={({ isActive }) =>
+          button({
+            afterHover: !isActive ? "primary" : "secondary",
+            className: `mx-4 last-of-type:mr-0 last-of-type:ml-4 ${isActive ? "text-primary" : "text-textColor"}`,
+          })
+        }
       >
         {navbarInfo?.name && navbarInfo.name}
-      </Link>
+      </NavLink>
     </li>
   );
 };

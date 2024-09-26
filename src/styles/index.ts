@@ -6,6 +6,7 @@ export const button = tv({
     afterHover: {
       primary:
         "relative duration-150 after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-100 hover:after:origin-left after:origin-right",
+      secondary: "relative after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full",
     },
     iconContent: {
       primary: "group",
@@ -13,7 +14,8 @@ export const button = tv({
     withBackground: {
       primaryColor:
         "bg-primary rounded-3xl shadow-secondary shadow-lg w-fit px-10 py-6 focus:ring focus:ring-secondary duration-300 hover:bg-hoverEffect hover:shadow-xl hover:shadow-secondary",
-      secondaryColor: "durarion-500 transition-all rounded-lg shadow-secondary shadow-md w-full py-2 px-6 focus:ring focus:ring-primary hover:bg-hoverEffect hover:shadow-lg hover:shadow-secondary"
+      secondaryColor:
+        "durarion-500 transition-all rounded-lg shadow-secondary shadow-md w-full py-2 px-6 focus:ring focus:ring-primary hover:bg-hoverEffect hover:shadow-lg hover:shadow-secondary",
     },
   },
 });
@@ -31,10 +33,11 @@ export const paragraph = tv({
   base: "w-full text-small text-textColor",
   variants: {
     sections: {
-      aboutMe: "md:text-justify indent-16 sm:flex-1 sm:min-w-[30rem] px-5 pb-5 md:max-w-[50rem] md:px-10",
+      aboutMe:
+        "md:text-justify indent-16 sm:flex-1 sm:min-w-[30rem] px-5 pb-5 md:max-w-[50rem] md:px-10",
       myProjects: "md:text-justify indent-16",
-      githubRepository: "text-center"
-    }
+      githubRepository: "text-center",
+    },
   },
 });
 

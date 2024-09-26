@@ -74,10 +74,14 @@ export interface ICurrentlyPost {
 export interface IPostNode extends IShortPostData {}
 
 export interface IPostEdge {
-  node: IPostNode
+  node: IPostNode;
 }
 
 export interface IPostsConnection {
   pageInfo: IPageInfo;
-  edges: IPostEdge[]
+  edges: IPostEdge[];
+}
+
+export interface IPostsData {
+  postsConnection: IPostsConnection;
 }

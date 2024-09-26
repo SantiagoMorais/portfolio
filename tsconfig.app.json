@@ -31,7 +31,8 @@
       "@styles/*": ["styles/*"],
       "@docs/*": ["docs/*"],
       "@contexts/*": ["contexts/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["src"]

@@ -36,7 +36,7 @@ export const BlogBanner = () => {
       </div>
 
       {BannerCaroulselSlides.map((slide) => (
-        <SwiperSlide className="size-full">
+        <SwiperSlide key={slide} className="size-full">
           <img
             src={slide}
             alt="Imagem blog"
