@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { ArticlesList } from "./articlesList";
 import { BlogBanner } from "./blogBanner";
 import { useQuery } from "@apollo/client";
@@ -9,8 +9,8 @@ import { Loading } from "./loading";
 import { NotFound } from "@components/notFound";
 
 export const Blog = () => {
-  const [loadingMore, setLoadingMore] = useState<boolean>(false);
-  const { loading, error, data, fetchMore } = useQuery<IPostsData>(
+  // const [loadingMore, setLoadingMore] = useState<boolean>(false);
+  const { loading, error, data } = useQuery<IPostsData>(
     GET_POSTS_QUERY,
     {
       variables: {
@@ -19,34 +19,34 @@ export const Blog = () => {
     }
   );
 
-  const loadMorePosts = () => {
-    if (loading || !data) return;
-    const endCursor: string = data.postsConnection.pageInfo.endCursor;
+  // const loadMorePosts = () => {
+  //   if (loading || !data) return;
+  //   const endCursor: string = data.postsConnection.pageInfo.endCursor;
 
-    setLoadingMore(true);
+  //   setLoadingMore(true);
 
-    fetchMore({
-      variables: {
-        after: endCursor,
-        first: 5,
-      },
-      updateQuery: (prevResult, { fetchMoreResult }) => {
-        setLoadingMore(false);
+  //   fetchMore({
+  //     variables: {
+  //       after: endCursor,
+  //       first: 5,
+  //     },
+  //     updateQuery: (prevResult, { fetchMoreResult }) => {
+  //       setLoadingMore(false);
 
-        if (!fetchMoreResult) return prevResult;
+  //       if (!fetchMoreResult) return prevResult;
 
-        return {
-          postsConnection: {
-            ...fetchMoreResult.postsConnection,
-            edges: [
-              ...prevResult.postsConnection.edges,
-              ...fetchMoreResult.postsConnection.edges,
-            ],
-          },
-        };
-      },
-    });
-  };
+  //       return {
+  //         postsConnection: {
+  //           ...fetchMoreResult.postsConnection,
+  //           edges: [
+  //             ...prevResult.postsConnection.edges,
+  //             ...fetchMoreResult.postsConnection.edges,
+  //           ],
+  //         },
+  //       };
+  //     },
+  //   });
+  // };
 
   return (
     <div>
