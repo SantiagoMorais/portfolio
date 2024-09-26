@@ -4,6 +4,8 @@ import { BlogBanner } from "./blogBanner";
 import { useQuery } from "@apollo/client";
 import { IPostsData } from "utils/types";
 import { GET_POSTS_QUERY } from "utils/blogApi";
+import { EmptyBlog } from "./emptyBlog";
+import { Loading } from "./loading";
 
 export const Blog = () => {
   const [loadingMore, setLoadingMore] = useState<boolean>(false);
@@ -15,8 +17,6 @@ export const Blog = () => {
       },
     }
   );
-
-  console.log(data);
 
   const loadMorePosts = () => {
     if (loading || !data) return;
@@ -50,7 +50,16 @@ export const Blog = () => {
   return (
     <div>
       <BlogBanner />
-      <ArticlesList />
+      {loading ? (
+        <Loading />
+      ) : error ? (
+        <></>
+      ) : data && data?.postsConnection.edges.length > 0 ? (
+        <ArticlesList data={data} />
+      ) : (
+        <EmptyBlog />
+      )}
+
     </div>
   );
 };

@@ -2,7 +2,6 @@ import { ApolloClient, HttpLink, InMemoryCache, gql } from "@apollo/client";
 import { env } from "env";
 
 export const client = new ApolloClient({
-  uri: env.VITE_HYGRAPH_API_URL,
   cache: new InMemoryCache(),
   link: new HttpLink({
     uri: env.VITE_HYGRAPH_API_URL,

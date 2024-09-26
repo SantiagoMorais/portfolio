@@ -14,7 +14,7 @@ export const Footer = () => {
       <SocialMediaLinks className="justify-center mb-10 flex-col" />
       <ul className="rounded-lg border w-full border-primary py-5 flex flex-col items-center md:w-fit md:items-end md:px-5 bg-panel">
         {navbar.map((item) => (
-          <MenuItem navbarInfo={item} />
+          <MenuItem key={item.id} navbarInfo={item} />
         ))}
       </ul>
     </footer>
