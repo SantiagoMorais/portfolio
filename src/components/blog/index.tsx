@@ -6,6 +6,7 @@ import { IPostsData } from "utils/types";
 import { GET_POSTS_QUERY } from "utils/blogApi";
 import { EmptyBlog } from "./emptyBlog";
 import { Loading } from "./loading";
+import { NotFound } from "@components/notFound";
 
 export const Blog = () => {
   const [loadingMore, setLoadingMore] = useState<boolean>(false);
@@ -53,13 +54,12 @@ export const Blog = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        <></>
+        <NotFound pageType="postsList" />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <ArticlesList data={data} />
       ) : (
         <EmptyBlog />
       )}
-
     </div>
   );
 };
