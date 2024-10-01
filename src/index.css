@@ -21,7 +21,7 @@ body {
 .light {
   --primary: #00bd95;
   --secondary: #19584f;
-  --bg: #D8D2C2;
+  --bg: #d8d2c2;
   --panel: #f3eeeab0;
   --secondaryPanel: #dfd6c6;
   --textColor: #000000;
@@ -36,4 +36,84 @@ body {
   --secondaryPanel: #171c22;
   --textColor: #ffffff;
   --hoverEffect: #ffffff;
+}
+
+#postContent {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-textColor font-bold text-medium mb-5 relative first-letter:capitalize w-fit inline-block md:text-large;
+  }
+
+  h2::after,
+  h3::after,
+  h4::after,
+  h5::after,
+  h6::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary to-transparent;
+  }
+
+  p {
+    @apply text-justify text-base w-fit mb-8 indent-20 leading-snug text-textColor last-of-type:mb-0;
+
+    a {
+      @apply text-primary underline font-medium duration-300 hover:opacity-70;
+    }
+  }
+
+  blockquote {
+    @apply border-l-4 border-primary bg-secondaryPanel text-primary p-4 rounded-r-lg text-small mb-4;
+  }
+
+  ul {
+    @apply list-disc ml-8 mb-4 text-textColor text-base;
+  }
+
+  ol {
+    @apply list-decimal ml-8 mb-4 text-textColor text-base;
+  }
+
+  img {
+    @apply w-full h-[30rem] object-cover object-center border-primary border shadow-allAround shadow-secondary rounded-lg mb-8 md:float-left md:w-1/2 md:max-h-[40rem] md:h-full md:mr-10 md:mb-10;
+  }
+
+  iframe {
+    @apply w-[60vw] max-w-[80rem] h-[calc(60vw*9/16)] max-h-[calc(80rem*9/16)] rounded-lg;
+  }
+
+  pre {
+    @apply bg-panel border border-primary p-4 rounded-lg overflow-auto mb-6 text-textColor md:w-fit md:py-10 md:px-10 md:float-left md:mr-6;
+  }
+
+  code {
+    @apply font-mono text-[3dvw] md:text-small;
+  }
+
+  pre code {
+    @apply block text-textColor;
+    white-space: pre-wrap;
+  }
+
+  table {
+    @apply w-full my-10 md:w-fit;
+  }
+
+  table thead tr th {
+    @apply bg-secondaryPanel border border-primary md:py-2 md:px-5;
+  }
+
+  table thead tr th p {
+    @apply text-center indent-0 w-full;
+  }
+
+  tbody tr td {
+    @apply border border-textColor md:py-2 md:px-5;
+  }
+
+  tbody tr td p {
+    @apply text-center indent-0 w-full;
+  }
 }
