@@ -6,12 +6,15 @@ import "@radix-ui/themes/styles.css";
 import { ThemeProvider } from "@contexts/themeTogglerContext.tsx";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "utils/blogApi.ts";
+import { SearchPostByTitleProvider } from "@contexts/searchPostByTitleContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ApolloProvider client={client}>
       <ThemeProvider>
-        <App />
+        <SearchPostByTitleProvider>
+          <App />
+        </SearchPostByTitleProvider>
       </ThemeProvider>
     </ApolloProvider>
   </StrictMode>

@@ -61,3 +61,27 @@ export const GET_CURRENTLY_POST_QUERY = gql`
     }
   }
 `;
+
+export const GET_POSTS_BY_TITLE_QUERY = gql`
+  query GetPostsByTitle($title: String!) {
+    postsConnection(where: { title_contains: $title }) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        node {
+          id
+          title
+          subtitle
+          image {
+            url
+          }
+          author {
+            name
+          }
+        }
+      }
+    }
+  }
+`;
