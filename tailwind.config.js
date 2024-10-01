@@ -8,6 +8,7 @@ export default {
       colors: {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
         bg: "var(--bg)",
         panel: "var(--panel)",
         secondaryPanel: "var(--secondaryPanel)",

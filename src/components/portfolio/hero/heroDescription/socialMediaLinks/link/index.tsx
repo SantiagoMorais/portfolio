@@ -1,13 +1,8 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SocialMediaType } from "@utils/socialMediaLinks";
 
 interface ILink {
-  link: {
-    id: string;
-    title: string;
-    link: string;
-    icon: IconDefinition;
-  };
+  link: SocialMediaType
 }
 
 export const Link: React.FC<ILink> = ({ link }) => {

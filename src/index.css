@@ -21,6 +21,7 @@ body {
 .light {
   --primary: #00bd95;
   --secondary: #19584f;
+  --tertiary: #f3eeea;
   --bg: #d8d2c2;
   --panel: #f3eeeab0;
   --secondaryPanel: #dfd6c6;
@@ -31,6 +32,7 @@ body {
 :root {
   --primary: #00bd95;
   --secondary: #19584f;
+  --tertiary: #20272f;
   --bg: #303135;
   --panel: #20272fc7;
   --secondaryPanel: #171c22;

@@ -6,6 +6,7 @@ import { ICurrentlyPost } from "@utils/types";
 import { useParams } from "react-router-dom";
 import parse from "html-react-parser";
 import "index.css";
+import { PostAuthor } from "./postAuthor";
 
 export const Post = () => {
   const { id } = useParams();
@@ -40,6 +41,7 @@ export const Post = () => {
 
             {data?.post.text.html && parse(data?.post.text.html)}
           </div>
+          <PostAuthor data={data?.post.author} />
         </div>
       )}
     </>
