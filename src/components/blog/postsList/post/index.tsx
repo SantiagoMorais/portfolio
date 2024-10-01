@@ -25,7 +25,7 @@ export const Post = () => {
         <Loading />
       ) : error ? (
         <NotFound pageType="general" />
-      ) : (
+      ) : !data?.post ? <NotFound pageType="general" /> : (
         <div className="w-full h-full pb-10 flex flex-col items-center gap-10">
           <h2 className="text-large mx-5 first-letter:capitalize text-textColor font-bold bg-secondaryPanel px-8 rounded-xl text-center md:text-extraLarge md:my-5">
             {data?.post.title}

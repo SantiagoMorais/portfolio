@@ -22,6 +22,9 @@ export const SocialMediaLinks = ({
             className
           )}
         >
+          <p className="text-textColor mr-5 text-small text-center transition-colors duration-150 md:text-base">
+            Cheque minhas redes:
+          </p>
           <ul className="flex gap-2 items-center flex-wrap md:gap-5">
             {(socialMedia as SocialMediaType[]).map((link) => (
               <Link key={link.id} link={link} />
