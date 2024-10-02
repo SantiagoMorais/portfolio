@@ -17,6 +17,7 @@ export const PostForm = () => {
       register,
       handleSubmit,
       formState: { errors },
+      reset
     } = useForm<SearchPostType>({
       resolver: zodResolver(searchPostForm),
     });
@@ -24,11 +25,12 @@ export const PostForm = () => {
     const handleSearchPost = (data: SearchPostType) => {
       const { postTitle } = data;
       setPostTitle(postTitle);
+      reset();
     };
   
     return (
-        <div className=" py-10 px-5 md:p-10">
-        <form onSubmit={handleSubmit(handleSearchPost)} className="flex flex-1 md:flex-col">
+        <div className=" pt-10 px-5 md:p-10">
+        <form onSubmit={handleSubmit(handleSearchPost)} className="flex flex-1 pb-10 md:flex-col md:pb-0">
           <div className="flex flex-row w-full">
             <label htmlFor="" className="flex flex-1 h-16 md:w-full min-w-0">
               <input
@@ -46,7 +48,7 @@ export const PostForm = () => {
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </div>
-          <p className="text-red-500 text-small h-16 flex items-center gap-2">
+          <p className={`text-red-500 text-small flex items-center gap-2 h-0 duration-300 opacity-0 ${errors.postTitle && "h-14 opacity-100"}`}>
             {errors.postTitle && `! ${errors.postTitle.message}`}
           </p>
         </form>

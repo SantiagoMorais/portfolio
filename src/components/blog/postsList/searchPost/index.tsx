@@ -5,6 +5,7 @@ import { useQuery } from "@apollo/client";
 import { Loading } from "@components/blog/loading";
 import { NotFound } from "@components/notFound";
 import { ReturnButton } from "./returnButton";
+import { PostsNotFound } from "./postsNotFound";
 
 export const SearchPost = () => {
   const { postTitle } = useSearchPostByTitle();
@@ -28,7 +29,7 @@ export const SearchPost = () => {
       ) : (
         <>
           <ReturnButton />
-          "Nada encontado"
+          <PostsNotFound />
         </>
       )}
     </div>
