@@ -1,13 +1,13 @@
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { PostsList } from "..";
+import { PostsList } from "../..";
 import { GET_POSTS_BY_TITLE_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/blog/loading";
 import { NotFound } from "@components/notFound";
-import { ReturnButton } from "./returnButton";
-import { PostsNotFound } from "./postsNotFound";
+import { ReturnButton } from "../returnButton";
+import { PostsNotFound } from "../postsNotFound";
 
-export const SearchPost = () => {
+export const SearchPostsByTitle = () => {
   const { postTitle } = useSearchPostByTitle();
   const { loading, error, data } = useQuery(GET_POSTS_BY_TITLE_QUERY, {
     variables: {

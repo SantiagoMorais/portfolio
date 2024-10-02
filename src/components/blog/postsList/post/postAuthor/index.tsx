@@ -1,7 +1,6 @@
 import { SocialMediaLinks } from "@components/portfolio/hero/heroDescription/socialMediaLinks";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { createId } from "@paralleldrive/cuid2";
-import { subtitle } from "@styles/index";
 import { IAuthorInfo } from "@utils/types";
 
 type PostAuthorProps = {

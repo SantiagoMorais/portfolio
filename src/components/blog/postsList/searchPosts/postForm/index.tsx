@@ -6,7 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 
 const searchPostForm = z.object({
-  postTitle: z.string().min(1, "Digite ao menos uma palavra"),
+  postTitle: z.string().max(100, "Não exceder 100 caracteres"),
 });
 
 type SearchPostType = z.infer<typeof searchPostForm>;
@@ -30,7 +30,7 @@ export const PostForm = () => {
   
     return (
         <div className=" pt-10 px-5 md:p-10">
-        <form onSubmit={handleSubmit(handleSearchPost)} className="flex flex-1 pb-10 md:flex-col md:pb-0">
+        <form onSubmit={handleSubmit(handleSearchPost)} className="flex flex-1 pb-10 flex-col md:pb-0">
           <div className="flex flex-row w-full">
             <label htmlFor="" className="flex flex-1 h-16 md:w-full min-w-0">
               <input
