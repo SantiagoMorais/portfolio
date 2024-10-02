@@ -85,3 +85,35 @@ export const GET_POSTS_BY_TITLE_QUERY = gql`
     }
   }
 `;
+
+export const GET_FILTERS_QUERY = gql`
+  {
+    filters {
+      title
+    }
+  }
+`;
+
+export const GET_FILTERED_POSTS_QUERY = gql`
+  query GetFilteredPosts($filter: String!) {
+    postsConnection(where: { filter_some: { title_contains: $filter } }) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        node {
+          id
+          title
+          subtitle
+          image {
+            url
+          }
+          author {
+            name
+          }
+        }
+      }
+    }
+  }
+`;
