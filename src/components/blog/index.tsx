@@ -7,13 +7,46 @@ import { EmptyBlog } from "./emptyBlog";
 import { Loading } from "./loading";
 import { NotFound } from "@components/notFound";
 import { SearchPosts } from "./postsList/searchPosts";
+import { useState } from "react";
 
 export const Blog = () => {
-  const { loading, error, data } = useQuery<IPostsData>(GET_POSTS_QUERY, {
-    variables: {
-      first: 10,
-    },
-  });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { loading, error, data, fetchMore } = useQuery<IPostsData>(
+    GET_POSTS_QUERY,
+    {
+      variables: {
+        first: 1,
+      },
+    }
+  );
+
+  const fetchMorePosts = () => {
+    if (loading || error) return;
+
+    setIsLoading(true);
+    const endCursor = data?.postsConnection.pageInfo.endCursor;
+
+    fetchMore({
+      variables: {
+        after: endCursor,
+        first: 2,
+      },
+      updateQuery(previousResult, { fetchMoreResult }) {
+        setIsLoading(false);
+        if (!fetchMoreResult) return previousResult;
+
+        return {
+          postsConnection: {
+            ...fetchMoreResult.postsConnection,
+            edges: [
+              ...previousResult.postsConnection.edges,
+              ...fetchMoreResult.postsConnection.edges,
+            ],
+          },
+        };
+      },
+    });
+  };
 
   return (
     <div>
@@ -24,7 +57,7 @@ export const Blog = () => {
         <NotFound pageType="postsList" />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <SearchPosts data={data}/>
+          <SearchPosts data={data} fetchMorePosts={fetchMorePosts} isLoading={isLoading} />
         </>
       ) : (
         <EmptyBlog />

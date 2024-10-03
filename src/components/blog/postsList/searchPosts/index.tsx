@@ -7,7 +7,13 @@ import { FilterForm } from "./filterForm";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 import { SearchPostsByFilter } from "./searchPostByFilter";
 
-export const SearchPosts = ({ data }: { data: IPostsData }) => {
+interface ISearchPostsProps {
+  data: IPostsData;
+  fetchMorePosts: () => void;
+  isLoading: boolean;
+}
+
+export const SearchPosts = ({ data, fetchMorePosts, isLoading }: ISearchPostsProps) => {
   const { postTitle } = useSearchPostByTitle();
   const { filter } = useFilterPosts();
 
@@ -22,7 +28,7 @@ export const SearchPosts = ({ data }: { data: IPostsData }) => {
       ) : filter ? (
         <SearchPostsByFilter />
       ) : (
-        <PostsList data={data} />
+        <PostsList data={data} fetchMorePosts={fetchMorePosts} isLoading={isLoading} />
       )}
     </div>
   );

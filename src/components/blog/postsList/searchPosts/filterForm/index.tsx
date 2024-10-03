@@ -12,7 +12,10 @@ export const FilterForm = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { data, loading, error } = useQuery<IPostsFilters>(GET_FILTERS_QUERY);
   const { setFilter, filter } = useFilterPosts();
-  const { setPostTitle } = useSearchPostByTitle();
+  const { setPostTitle, postTitle } = useSearchPostByTitle();
+
+  console.log(filter, postTitle);
+  
 
   const handleSelectFilter = (selectedFilter: string) => {
     if (!selectedFilter) return;
