@@ -1,9 +1,5 @@
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 import { PostsList } from "../..";
-import {
-  GET_FILTERED_POSTS_QUERY,
-  GET_POSTS_BY_TITLE_QUERY,
-} from "@utils/blogApi";
+import { GET_FILTERED_POSTS_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/blog/loading";
 import { NotFound } from "@components/notFound";
