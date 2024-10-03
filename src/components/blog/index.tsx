@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { BlogBanner } from "./blogBanner";
 import { useQuery } from "@apollo/client";
 import { IPostsData } from "utils/types";
@@ -15,7 +14,7 @@ export const Blog = () => {
     GET_POSTS_QUERY,
     {
       variables: {
-        first: 1,
+        first: 10,
       },
     }
   );
@@ -29,7 +28,7 @@ export const Blog = () => {
     fetchMore({
       variables: {
         after: endCursor,
-        first: 2,
+        first: 10,
       },
       updateQuery(previousResult, { fetchMoreResult }) {
         setIsLoading(false);
@@ -37,7 +36,7 @@ export const Blog = () => {
 
         return {
           postsConnection: {
-            ...fetchMoreResult.postsConnection,
+            ...previousResult.postsConnection,
             edges: [
               ...previousResult.postsConnection.edges,
               ...fetchMoreResult.postsConnection.edges,

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 
-export const ReturnButton = () => {
+export const ReturnButton = ({message}: {message: string}) => {
   const { setPostTitle } = useSearchPostByTitle();
   const { setFilter } = useFilterPosts();
 
@@ -23,7 +23,7 @@ export const ReturnButton = () => {
           icon={faUndo}
           className="duration-300 group-hover:rotate-[-360deg] group-hover:scale-110"
         />{" "}
-        Retornar
+        <span className="first-letter:uppercase">{message}</span>
       </button>
     </div>
   );

@@ -1,10 +1,7 @@
 import {
-  faAdd,
-  faHandPointer,
-  faSpinner,
+  faHandPointer
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { button } from "@styles/index";
 import { IPostsData } from "@utils/types";
 import { Link } from "react-router-dom";
 import { LoadMoreButton } from "./searchPosts/loadMoreButton";
