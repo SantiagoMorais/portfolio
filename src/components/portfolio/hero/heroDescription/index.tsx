@@ -1,6 +1,7 @@
 import { button } from "@styles/index";
 import { SocialMediaLinks } from "./socialMediaLinks";
 import { whatsAppLink } from "utils/variables";
+import { socialMedia } from "@utils/socialMediaLinks";
 
 export const HeroDescription = () => {
   return (
@@ -27,7 +28,7 @@ export const HeroDescription = () => {
         Vamos conversar
       </a>
 
-      <SocialMediaLinks />
+      <SocialMediaLinks socialMedia={socialMedia}/>
     </div>
   );
 };
