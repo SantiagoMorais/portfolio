@@ -15,7 +15,7 @@ createRoot(document.getElementById("root")!).render(
       <ThemeProvider>
         <SearchPostByTitleProvider>
           <FilterPostsProvider>
-            <App />
+              <App />
           </FilterPostsProvider>
         </SearchPostByTitleProvider>
       </ThemeProvider>

@@ -85,3 +85,10 @@ export interface IPostsConnection {
 export interface IPostsData {
   postsConnection: IPostsConnection;
 }
+
+export interface IPostsFilters {
+  filters: {
+    id: string;
+    title: string;
+  }[]
+}

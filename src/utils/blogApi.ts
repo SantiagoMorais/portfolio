@@ -89,6 +89,7 @@ export const GET_POSTS_BY_TITLE_QUERY = gql`
 export const GET_FILTERS_QUERY = gql`
   {
     filters {
+      id
       title
     }
   }
