@@ -9,7 +9,7 @@ type PostsListProps = {
 
 export const PostsList: React.FC<PostsListProps> = ({ data }) => {
   return (
-    <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5 py-16 md:px-10 md:py-20 gap-8">
+    <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-5 pb-16 pt-10 md:px-10 md:pb-20 gap-8">
       {data?.postsConnection.edges.map((post) => (
         <Link
           key={post.node.id}

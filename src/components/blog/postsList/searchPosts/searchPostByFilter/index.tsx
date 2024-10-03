@@ -1,17 +1,21 @@
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 import { PostsList } from "../..";
-import { GET_POSTS_BY_TITLE_QUERY } from "@utils/blogApi";
+import {
+  GET_FILTERED_POSTS_QUERY,
+  GET_POSTS_BY_TITLE_QUERY,
+} from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/blog/loading";
 import { NotFound } from "@components/notFound";
 import { ReturnButton } from "../returnButton";
 import { PostsNotFound } from "../postsNotFound";
+import { useFilterPosts } from "@contexts/filterPostsContext";
 
-export const SearchPostsByTitle = () => {
-  const { postTitle } = useSearchPostByTitle();
-  const { loading, error, data } = useQuery(GET_POSTS_BY_TITLE_QUERY, {
+export const SearchPostsByFilter = () => {
+  const { filter } = useFilterPosts();
+  const { loading, error, data } = useQuery(GET_FILTERED_POSTS_QUERY, {
     variables: {
-      title: postTitle,
+      filter,
     },
   });
 
@@ -29,7 +33,7 @@ export const SearchPostsByTitle = () => {
       ) : (
         <>
           <ReturnButton />
-          <PostsNotFound searchType="searchingByTitle"/>
+          <PostsNotFound searchType="searchingByFilter" />
         </>
       )}
     </div>

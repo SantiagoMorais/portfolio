@@ -2,12 +2,15 @@ import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 import { button } from "@styles/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
+import { useFilterPosts } from "@contexts/filterPostsContext";
 
 export const ReturnButton = () => {
   const { setPostTitle } = useSearchPostByTitle();
+  const { setFilter } = useFilterPosts();
 
   const handleResetInput = () => {
     setPostTitle("");
+    setFilter("");
   };
 
   return (
