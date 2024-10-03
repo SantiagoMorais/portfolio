@@ -18,7 +18,7 @@ export const SearchPostsByTitle = () => {
     {
       variables: {
         title: postTitle,
-        first: 1,
+        first: 10,
       },
     }
   );
@@ -31,7 +31,7 @@ export const SearchPostsByTitle = () => {
     fetchMore({
       variables: {
         after: endCursor,
-        first: 1,
+        first: 10,
       },
       updateQuery(previousResult, { fetchMoreResult }) {
         setIsLoading(false);

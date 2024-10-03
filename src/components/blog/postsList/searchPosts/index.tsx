@@ -19,7 +19,7 @@ export const SearchPosts = ({ data, fetchMorePosts, isLoading }: ISearchPostsPro
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col gap-4 p-4 pt-10 md:flex-row">
+      <div className="flex flex-col gap-4 p-4 pt-10 md:flex-row md:px-10">
         <PostForm />
         <FilterForm />
       </div>

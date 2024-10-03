@@ -17,7 +17,7 @@ export const SearchPostsByFilter = () => {
     {
       variables: {
         filter,
-        first: 1,
+        first: 10,
       },
     }
   );

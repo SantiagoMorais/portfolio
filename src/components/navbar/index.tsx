@@ -4,6 +4,7 @@ import { Logo } from "./logo";
 import { AccordionMenu } from "./accordionMenu";
 import { MenuItem } from "./menuItem";
 import { ThemeToggleButton } from "./themeTogglerButton";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isAccordion, setIsAccordion] = useState<boolean>(false);
@@ -22,7 +23,9 @@ export const Navbar = () => {
   return (
     <header className="w-full flex justify-center p-10 md:px-20 md:py-16">
       <div className="max-w-screen-2xl w-full flex items-center flex-col gap-4 md:flex-row md:justify-between">
-        <Logo className="text-large first-letter:text-extraLarge" />
+        <Link to="/" className="duration-300 hover:opacity-70 hover:scale-110 cursor-pointer">
+          <Logo className="text-large first-letter:text-extraLarge" />
+        </Link>
 
         <nav className="flex flex-col items-center gap-4 md:flex-row">
           {isAccordion ? (
@@ -32,7 +35,7 @@ export const Navbar = () => {
               <ThemeToggleButton />
               {navbar &&
                 navbar.map((item) => (
-                  <MenuItem key={item.id} navbarInfo={item}/>
+                  <MenuItem key={item.id} navbarInfo={item} />
                 ))}
             </ul>
           )}
