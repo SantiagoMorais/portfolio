@@ -70,7 +70,7 @@ export const SearchPostsByFilter = () => {
         </>
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <ResetTitleAndFilterButton message="Retornar às publicações" />
+          <ResetTitleAndFilterButton message="Remover filtro" />
           <PostsList
             fetchMorePosts={fetchMorePosts}
             isLoading={isLoading}
