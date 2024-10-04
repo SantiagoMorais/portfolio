@@ -3,7 +3,7 @@ import { PostsList } from "../..";
 import { GET_POSTS_BY_TITLE_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
-import { ResetTitleAndFilterButton } from "../../../../ui/ResetTitleAndFilterButton";
+import { ResetTitleAndFilterButton } from "../../../../ui/resetTitleAndFilterButton";
 import { PostsNotFound } from "../postsNotFound";
 import { useState } from "react";
 import { IPostsData } from "@utils/types";

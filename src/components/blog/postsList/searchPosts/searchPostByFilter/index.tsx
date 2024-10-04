@@ -8,7 +8,7 @@ import { useState } from "react";
 import { IPostsData } from "@utils/types";
 import { AdvicePage } from "@components/advicePage";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
-import { ResetTitleAndFilterButton } from "@components/ui/ResetTitleAndFilterButton";
+import { ResetTitleAndFilterButton } from "@components/ui/resetTitleAndFilterButton";
 
 export const SearchPostsByFilter = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
