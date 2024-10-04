@@ -3,11 +3,12 @@ import { PostsList } from "../..";
 import { GET_POSTS_BY_TITLE_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
-import { NotFound } from "@components/advicePages/notFound";
 import { ReturnButton } from "../../../../ui/returnButton";
 import { PostsNotFound } from "../postsNotFound";
 import { useState } from "react";
 import { IPostsData } from "@utils/types";
+import { AdvicePage } from "@components/advicePage";
+import { faFrown } from "@fortawesome/free-solid-svg-icons";
 
 export const SearchPostsByTitle = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -56,7 +57,14 @@ export const SearchPostsByTitle = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        <NotFound pageType="postsList" />
+        <AdvicePage
+          title="Ops, página não encontrada"
+          adviceMessage="Por algum motivo não foi possível encontrar os dados das publicações. Por favor, tente mais tarde ou retorne para a página inicial."
+          icon={faFrown}
+          polygonEmojiMessage="404"
+          buttonText="Retornar"
+          route="/"
+        />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
           <ReturnButton message="retornar" />

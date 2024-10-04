@@ -2,7 +2,7 @@ import { PostsList } from "../..";
 import { GET_FILTERED_POSTS_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
-import { NotFound } from "@components/advicePages/notFound";
+import { NotFound } from "@components/advicePage/notFound";
 import { ReturnButton } from "../../../../ui/returnButton";
 import { PostsNotFound } from "../postsNotFound";
 import { useFilterPosts } from "@contexts/filterPostsContext";

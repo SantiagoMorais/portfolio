@@ -5,7 +5,7 @@ interface ILink {
   link: SocialMediaType;
 }
 
-export const Link: React.FC<ILink> = ({ link }) => {
+export const SocialLink: React.FC<ILink> = ({ link }) => {
   return (
     <>
       {link && (

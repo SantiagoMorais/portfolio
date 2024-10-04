@@ -1,4 +1,4 @@
-import { Link } from "./link";
+import { SocialLink } from "./link";
 import { twMerge } from "tailwind-merge";
 import { SocialMediaType } from "@utils/socialMediaLinks";
 
@@ -27,12 +27,12 @@ export const SocialMediaLinks = ({
           </p>
           <ul className="flex gap-2 items-center flex-wrap md:gap-5">
             {(socialMedia as SocialMediaType[]).map((link) => (
-              <Link key={link.id} link={link} />
+              <SocialLink key={link.id} link={link} />
             ))}
           </ul>
         </div>
       ) : (
-        <Link link={socialMedia as SocialMediaType} />
+        <SocialLink link={socialMedia as SocialMediaType} />
       )}
     </>
   );

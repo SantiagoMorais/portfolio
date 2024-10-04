@@ -1,15 +1,15 @@
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
-import { NotFound } from "@components/advicePages/notFound";
 import { GET_CURRENTLY_POST_QUERY } from "@utils/blogApi";
 import { ICurrentlyPost } from "@utils/types";
 import { Link, useParams } from "react-router-dom";
 import "index.css";
 import { PostAuthor } from "./postAuthor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUndo } from "@fortawesome/free-solid-svg-icons";
+import { faFrown, faUndo } from "@fortawesome/free-solid-svg-icons";
 import { button } from "@styles/index";
 import { PostContent } from "./postContent";
+import { AdvicePage } from "@components/advicePage";
 
 export const Post = () => {
   const { id } = useParams();
@@ -22,14 +22,25 @@ export const Post = () => {
     }
   );
 
+  const pageNotFound = (
+    <AdvicePage
+      title="Ops, página não encontrada"
+      icon={faFrown}
+      adviceMessage="Não encontramos a página que você procura. Por favor, tente novamente ou retorne para a página inicial."
+      route="/"
+      buttonText="Retornar"
+      polygonEmojiMessage="404"
+    />
+  );
+
   return (
     <>
       {loading ? (
         <Loading />
       ) : error ? (
-        <NotFound pageType="general" />
+        pageNotFound
       ) : !data?.post ? (
-        <NotFound pageType="general" />
+        pageNotFound
       ) : (
         <div className="w-full h-full pb-10 flex flex-col items-center gap-10">
           <PostContent data={data} />

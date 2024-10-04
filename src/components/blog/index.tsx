@@ -2,11 +2,11 @@ import { BlogBanner } from "./blogBanner";
 import { useQuery } from "@apollo/client";
 import { IPostsData } from "utils/types";
 import { GET_POSTS_QUERY } from "utils/blogApi";
-import { EmptyBlog } from "../advicePages/emptyBlog";
 import { Loading } from "../ui/loading";
-import { NotFound } from "@components/advicePages/notFound";
 import { SearchPosts } from "./postsList/searchPosts";
 import { useState } from "react";
+import { AdvicePage } from "@components/advicePage";
+import { faFrown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
 
 export const Blog = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -53,7 +53,14 @@ export const Blog = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        <NotFound pageType="postsList" />
+        <AdvicePage
+          title="Ops, página não encontrada"
+          adviceMessage="Por algum motivo não foi possível encontrar os dados das publicações. Por favor, tente mais tarde ou retorne para a página inicial."
+          icon={faFrown}
+          polygonEmojiMessage="404"
+          buttonText="Retornar"
+          route="/"
+        />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
           <SearchPosts
@@ -63,7 +70,14 @@ export const Blog = () => {
           />
         </>
       ) : (
-        <EmptyBlog />
+        <AdvicePage
+          title="Em breve, novas publicações!"
+          adviceMessage="Estamos trabalhando para desenvolver novos conteúdos essenciais sobre desenvolvimento web e programação para você! Enquanto isso, retorne à página inicial."
+          route="/"
+          icon={faSmileWink}
+          buttonText="Retornar"
+          polygonEmojiMessage="Em Breve!"
+        />
       )}
     </div>
   );
