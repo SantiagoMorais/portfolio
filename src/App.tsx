@@ -1,4 +1,4 @@
-import customBg from "@assets/custom-background.png";
+import customBg from "@assets/imgs/custom-background.png";
 import { ScrollButton } from "@components/ui/scrollButton";
 import { AppRoutes } from "@pages/appRoutes";
 

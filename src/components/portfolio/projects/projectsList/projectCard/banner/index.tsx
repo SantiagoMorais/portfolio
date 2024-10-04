@@ -1,4 +1,4 @@
-import imageNotFound from "@assets/image-not-found.jpg";
+import imageNotFound from "@assets/imgs/image-not-found.jpg";
 import { ProjectProps } from "utils/types";
 
 export const Banner = ({ project }: ProjectProps) => {

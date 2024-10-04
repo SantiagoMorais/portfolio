@@ -1,12 +1,17 @@
-import { useTheme } from "@contexts/themeTogglerContext";
 import { faAdjust } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 export const ThemeToggleButton = () => {
-  const { theme, toggleTheme } = useTheme();
+  const [theme, setTheme] = useState("dark");
   const themeIsLight = theme === "light"
-  
 
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.body.classList.toggle("light", newTheme === "light");
+  };
+  
   return (
     <button onClick={toggleTheme} className="size-10 cursor-pointer bg-none border-none">
       <FontAwesomeIcon
