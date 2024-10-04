@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 
-export const ReturnButton = ({message}: {message: string}) => {
+export const ResetTitleAndFilterButton = ({message}: {message: string}) => {
   const { setPostTitle } = useSearchPostByTitle();
   const { setFilter } = useFilterPosts();
 

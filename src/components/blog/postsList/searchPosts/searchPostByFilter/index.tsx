@@ -2,12 +2,13 @@ import { PostsList } from "../..";
 import { GET_FILTERED_POSTS_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
-import { NotFound } from "@components/advicePage/notFound";
-import { ReturnButton } from "../../../../ui/returnButton";
 import { PostsNotFound } from "../postsNotFound";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 import { useState } from "react";
 import { IPostsData } from "@utils/types";
+import { AdvicePage } from "@components/advicePage";
+import { faFrown } from "@fortawesome/free-solid-svg-icons";
+import { ResetTitleAndFilterButton } from "@components/ui/ResetTitleAndFilterButton";
 
 export const SearchPostsByFilter = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -57,12 +58,19 @@ export const SearchPostsByFilter = () => {
         <Loading />
       ) : error ? (
         <>
-          <ReturnButton message="Retornar às publicações" />
-          <NotFound pageType="postsList" />
+          <ResetTitleAndFilterButton message="Retornar às publicações" />
+          <AdvicePage
+            title="Ops, página não encontrada"
+            adviceMessage="Por algum motivo não foi possível encontrar os dados das publicações. Por favor, tente mais tarde ou retorne para a página inicial."
+            icon={faFrown}
+            polygonEmojiMessage="404"
+            buttonText="Retornar"
+            route="/"
+          />
         </>
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <ReturnButton message="Retornar às publicações" />
+          <ResetTitleAndFilterButton message="Retornar às publicações" />
           <PostsList
             fetchMorePosts={fetchMorePosts}
             isLoading={isLoading}
@@ -71,7 +79,7 @@ export const SearchPostsByFilter = () => {
         </>
       ) : (
         <>
-          <ReturnButton message="Retornar às publicações" />
+          <ResetTitleAndFilterButton message="Retornar às publicações" />
           <PostsNotFound searchType="searchingByFilter" />
         </>
       )}

@@ -3,7 +3,7 @@ import { PostsList } from "../..";
 import { GET_POSTS_BY_TITLE_QUERY } from "@utils/blogApi";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
-import { ReturnButton } from "../../../../ui/returnButton";
+import { ResetTitleAndFilterButton } from "../../../../ui/ResetTitleAndFilterButton";
 import { PostsNotFound } from "../postsNotFound";
 import { useState } from "react";
 import { IPostsData } from "@utils/types";
@@ -67,7 +67,7 @@ export const SearchPostsByTitle = () => {
         />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <ReturnButton message="retornar" />
+          <ResetTitleAndFilterButton message="retornar" />
           <PostsList
             fetchMorePosts={fetchMorePosts}
             isLoading={isLoading}
@@ -76,7 +76,7 @@ export const SearchPostsByTitle = () => {
         </>
       ) : (
         <>
-          <ReturnButton message="Retornar às publicações" />
+          <ResetTitleAndFilterButton message="Retornar às publicações" />
           <PostsNotFound searchType="searchingByTitle" />
         </>
       )}
