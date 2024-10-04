@@ -4,7 +4,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IPostsData } from "@utils/types";
 import { Link } from "react-router-dom";
-import { LoadMoreButton } from "./searchPosts/loadMoreButton";
+import { LoadMoreButton } from "../../ui/loadMoreButton";
 
 type PostsListProps = {
   data: IPostsData | undefined;

@@ -2,7 +2,7 @@ import { faSmileWink, faUndo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { button, subtitle } from "@styles/index";
-import { PolygonEmoji } from "@components/polygonEmoji";
+import { PolygonEmoji } from "@components/ui/polygonEmoji";
 
 export const DevelopmentContent = () => {
   return (

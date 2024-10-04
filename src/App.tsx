@@ -1,5 +1,5 @@
 import customBg from "@assets/custom-background.png";
-import { ScrollButton } from "@components/scrollButton";
+import { ScrollButton } from "@components/ui/scrollButton";
 import { AppRoutes } from "@pages/appRoutes";
 
 export const App = () => {

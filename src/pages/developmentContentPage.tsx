@@ -1,4 +1,4 @@
-import { DevelopmentContent } from "@components/developmentContent"
+import { DevelopmentContent } from "@components/advicePages/developmentContent"
 
 export const DevelopmentContentPage = () => {
     return <DevelopmentContent />

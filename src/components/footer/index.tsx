@@ -1,4 +1,4 @@
-import { Logo } from "@components/navbar/logo";
+import { Logo } from "@components/ui/logo";
 import { MenuItem } from "@components/navbar/menuItem";
 import { SocialMediaLinks } from "@components/portfolio/hero/heroDescription/socialMediaLinks";
 import { navbar } from "@json/data.json";

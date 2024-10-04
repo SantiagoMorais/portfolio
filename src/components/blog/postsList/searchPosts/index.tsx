@@ -1,9 +1,9 @@
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { PostForm } from "./postForm";
+import { PostForm } from "./forms/postForm";
 import { SearchPostsByTitle } from "./searchPostsByTitle";
 import { PostsList } from "..";
 import { IPostsData } from "@utils/types";
-import { FilterForm } from "./filterForm";
+import { FilterForm } from "./forms/filterForm";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 import { SearchPostsByFilter } from "./searchPostByFilter";
 

@@ -1,4 +1,4 @@
-import { Logo } from "@components/navbar/logo";
+import { Logo } from "@components/ui/logo";
 
 export const BannerDescription = () => {
   return (
@@ -15,8 +15,7 @@ export const BannerDescription = () => {
       </div>
 
       <h3 className="mb-2 text-center leading-tight text-white text-medium font-bold sm:text-[1.6dvw]">
-        Felipe Santiago {" "}
-        <span className="text-primary">Desenvolvedor Web</span>
+        Felipe Santiago <span className="text-primary">Desenvolvedor Web</span>
       </h3>
       <h3 className="text-small text-center text-white font-normal sm:text-[1.15dvw]">
         Acesse conteúdos essenciais sobre desenvolvimento web e programação.

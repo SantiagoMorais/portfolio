@@ -1,7 +1,7 @@
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useFilterPosts } from "@contexts/filterPostsContext";
-import { PolygonEmoji } from "@components/polygonEmoji";
+import { PolygonEmoji } from "@components/ui/polygonEmoji";
 
 type PostNotFoundProps = {
   searchType: "searchingByFilter" | "searchingByTitle";

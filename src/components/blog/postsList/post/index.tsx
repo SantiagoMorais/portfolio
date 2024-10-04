@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
-import { Loading } from "@components/blog/loading";
-import { NotFound } from "@components/notFound";
+import { Loading } from "@components/ui/loading";
+import { NotFound } from "@components/advicePages/notFound";
 import { GET_CURRENTLY_POST_QUERY } from "@utils/blogApi";
 import { ICurrentlyPost } from "@utils/types";
 import { Link, useParams } from "react-router-dom";

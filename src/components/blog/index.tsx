@@ -2,9 +2,9 @@ import { BlogBanner } from "./blogBanner";
 import { useQuery } from "@apollo/client";
 import { IPostsData } from "utils/types";
 import { GET_POSTS_QUERY } from "utils/blogApi";
-import { EmptyBlog } from "./emptyBlog";
-import { Loading } from "./loading";
-import { NotFound } from "@components/notFound";
+import { EmptyBlog } from "../advicePages/emptyBlog";
+import { Loading } from "../ui/loading";
+import { NotFound } from "@components/advicePages/notFound";
 import { SearchPosts } from "./postsList/searchPosts";
 import { useState } from "react";
 
@@ -56,7 +56,11 @@ export const Blog = () => {
         <NotFound pageType="postsList" />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <SearchPosts data={data} fetchMorePosts={fetchMorePosts} isLoading={isLoading} />
+          <SearchPosts
+            data={data}
+            fetchMorePosts={fetchMorePosts}
+            isLoading={isLoading}
+          />
         </>
       ) : (
         <EmptyBlog />

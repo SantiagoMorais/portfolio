@@ -24,7 +24,7 @@ export const HeroDescription = () => {
         sociais!
       </p>
 
-      <a href={whatsAppLink} target="_blank" className={button({ withBackground: "primaryColor", className: "text-textColor" })}>
+      <a href={whatsAppLink} target="_blank" className={button({ withBackground: "primaryColor", className: "text-white" })}>
         Vamos conversar
       </a>
 
