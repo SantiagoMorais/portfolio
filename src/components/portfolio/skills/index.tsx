@@ -4,7 +4,7 @@ import { SkillDetails } from "./skillDetails";
 
 export const Skills = () => {
   return (
-    <section className="w-full px-10 py-16 mb-5">
+    <section className="w-full px-5 py-10 mb-5 md:px-10 md:py-16">
       <div className="flex flex-col w-full">
         <h2
           className={`${subtitle({ afterContent: "primaryOnCleanBg", size: "large" })} text-textColor mb-12`}

@@ -5,7 +5,7 @@ import { Curriculum } from "./curriculum";
 
 export const AboutMe = () => {
   return (
-    <section className="bg-secondaryPanel flex flex-col px-10 py-16 w-full gap-5">
+    <section className="bg-secondaryPanel flex flex-col px-5 py-16 w-full gap-5 md:px-10">
       <h2
         className={`${subtitle({ afterContent: "primary", size: "large" })} text-textColor`}
       >

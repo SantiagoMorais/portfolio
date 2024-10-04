@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const button = tv({
-  base: "whitespace-nowrap break-normal duration-150 transition-all px-2 py-1 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center",
+  base: "break-normal duration-150 transition-all px-2 py-1 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center flex-wrap",
   variants: {
     afterHover: {
       primary:
@@ -34,7 +34,7 @@ export const paragraph = tv({
   variants: {
     sections: {
       aboutMe:
-        "md:text-justify indent-16 sm:flex-1 sm:min-w-[30rem] px-5 pb-5 md:max-w-[50rem] md:px-10",
+        "md:text-justify indent-16 sm:flex-1 sm:min-w-[30rem] pb-5 md:max-w-[50rem]",
       myProjects: "md:text-justify indent-16",
       githubRepository: "text-center",
     },

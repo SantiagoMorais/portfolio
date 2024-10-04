@@ -9,9 +9,9 @@ import { button, subtitle } from "@styles/index";
 
 export const DevelopmentContent = () => {
   return (
-    <div className=" flex flex-col w-full items-center p-10 pb-20 gap-10">
+    <div className="flex flex-col w-full items-center p-10 pb-20 gap-10">
       <h2
-        className={`text-textColor text-large md:text-extraLarge text-center pb-2 ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
+        className={`text-textColor text-medium md:text-extraLarge text-center pb-2 ${subtitle({ afterContent: "secondaryOnCleanBg", className: "mb-0" })}`}
       >
         Conteúdo em desenvolvimento!
       </h2>
@@ -26,7 +26,7 @@ export const DevelopmentContent = () => {
           icon={faSmileWink}
           className="size-2/3 text-textColor m-10 mb-0"
         />
-        <p className="text-large md:text-giant font-extrabold text-textColor mb-20">
+        <p className="text-large md:text-giant font-extrabold text-textColor text-center leading-none md:mb-20">
           Em breve!
         </p>
       </div>

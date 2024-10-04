@@ -4,7 +4,7 @@ export const ProjectTopics = ({ project }: ProjectProps) => {
   const hiddenIcons: string[] = ["portfolio", "contextapi", "tests"];
 
   return (
-    <div className="w-full flex flex-wrap justify-center gap-2 p-5 h-full">
+    <div className="w-full flex flex-wrap justify-center gap-2 h-full">
       {project.topics
         .filter((topic) => !hiddenIcons.includes(topic))
         .map((icon) => (

@@ -14,11 +14,12 @@ export const ReturnButton = ({message}: {message: string}) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center leading-tight px-5 md:px-10">
       <button
         onClick={() => handleResetInput()}
-        className={`flex items-center gap-5 text-medium text-textColor group ${button({ withBackground: "primaryColor" })}`}
+        className={`flex items-center gap-x-5 text-base md:text-medium text-textColor group text-center ${button({ withBackground: "primaryColor" })}`}
       >
+  
         <FontAwesomeIcon
           icon={faUndo}
           className="duration-300 group-hover:rotate-[-360deg] group-hover:scale-110"
