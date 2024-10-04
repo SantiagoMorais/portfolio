@@ -1,11 +1,11 @@
 import { faFrown, faUndo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import vector from "@assets/vector.png";
 import { button, subtitle } from "@styles/index";
+import { PolygonEmoji } from "@components/polygonEmoji";
 
 export const NotFound = ({
-  pageType,
+  pageType
 }: {
   pageType: "postsList" | "general";
 }) => {
@@ -16,21 +16,7 @@ export const NotFound = ({
       >
         Ops, página não encontrada.
       </h2>
-      <div
-        className="max-w-[60rem] max-h-[60rem] size-contain p-20 flex flex-col items-center gap-10"
-        style={{
-          background: `url(${vector}) no-repeat center center`,
-          backgroundSize: "contain",
-        }}
-      >
-        <FontAwesomeIcon
-          icon={faFrown}
-          className="size-2/3 text-textColor m-10 mb-0"
-        />
-        <p className="text-large md:text-giant font-extrabold text-textColor">
-          404
-        </p>
-      </div>
+      <PolygonEmoji icon={faFrown} message="404" />
       <p className="text-textColor text-base md:text-medium text-center">
         {pageType === "general" ? (
           <>

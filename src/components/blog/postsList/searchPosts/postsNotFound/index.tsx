@@ -1,11 +1,10 @@
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import vector from "@assets/vector.png";
 import { useFilterPosts } from "@contexts/filterPostsContext";
+import { PolygonEmoji } from "@components/polygonEmoji";
 
 type PostNotFoundProps = {
-  searchType: "searchingByFilter" | "searchingByTitle"
+  searchType: "searchingByFilter" | "searchingByTitle";
 };
 
 export const PostsNotFound = ({ searchType }: PostNotFoundProps) => {
@@ -29,18 +28,7 @@ export const PostsNotFound = ({ searchType }: PostNotFoundProps) => {
           <>O conteúdo que você procura não pôde ser encontrado</>
         )}
       </h3>
-      <div
-        className="max-w-[60rem] max-h-[60rem] size-contain p-28 flex justify-center items-center"
-        style={{
-          background: `url(${vector}) no-repeat center center`,
-          backgroundSize: "contain",
-        }}
-      >
-        <FontAwesomeIcon
-          icon={faMagnifyingGlass}
-          className="size-2/3 text-textColor"
-        />
-      </div>
+      <PolygonEmoji icon={faMagnifyingGlass} />
     </div>
   );
 };

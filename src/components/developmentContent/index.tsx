@@ -1,11 +1,8 @@
-import {
-  faSmileWink,
-  faUndo,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSmileWink, faUndo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import vector from "@assets/vector.png";
 import { button, subtitle } from "@styles/index";
+import { PolygonEmoji } from "@components/polygonEmoji";
 
 export const DevelopmentContent = () => {
   return (
@@ -15,21 +12,7 @@ export const DevelopmentContent = () => {
       >
         Conteúdo em desenvolvimento!
       </h2>
-      <div
-        className="max-w-[60rem] max-h-[60rem] size-contain p-20 flex flex-col items-center gap-5"
-        style={{
-          background: `url(${vector}) no-repeat center center`,
-          backgroundSize: "contain",
-        }}
-      >
-        <FontAwesomeIcon
-          icon={faSmileWink}
-          className="size-2/3 text-textColor m-10 mb-0"
-        />
-        <p className="text-large md:text-giant font-extrabold text-textColor text-center leading-none md:mb-20">
-          Em breve!
-        </p>
-      </div>
+      <PolygonEmoji message="Em breve" icon={faSmileWink} />
       <p className="text-textColor text-base md:text-medium text-center">
         Se acalme! Esta página está em desenvolvimento e em breve traremos mais
         conteúdos para você. <br />
