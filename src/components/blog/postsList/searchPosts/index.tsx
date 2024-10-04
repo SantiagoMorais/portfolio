@@ -1,5 +1,5 @@
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { PostForm } from "./forms/postForm";
+import { TitleForm } from "./forms/titleForm";
 import { SearchPostsByTitle } from "./searchPostsByTitle";
 import { PostsList } from "..";
 import { IPostsData } from "@utils/types";
@@ -20,7 +20,7 @@ export const SearchPosts = ({ data, fetchMorePosts, isLoading }: ISearchPostsPro
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col gap-4 p-4 pt-10 md:flex-row md:px-10">
-        <PostForm />
+        <TitleForm />
         <FilterForm />
       </div>
       {postTitle ? (
