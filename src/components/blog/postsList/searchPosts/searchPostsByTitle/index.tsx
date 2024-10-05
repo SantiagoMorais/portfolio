@@ -53,7 +53,7 @@ export const SearchPostsByTitle = () => {
   };
 
   return (
-    <div className="">
+    <div>
       {loading ? (
         <Loading />
       ) : error ? (
