@@ -22,7 +22,7 @@ Veja o projeto completo na web em: [Portfólio Felipe Santiago](https://portfoli
   - [Advice Page](#advice-page)
   - [Portfólio](#portfólio) -[Github Automated Repos](#github-automated-repos)
     - [Github: localização do repositório](#github-localização-do-repositório)
-  - [Blog](#blog) 
+  - [Blog](#blog)
     - [Consulta GraphQL](#consulta-graphql)
     - [useQuery](#usequery)
     - [fetchMore](#fetchmore)

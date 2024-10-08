@@ -14,8 +14,6 @@ export type TCategory =
   | "tailwindcss"
   | "nodejs";
 
-  
-
 export const categoryList: { name: string; topic: TCategory; id: string }[] = [
   { name: "Ver todos", topic: "portfolio", id: createId() },
   { name: "React", topic: "react", id: createId() },

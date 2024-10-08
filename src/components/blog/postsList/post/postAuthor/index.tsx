@@ -62,4 +62,4 @@ export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => {
       </div>
     )
   );
-}
+};

@@ -1,6 +1,7 @@
 import {
-    faAdd, faSmileWink,
-    faSpinner
+  faAdd,
+  faSmileWink,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

@@ -13,7 +13,11 @@ interface ISearchPostsProps {
   isLoading: boolean;
 }
 
-export const SearchPosts = ({ data, fetchMorePosts, isLoading }: ISearchPostsProps) => {
+export const SearchPosts = ({
+  data,
+  fetchMorePosts,
+  isLoading,
+}: ISearchPostsProps) => {
   const { postTitle } = useSearchPostByTitle();
   const { filter } = useFilterPosts();
 
@@ -28,7 +32,11 @@ export const SearchPosts = ({ data, fetchMorePosts, isLoading }: ISearchPostsPro
       ) : filter ? (
         <SearchPostsByFilter />
       ) : (
-        <PostsList data={data} fetchMorePosts={fetchMorePosts} isLoading={isLoading} />
+        <PostsList
+          data={data}
+          fetchMorePosts={fetchMorePosts}
+          isLoading={isLoading}
+        />
       )}
     </div>
   );

@@ -16,10 +16,7 @@ export const PolygonEmoji = ({ icon, message }: IPolygonEmojiProps) => {
         backgroundSize: "contain",
       }}
     >
-      <FontAwesomeIcon
-        icon={icon}
-        className="size-2/3 text-white m-10"
-      />
+      <FontAwesomeIcon icon={icon} className="size-2/3 text-white m-10" />
       {message && (
         <p className="text-center text-large md:text-giant font-extrabold text-white mb-10 leading-none">
           {message}

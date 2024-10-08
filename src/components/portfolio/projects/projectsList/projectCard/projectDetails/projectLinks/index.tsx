@@ -22,7 +22,7 @@ export const ProjectLinks = ({ project }: ProjectProps) => {
                 "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
             }}
           >
-            <FontAwesomeIcon icon={faGithub} className="text-medium"/>
+            <FontAwesomeIcon icon={faGithub} className="text-medium" />
           </a>
         )}
         <a

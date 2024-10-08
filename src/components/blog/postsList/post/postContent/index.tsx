@@ -2,7 +2,7 @@ import { ICurrentlyPost } from "@utils/types";
 import parse from "html-react-parser";
 
 export const PostContent = ({ data }: { data: ICurrentlyPost }) => {
-    const updatedData =
+  const updatedData =
     data && new Date(data.post.date).toLocaleDateString("pt-BR");
   return (
     <div className="w-full h-full flex flex-col items-center gap-10">

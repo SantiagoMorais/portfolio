@@ -18,7 +18,7 @@ export const AccordionContent = ({
     setFilter(selectedFilter);
     setPostTitle("");
   };
-  
+
   return (
     <Collapse isOpened={isOpen}>
       <div className="flex flex-col bg-secondaryPanel py-2 px-2 rounded-md border border-primary">

@@ -36,4 +36,9 @@ export const whatIDoList: {
   },
 ];
 
-export const BannerCaroulselSlides = [blogImage1, blogImage2, blogImage3, blogImage4];
+export const BannerCaroulselSlides = [
+  blogImage1,
+  blogImage2,
+  blogImage3,
+  blogImage4,
+];

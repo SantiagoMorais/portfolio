@@ -1,6 +1,4 @@
-import {
-  faHandPointer
-} from "@fortawesome/free-solid-svg-icons";
+import { faHandPointer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IPostsData } from "@utils/types";
 import { Link } from "react-router-dom";

@@ -6,7 +6,8 @@ export const button = tv({
     afterHover: {
       primary:
         "relative duration-150 after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-100 hover:after:origin-left after:origin-right",
-      secondary: "relative after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full",
+      secondary:
+        "relative after:absolute after:bottom-0 after:left-0 after:h-[.2rem] after:bg-primary after:w-full",
     },
     iconContent: {
       primary: "group",

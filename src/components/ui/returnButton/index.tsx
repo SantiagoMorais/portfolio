@@ -4,11 +4,11 @@ import { button } from "@styles/index";
 import { Link } from "react-router-dom";
 
 type ReturnButtonProps = {
-    route: string;
-    buttonText: string;
-  };
+  route: string;
+  buttonText: string;
+};
 
-export const ReturnButton = ({buttonText, route}: ReturnButtonProps) => {
+export const ReturnButton = ({ buttonText, route }: ReturnButtonProps) => {
   return (
     <Link
       to={route}

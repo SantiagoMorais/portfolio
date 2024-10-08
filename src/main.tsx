@@ -11,11 +11,11 @@ import { FilterPostsProvider } from "@contexts/filterPostsContext.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ApolloProvider client={client}>
-        <SearchPostByTitleProvider>
-          <FilterPostsProvider>
-              <App />
-          </FilterPostsProvider>
-        </SearchPostByTitleProvider>
+      <SearchPostByTitleProvider>
+        <FilterPostsProvider>
+          <App />
+        </FilterPostsProvider>
+      </SearchPostByTitleProvider>
     </ApolloProvider>
   </StrictMode>
 );

@@ -12,11 +12,7 @@ const FilterPostsContext = createContext<IFilterPostsContext>({
 
 export const useFilterPosts = () => useContext(FilterPostsContext);
 
-export const FilterPostsProvider = ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
+export const FilterPostsProvider = ({ children }: { children: ReactNode }) => {
   const [filter, setFilter] = useState<string>("");
 
   return (

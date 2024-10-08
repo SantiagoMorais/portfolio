@@ -1,4 +1,12 @@
-import { faBook, faCode, faKey, faLaptopCode, faServer, faTools, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faCode,
+  faKey,
+  faLaptopCode,
+  faServer,
+  faTools,
+  IconDefinition,
+} from "@fortawesome/free-solid-svg-icons";
 
 const iconMapping: Record<string, IconDefinition> = {
   code: faCode,
@@ -11,5 +19,3 @@ const iconMapping: Record<string, IconDefinition> = {
 const defaultIcon = faLaptopCode;
 
 export { iconMapping, defaultIcon };
-
-

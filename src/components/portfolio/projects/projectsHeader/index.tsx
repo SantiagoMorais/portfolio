@@ -24,7 +24,7 @@ export const ProjectHeader = () => {
           className="text-primary font-bold duration-300 hover:text-textColor hover:tracking-wider"
           style={{ filter: "drop-shadow(0 0 10px #19584f)" }}
         >
-          Clicando Aqui! 
+          Clicando Aqui!
         </a>
       </p>
     </div>

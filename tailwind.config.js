@@ -13,10 +13,10 @@ export default {
         panel: "var(--panel)",
         secondaryPanel: "var(--secondaryPanel)",
         textColor: "var(--textColor)",
-        hoverEffect: "var(--hoverEffect)"
+        hoverEffect: "var(--hoverEffect)",
       },
       fontFamily: {
-        fontFamily: "Roboto, sans-serif"
+        fontFamily: "Roboto, sans-serif",
       },
       fontSize: {
         small: "1.6rem",
@@ -24,11 +24,11 @@ export default {
         medium: "2.4rem",
         large: "3rem",
         extraLarge: "4.5rem",
-        giant: "6rem"
+        giant: "6rem",
       },
       boxShadow: {
-        allAround: "0 0 20px"
-      }
+        allAround: "0 0 20px",
+      },
     },
   },
   plugins: [],

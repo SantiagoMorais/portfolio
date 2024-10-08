@@ -22,7 +22,11 @@ export const ImageDialog = ({
               "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
           }}
         >
-          <FontAwesomeIcon icon={faImage} title="Ver imagem" className="text-medium" />
+          <FontAwesomeIcon
+            icon={faImage}
+            title="Ver imagem"
+            className="text-medium"
+          />
         </button>
       </Dialog.Trigger>
 
@@ -39,7 +43,12 @@ export const ImageDialog = ({
               />
             </div>
             <Dialog.Close className="absolute top-0 right-0 left-0 flex justify-center translate-y-[-8rem]">
-              <p className={button({withBackground: "primaryColor", className: "flex gap-5"})}>
+              <p
+                className={button({
+                  withBackground: "primaryColor",
+                  className: "flex gap-5",
+                })}
+              >
                 <FontAwesomeIcon icon={faTimes} />
                 Retornar
               </p>
