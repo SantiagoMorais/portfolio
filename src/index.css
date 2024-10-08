@@ -46,7 +46,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply text-textColor font-bold text-medium mb-5 relative first-letter:capitalize w-fit inline-block md:text-large;
+    @apply text-textColor font-bold text-medium mb-5 relative first-letter:capitalize inline-block md:text-large md:w-[48%];
   }
 
   h2::after,
@@ -79,7 +79,11 @@ body {
   }
 
   img {
-    @apply w-full h-[30rem] object-cover object-center border-primary border shadow-allAround shadow-secondary rounded-lg mb-8 md:float-left md:w-1/2 md:max-h-[40rem] md:h-full md:mr-10 md:mb-10;
+    @apply w-fit h-fit max-w-[50%] max-h-[30rem] block border border-primary shadow-allAround shadow-secondary rounded-lg mb-8 m-auto object-cover object-center;
+  }
+
+  #postBanner {
+    @apply w-full max-w-full md:max-w-[80rem] md:h-fit md:max-h-full;
   }
 
   iframe {
@@ -87,11 +91,15 @@ body {
   }
 
   pre {
-    @apply bg-panel border border-primary p-4 rounded-lg overflow-auto mb-6 text-textColor md:w-fit md:py-10 md:px-10 md:float-left md:mr-6;
+    @apply w-full bg-panel border border-primary rounded-lg overflow-auto mb-6 text-textColor md:w-fit md:mb-10;
+
+    code {
+      @apply font-mono text-[3dvw] font-normal md:text-small border-0 bg-panel p-4;
+    }
   }
 
   code {
-    @apply font-mono text-[3dvw] md:text-small;
+    @apply font-mono text-small text-primary md:text-base bg-panel font-semibold border border-secondary rounded-md px-2 border-none;
   }
 
   pre code {
