@@ -26,6 +26,7 @@ Veja o projeto completo na web em: [Portfólio Felipe Santiago](https://portfoli
     - [Consulta GraphQL](#consulta-graphql)
     - [useQuery](#usequery)
     - [fetchMore](#fetchmore)
+- [Autor](#autor)
 
 ## Imagens
 

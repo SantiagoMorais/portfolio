@@ -8,7 +8,7 @@ import { useState } from "react";
 import { IPostsData } from "@utils/types";
 import { AdvicePage } from "@components/advicePage";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
-import { ResetTitleAndFilterButton } from "@components/ui/resetTitleAndFilterButton";
+import { ButtonResetTitleAndFilter } from "@components/ui/buttonResetTitleAndFilter";
 
 export const SearchPostsByFilter = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -58,7 +58,7 @@ export const SearchPostsByFilter = () => {
         <Loading />
       ) : error ? (
         <>
-          <ResetTitleAndFilterButton message="Retornar às publicações" />
+          <ButtonResetTitleAndFilter message="Retornar às publicações" />
           <AdvicePage
             title="Ops, página não encontrada"
             adviceMessage="Por algum motivo não foi possível encontrar os dados das publicações. Por favor, tente mais tarde ou retorne para a página inicial."
@@ -70,7 +70,7 @@ export const SearchPostsByFilter = () => {
         </>
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <ResetTitleAndFilterButton message="Remover filtro" />
+          <ButtonResetTitleAndFilter message="Remover filtro" />
           <PostsList
             fetchMorePosts={fetchMorePosts}
             isLoading={isLoading}
@@ -79,7 +79,7 @@ export const SearchPostsByFilter = () => {
         </>
       ) : (
         <>
-          <ResetTitleAndFilterButton message="Retornar às publicações" />
+          <ButtonResetTitleAndFilter message="Retornar às publicações" />
           <PostsNotFound searchType="searchingByFilter" />
         </>
       )}

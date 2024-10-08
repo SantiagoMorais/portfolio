@@ -1,5 +1,5 @@
 import { createId } from "@paralleldrive/cuid2";
-import { githubProfile, linkedinUrl, whatsAppLink } from "utils/variables";
+import { email, githubProfile, linkedinUrl, whatsAppLink } from "utils/variables";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithub,
@@ -29,5 +29,5 @@ export const socialMedia: SocialMediaType[] = [
     title: "Whatsapp",
     icon: faWhatsapp,
   },
-  { id: createId(), link: whatsAppLink, title: "Email", icon: faAt },
+  { id: createId(), link: `mailto:${email}`, title: "Email", icon: faAt },
 ];

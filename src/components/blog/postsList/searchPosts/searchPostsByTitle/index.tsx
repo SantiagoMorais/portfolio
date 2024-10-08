@@ -8,7 +8,7 @@ import { useState } from "react";
 import { IPostsData } from "@utils/types";
 import { AdvicePage } from "@components/advicePage";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
-import { ResetTitleAndFilterButton } from "@components/ui/resetTitleAndFilterButton";
+import { ButtonResetTitleAndFilter } from "@components/ui/buttonResetTitleAndFilter";
 
 export const SearchPostsByTitle = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -67,7 +67,7 @@ export const SearchPostsByTitle = () => {
         />
       ) : data && data?.postsConnection.edges.length > 0 ? (
         <>
-          <ResetTitleAndFilterButton message="retornar" />
+          <ButtonResetTitleAndFilter message="retornar" />
           <PostsList
             fetchMorePosts={fetchMorePosts}
             isLoading={isLoading}
@@ -76,7 +76,7 @@ export const SearchPostsByTitle = () => {
         </>
       ) : (
         <>
-          <ResetTitleAndFilterButton message="Retornar às publicações" />
+          <ButtonResetTitleAndFilter message="Retornar às publicações" />
           <PostsNotFound searchType="searchingByTitle" />
         </>
       )}
