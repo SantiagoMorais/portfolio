@@ -1,6 +1,6 @@
 import { button, subtitle } from "@styles/index";
-import curriculumPT from "@docs/Currículo atualizado em português 2024-Set.pdf";
-import curriculumEN from "@docs/Currículo atualizado em inglês 2024-Set.pdf";
+import curriculumPT from "@docs/Currículo atualizado em português 2024-Out.pdf";
+import curriculumEN from "@docs/Currículo atualizado em inglês 2024-Oct.pdf";
 
 export const Curriculum = () => {
   return (
