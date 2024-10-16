@@ -1,4 +1,4 @@
-import { BlogBanner } from "./blogBanner";
+import { Banner } from "./banner";
 import { useQuery } from "@apollo/client";
 import { IPostsData } from "utils/types";
 import { GET_POSTS_QUERY } from "utils/blogApi";
@@ -7,6 +7,7 @@ import { SearchPosts } from "./postsList/searchPosts";
 import { useState } from "react";
 import { AdvicePage } from "@components/advicePage";
 import { faFrown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
+import { BannerCarouselSlides } from "utils/lists";
 
 export const Blog = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -49,7 +50,11 @@ export const Blog = () => {
 
   return (
     <div>
-      <BlogBanner />
+      <Banner
+        imagesList={BannerCarouselSlides}
+        title="Blog"
+        subtitle="Acesse conteúdos essenciais sobre desenvolvimento web e programação."
+      />
       {loading ? (
         <Loading />
       ) : error ? (

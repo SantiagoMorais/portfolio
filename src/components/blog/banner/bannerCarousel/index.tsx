@@ -1,8 +1,11 @@
-import { BannerCaroulselSlides } from "utils/lists";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export const BannerCarousel = () => {
+interface IBannerCarouselProps {
+  imagesList: string[];
+}
+
+export const BannerCarousel = ({ imagesList }: IBannerCarouselProps) => {
   return (
     <Swiper
       className="size-full z-10 absolute top-0 left-0 border-t-2 border-b-2 border-secondary overflow-hidden shadow-allAround shadow-secondary"
@@ -13,7 +16,7 @@ export const BannerCarousel = () => {
     >
       <div className="absolute top-0 left-0 size-full bg-[rgba(0,0,0,.6)] z-10"></div>
 
-      {BannerCaroulselSlides.map((slide) => (
+      {imagesList.map((slide) => (
         <SwiperSlide key={slide} className="size-full">
           <img
             src={slide}
