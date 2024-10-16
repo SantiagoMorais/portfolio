@@ -38,7 +38,7 @@ export const CertificatesSection = () => {
           route="/"
         />
       ) : data && data.certificatesConnection.edges.length > 0 ? (
-        <CertificatesList />
+        <CertificatesList certificates={data.certificatesConnection.edges}/>
       ) : (
         <AdvicePage
           title="Em breve, os certificados estão registrados!"
