@@ -5,8 +5,8 @@ import { Navbar } from "@components/navbar";
 import { Footer } from "@components/footer";
 import { BlogPage } from "./blogPage";
 import { PostPage } from "./postPage";
-import { DevelopmentContentPage } from "./developmentContentPage";
 import { ScrollToTop } from "./scrollToTop";
+import { CertificatesPage } from "./certificatesPage";
 
 export const AppRoutes = () => {
   return (
@@ -17,7 +17,7 @@ export const AppRoutes = () => {
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<PostPage />} />
-        <Route path="/contato" element={<DevelopmentContentPage />} />
+        <Route path="/certificados" element={<CertificatesPage />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
