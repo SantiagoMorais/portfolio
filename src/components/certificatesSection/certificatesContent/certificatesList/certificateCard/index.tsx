@@ -26,7 +26,7 @@ export const CertificateCard = ({ cardInfo }: ICertificateCard) => {
           src={cardInfo.image.url}
           title={cardInfo.title}
           alt={`Certificado do curso: ${cardInfo.title}`}
-          className="min-w-full h-[25rem] md:h-[30rem] object-cover object-center border-b border-primary mb-2"
+          className="min-w-full h-auto md:h-[30rem] object-cover object-center border-b border-primary mb-2"
         />
       </div>
       <h3 className="text-textColor font-medium text-base text-center px-4 mb-2">

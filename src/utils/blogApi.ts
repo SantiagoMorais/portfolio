@@ -152,21 +152,3 @@ export const GET_CERTIFICATES_QUERY = gql`
     }
   }
 `;
-
-export const GET_CERTIFICATES_DURATION_QUERY = gql`
-  query GetCertificatesQuery($after: String, $first: Int!) {
-    ertificatesConnection(after: $after, first: $first) {
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-      edges {
-        node {
-          id
-          courseDuration
-          backendTechnology
-        }
-      }
-    }
-  }
-`;

@@ -121,24 +121,3 @@ export interface ICertificatesConnection {
 export interface ICertificatesData {
   certificatesConnection: ICertificatesConnection;
 }
-
-// Certificate duration query types
-
-export interface ICertificateDurationNode {
-  id: string;
-  courseDuration: string;
-  backendTechnology: string;
-}
-
-export interface ICertificateDurationEdge {
-  node: ICertificateDurationNode;
-}
-
-export interface ICertificatesDurationConnection {
-  pageInfo: IPageInfo;
-  edges: ICertificateDurationEdge[];
-}
-
-export interface ICertificatesDurationData {
-  certificatesConnection: ICertificatesDurationConnection;
-}
