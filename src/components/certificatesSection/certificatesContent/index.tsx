@@ -1,5 +1,4 @@
-import { ICertificateEdge, ICertificatesData } from "@utils/types";
-import { CertificateCard } from "./certificatesList/certificateCard";
+import { ICertificatesData } from "@utils/types";
 import { CertificatesList } from "./certificatesList";
 import { Loading } from "@components/ui/loading";
 import { LoadMoreButton } from "@components/ui/loadMoreButton";

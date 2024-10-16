@@ -2,7 +2,6 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { subtitle } from "@styles/index";
 import { ICertificateNode } from "@utils/types";
-import { Collapse } from "react-collapse";
 
 export interface ICertificateInfo {
   cardInfo: ICertificateNode;
