@@ -1,37 +1,47 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAdd,
+  faEye,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ICertificateNode } from "@utils/types";
 import { useState } from "react";
+import { CertificateInfo } from "./certificateInfo";
 
-interface ICertificateCard {
+export interface ICertificateCard {
   cardInfo: ICertificateNode;
 }
 
 export const CertificateCard = ({ cardInfo }: ICertificateCard) => {
-  const [openInfo, setOpenInfo] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  console.log(isOpen);
 
   return (
-    <li className="bg-secondaryPanel border border-primary rounded-xl overflow-hidden duration-300 flex flex-col items-center gap-2 select-none hover:shadow-allAround hover:shadow-secondary hover:scale-105 relative">
-      <img
-        src={cardInfo.image.url}
-        title={cardInfo.title}
-        alt={`Certificado do curso: ${cardInfo.title}`}
-        className="min-w-full h-[25rem] md:h-[30rem] object-cover object-center border-b border-primary"
-      />
-      <h3 className="text-textColor font-medium text-base text-center px-4 h-full">
+    <li className="relative group overflow-hidden bg-secondaryPanel border border-primary rounded-xl duration-300 flex flex-col justify-between items-center select-none hover:shadow-allAround hover:shadow-secondary hover:scale-105">
+      <div className="relative w-full h-auto">
+        <a className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-none opacity-0 group-hover:opacity-100 flex flex-col items-center size-28 justify-center border-2 border-primary duration-300 rounded-full text-white bg-black bg-opacity-80 shadow-allAround shadow-primary cursor:pointer hover:bg-white hover:border-primary hover:scale-125 hover:text-primary hover:bg-opacity-100" target="_blank" href={cardInfo.certificateFile.url}>
+          <FontAwesomeIcon icon={faEye} className="text-large" />
+        </a>
+        <img
+          src={cardInfo.image.url}
+          title={cardInfo.title}
+          alt={`Certificado do curso: ${cardInfo.title}`}
+          className="min-w-full h-[25rem] md:h-[30rem] object-cover object-center border-b border-primary mb-2"
+        />
+      </div>
+      <h3 className="text-textColor font-medium text-base text-center px-4 mb-2">
         {cardInfo.title}
       </h3>
       <button
-        className="duration-300 group bg-textColor rounded-t-full hover:bg-primary hover:shadow-allAround hover:shadow-secondary"
-        onMouseEnter={() => setOpenInfo(true)}
-        onMouseOut={() => setOpenInfo(false)}
+        className="duration-300 group bg-textColor rounded-t-full hover:bg-primary hover:shadow-allAround hover:shadow-secondary mt-auto z-20 w-24 pt-4 group text-secondaryPanel hover:text-white"
+        onClick={() => setIsOpen(!isOpen)}
       >
         <FontAwesomeIcon
-          icon={faChevronDown}
-          className="px-8 pt-4 duration-300 text-secondaryPanel group-hover:text-white"
+          icon={isOpen ? faTimes : faAdd}
+          className={`transition-transform duration-300 text-base ${isOpen ? "rotate-180" : "rotate-0"}`}
         />
       </button>
-      <div className="absolute bottom-0 left-0 w-full h-0"></div>
+      <CertificateInfo cardInfo={cardInfo} isOpen={isOpen} />
     </li>
   );
 };

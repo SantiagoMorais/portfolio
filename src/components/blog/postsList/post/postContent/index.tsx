@@ -2,7 +2,7 @@ import { ICurrentlyPost } from "@utils/types";
 import parse from "html-react-parser";
 
 export const PostContent = ({ data }: { data: ICurrentlyPost }) => {
-  const updatedData =
+  const updatedDate =
     data && data.post.date.split("-").reverse().join("/");
 
   return (
@@ -23,7 +23,7 @@ export const PostContent = ({ data }: { data: ICurrentlyPost }) => {
       </div>
       <p className="text-center text-textColor font-medium text-medium bg-secondaryPanel px-4 py-2 rounded-md">
         Post criado/atualizado em:{" "}
-        <span className="text-primary">{updatedData}</span>
+        <span className="text-primary">{updatedDate}</span>
       </p>
     </div>
   );
