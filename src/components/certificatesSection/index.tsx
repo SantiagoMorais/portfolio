@@ -6,10 +6,12 @@ import { faFrown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
 import { GET_CERTIFICATES_QUERY } from "@utils/blogApi";
 import { CertificatesCarouselSlides } from "@utils/lists";
 import { ICertificatesData } from "@utils/types";
-import { CertificatesList } from "./certificatesList";
+import { CertificatesContent } from "./certificatesContent";
+import { useState } from "react";
 
 export const CertificatesSection = () => {
-  const { data, error, loading } = useQuery<ICertificatesData>(
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { data, error, loading, fetchMore } = useQuery<ICertificatesData>(
     GET_CERTIFICATES_QUERY,
     {
       variables: {
@@ -17,6 +19,34 @@ export const CertificatesSection = () => {
       },
     }
   );
+
+  const fetchMorePosts = () => {
+    if (error || loading) return;
+
+    setIsLoading(true);
+    const endCursor = data?.certificatesConnection.pageInfo.endCursor;
+
+    fetchMore({
+      variables: {
+        after: endCursor,
+        first: 10,
+      },
+      updateQuery(previousResult, { fetchMoreResult }) {
+        setIsLoading(false);
+        if (!fetchMorePosts) return previousResult;
+
+        return {
+          certificatesConnection: {
+            ...previousResult.certificatesConnection,
+            edges: [
+              ...previousResult.certificatesConnection.edges,
+              ...fetchMoreResult.certificatesConnection.edges,
+            ],
+          },
+        };
+      },
+    });
+  };
 
   return (
     <div>
@@ -38,7 +68,11 @@ export const CertificatesSection = () => {
           route="/"
         />
       ) : data && data.certificatesConnection.edges.length > 0 ? (
-        <CertificatesList certificates={data.certificatesConnection.edges}/>
+        <CertificatesContent
+          data={data}
+          fetchMorePosts={fetchMorePosts}
+          isLoading={isLoading}
+        />
       ) : (
         <AdvicePage
           title="Em breve, os certificados estão registrados!"
