@@ -420,6 +420,14 @@ Assim, enviamos essa função para dentro de algum botão que será responsável
 
 Assim abrangemos todos os pontos da nossa aplicação, até o momento, mas muito mais será desenvolvido.
 
+### Certificates
+
+Essa sessão foca em utilizar também do hygraph e graphql para listar os certificados recebidos até o dia de hoje e automatizar o processo de listagem.
+
+Os certificados são organizados de acordo com a data de emissão.
+
+Os processos de `fetchMore` e listagem de dados foi criado da mesma forma que os posts.
+
 ## Autor
 
 - GitHub - [Felipe Santiago Morais](https://github.com/SantiagoMorais)
