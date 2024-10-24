@@ -14,13 +14,13 @@ export const HeroDescription = () => {
           Felipe Santiago
         </h1>
         <h3 className="font-normal text-base text-textColor transition-colors duration-150 md:text-medium">
-          Desenvolvedor <span className="text-primary font-bold">Frontend</span>
+          Desenvolvedor <span className="text-primary font-bold">Fullstack</span>
         </h3>
       </div>
 
       <p className="font-normal text-small opacity-70 text-textColor mb-5 transition-colors duration-150 md:text-base max-w-[70rem]">
-        Sou apaixonado por criar interfaces amigáveis com React.js e TypeScript.
-        Veja meus projetos aqui e entre em contato comigo nas minhas redes
+        Sou apaixonado por criar interfaces amigáveis com React.js e TypeScript, integrando com banco de dados via Node JS.
+        Veja meus projetos aqui e entre em contato comigo pelas minhas redes
         sociais!
       </p>
 
