@@ -1,8 +1,4 @@
-import {
-  faAdd,
-  faEye,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAdd, faEye, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ICertificateNode } from "@utils/types";
 import { useState } from "react";
@@ -19,7 +15,11 @@ export const CertificateCard = ({ cardInfo }: ICertificateCard) => {
   return (
     <li className="relative group overflow-hidden bg-secondaryPanel border border-primary rounded-xl duration-300 flex flex-col justify-between items-center select-none hover:shadow-allAround hover:shadow-secondary hover:scale-105">
       <div className="relative w-full h-auto">
-        <a className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-none opacity-0 group-hover:opacity-100 flex flex-col items-center size-28 justify-center border-2 border-primary duration-300 rounded-full text-white bg-black bg-opacity-80 shadow-allAround shadow-primary cursor:pointer hover:bg-white hover:border-primary hover:scale-125 hover:text-primary hover:bg-opacity-100" target="_blank" href={cardInfo.certificateFile.url}>
+        <a
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-none opacity-0 group-hover:opacity-100 flex flex-col items-center size-28 justify-center border-2 border-primary duration-300 rounded-full text-white bg-black bg-opacity-80 shadow-allAround shadow-primary cursor:pointer hover:bg-white hover:border-primary hover:scale-125 hover:text-primary hover:bg-opacity-100"
+          target="_blank"
+          href={cardInfo.certificateFile.url}
+        >
           <FontAwesomeIcon icon={faEye} className="text-large" />
         </a>
         <img
