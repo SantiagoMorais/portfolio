@@ -2,8 +2,7 @@ import { ICurrentlyPost } from "@utils/types";
 import parse from "html-react-parser";
 
 export const PostContent = ({ data }: { data: ICurrentlyPost }) => {
-  const updatedDate =
-    data && data.post.date.split("-").reverse().join("/");
+  const updatedDate = data && data.post.date.split("-").reverse().join("/");
 
   return (
     <div className="w-full h-full flex flex-col items-center gap-10">
@@ -16,9 +15,7 @@ export const PostContent = ({ data }: { data: ICurrentlyPost }) => {
           alt={`Imagem do post ${data?.post.title}`}
           id="postBanner"
         />
-
         {data?.post.subtitle && <h3>{data.post.subtitle}</h3>}
-
         {data?.post.text.html && parse(data?.post.text.html)}
       </div>
       <p className="text-center text-textColor font-medium text-medium bg-secondaryPanel px-4 py-2 rounded-md">

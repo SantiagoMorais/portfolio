@@ -10,7 +10,6 @@ export interface ICertificateCard {
 
 export const CertificateCard = ({ cardInfo }: ICertificateCard) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  console.log(isOpen);
 
   return (
     <li className="relative group overflow-hidden bg-secondaryPanel border border-primary rounded-xl duration-300 flex flex-col justify-between items-center select-none hover:shadow-allAround hover:shadow-secondary hover:scale-105">

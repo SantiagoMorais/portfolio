@@ -53,7 +53,7 @@ export const SearchPostsByFilter = () => {
   };
 
   return (
-    <div className="">
+    <div>
       {loading ? (
         <Loading />
       ) : error ? (

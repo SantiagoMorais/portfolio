@@ -30,7 +30,6 @@ export const ProjectsCategories = () => {
           />
         ))}
       </ul>
-
       <ProjectsList data={data} />
     </div>
   );

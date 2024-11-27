@@ -8,12 +8,9 @@ interface IBannerProps {
   subtitle: string;
 }
 
-export const Banner = ({ imagesList, subtitle, title }: IBannerProps) => {
-  return (
-    <div className="size-full relative flex">
-      <BannerCarousel imagesList={imagesList} />
-
-      <BannerDescription subtitle={subtitle} title={title} />
-    </div>
-  );
-};
+export const Banner = ({ imagesList, subtitle, title }: IBannerProps) => (
+  <div className="size-full relative flex">
+    <BannerCarousel imagesList={imagesList} />
+    <BannerDescription subtitle={subtitle} title={title} />
+  </div>
+);

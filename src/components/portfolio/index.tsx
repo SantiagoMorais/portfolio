@@ -3,8 +3,7 @@ import { Hero } from "./hero";
 import { Projects } from "./projects";
 import { Skills } from "./skills";
 
-export const Portfolio = () => {
-  return (
+export const Portfolio = () => (
     <div className="flex-1 flex flex-col items-center">
       <Hero />
       <AboutMe />
@@ -12,4 +11,3 @@ export const Portfolio = () => {
       <Projects />
     </div>
   );
-};

@@ -19,19 +19,17 @@ export const AdvicePage = ({
   route,
   title,
   polygonEmojiMessage,
-}: AdvicePageProps) => {
-  return (
-    <div className=" flex flex-col w-full items-center p-10 pb-20 gap-10">
-      <h2
-        className={`text-textColor text-large md:text-extraLarge text-center pb-2 ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
-      >
-        {title}
-      </h2>
-      <PolygonEmoji icon={icon} message={polygonEmojiMessage} />
-      <p className="text-textColor text-base md:text-medium text-center">
-        {adviceMessage}
-      </p>
-      <ReturnButton buttonText={buttonText} route={route} />
-    </div>
-  );
-};
+}: AdvicePageProps) => (
+  <div className=" flex flex-col w-full items-center p-10 pb-20 gap-10">
+    <h2
+      className={`text-textColor text-large md:text-extraLarge text-center pb-2 ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
+    >
+      {title}
+    </h2>
+    <PolygonEmoji icon={icon} message={polygonEmojiMessage} />
+    <p className="text-textColor text-base md:text-medium text-center">
+      {adviceMessage}
+    </p>
+    <ReturnButton buttonText={buttonText} route={route} />
+  </div>
+);

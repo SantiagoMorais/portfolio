@@ -1,5 +1,3 @@
 import { Portfolio } from "@components/portfolio";
 
-export const PortfolioPage = () => {
-  return <Portfolio />;
-};
+export const PortfolioPage = () => <Portfolio />;

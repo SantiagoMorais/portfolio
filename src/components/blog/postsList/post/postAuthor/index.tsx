@@ -7,11 +7,9 @@ type PostAuthorProps = {
   data: IAuthorInfo | undefined;
 };
 
-export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => {
-  console.log(data);
-
-  return (
-    data && (
+export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => (
+  <>
+    {data && (
       <div className="flex flex-col gap-6 w-full px-5 items-center sm:flex-row sm:px-20 sm:justify-center sm:gap-10 sm:flex-wrap pt-10 relative before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r from-transparent via-primary to-transparent before:top-0 before:left-0">
         <img
           src={data.avatar.url}
@@ -26,7 +24,6 @@ export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => {
           <p className="px-5 py-2 bg-secondaryPanel rounded-xl text-textColor first-letter:uppercase text-small w-full">
             {data.description}
           </p>
-
           <div className="flex flex-col items-center gap-2 sm:w-">
             <p className="font-medium text-textColor first-letter:capitalize text-center sm:hidden">
               {data.github
@@ -60,6 +57,6 @@ export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => {
           </div>
         </div>
       </div>
-    )
-  );
-};
+    )}
+  </>
+);

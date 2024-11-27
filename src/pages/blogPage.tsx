@@ -1,5 +1,3 @@
 import { Blog } from "@components/blog";
 
-export const BlogPage = () => {
-  return <Blog />;
-};
+export const BlogPage = () => <Blog />;
