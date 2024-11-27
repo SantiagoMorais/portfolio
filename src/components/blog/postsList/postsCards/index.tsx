@@ -16,15 +16,17 @@ export const PostsCards = ({ data }: { data: IPostsData | undefined }) => (
           alt="Imagem do artigo"
           className="w-full h-[25rem] md:h-[30rem] object-cover object-center border-b-2 border-primary"
         />
-        <div className="px-5 py-4 md:px-10 md:py-5 flex flex-col w-full border-b border-secondary">
-          <h3 className="first-letter:capitalize text-base text-primary font-bold">
-            {post.node.title}
-          </h3>
-          {post.node.subtitle && (
-            <h4 className="first-letter:capitalize text-textColor text-small mb-10">
-              {post.node.subtitle}
-            </h4>
-          )}
+        <div className="px-5 py-4 flex-1 justify-between md:px-10 md:py-5 flex flex-col w-full border-b border-secondary">
+          <div className="w-full flex flex-col">
+            <h3 className="first-letter:capitalize text-base text-primary font-bold">
+              {post.node.title}
+            </h3>
+            {post.node.subtitle && (
+              <h4 className="first-letter:capitalize text-textColor text-small mb-10">
+                {post.node.subtitle}
+              </h4>
+            )}
+          </div>
           <div className="flex justify-center">
             <p className="text-small text=cemter text-white uppercase transition-opacity inline-block font-medium bg-secondary rounded-full px-5 py-2 text-center">
               Ler publicação{" "}
