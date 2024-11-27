@@ -41,12 +41,13 @@ body {
 }
 
 #postContent {
+  h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply text-textColor font-bold text-medium mb-5 relative first-letter:capitalize inline-block md:text-large md:w-[48%];
+    @apply text-textColor font-bold text-medium mb-5 relative first-letter:capitalize inline-block md:text-large;
   }
 
   h2::after,
@@ -59,7 +60,7 @@ body {
   }
 
   p {
-    @apply text-justify text-base w-fit mb-8 indent-20 leading-snug text-textColor last-of-type:mb-0;
+    @apply text-justify text-base w-fit mb-8 leading-snug text-textColor last-of-type:mb-0;
 
     a {
       @apply text-primary underline font-medium duration-300 hover:opacity-70;
@@ -115,15 +116,7 @@ body {
     @apply bg-secondaryPanel border border-primary md:py-2 md:px-5;
   }
 
-  table thead tr th p {
-    @apply text-center indent-0 w-full;
-  }
-
   tbody tr td {
-    @apply border border-textColor md:py-2 md:px-5;
-  }
-
-  tbody tr td p {
-    @apply text-center indent-0 w-full;
+    @apply border border-textColor md:py-2 md:px-5 w-full text-center;
   }
 }
