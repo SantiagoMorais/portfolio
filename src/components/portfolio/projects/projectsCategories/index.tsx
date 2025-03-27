@@ -16,12 +16,10 @@ export const ProjectsCategories = () => {
 
   const { data, isLoading, isLoadingError } = useGitHubAutomatedRepos(
     "SantiagoMorais",
-    "react"
+    currentCategory
   );
 
   const handleCategory = (category: TCategory) => setCurrentCategory(category);
-
-  console.log(data);
 
   const content = () => {
     if (isLoading)
