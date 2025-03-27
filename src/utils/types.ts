@@ -68,32 +68,3 @@ export interface IPostsFilters {
     title: string;
   }[];
 }
-
-// Certificates query types
-
-export interface ICertificateNode {
-  id: string;
-  title: string;
-  description: string;
-  courseDuration: string;
-  dateConclusion: string;
-  certificateFile: {
-    url: string;
-  };
-  image: {
-    url: string;
-  };
-}
-
-export interface ICertificateEdge {
-  node: ICertificateNode;
-}
-
-export interface ICertificatesConnection {
-  pageInfo: IPageInfo;
-  edges: ICertificateEdge[];
-}
-
-export interface ICertificatesData {
-  certificatesConnection: ICertificatesConnection;
-}

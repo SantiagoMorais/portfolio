@@ -6,7 +6,6 @@ import { Footer } from "@components/footer";
 import { BlogPage } from "./blogPage";
 import { PostPage } from "./postPage";
 import { ScrollToTop } from "./scrollToTop";
-import { CertificatesPage } from "./certificatesPage";
 
 export const AppRoutes = () => (
   <BrowserRouter>
@@ -16,7 +15,6 @@ export const AppRoutes = () => (
       <Route path="/" element={<PortfolioPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/blog/:id" element={<PostPage />} />
-      <Route path="/certificados" element={<CertificatesPage />} />
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
     <Footer />

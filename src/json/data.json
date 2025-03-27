@@ -1,8 +1,7 @@
 {
   "navbar": [
     { "id": "portfolio", "name": "Portfólio", "path": "/" },
-    { "id": "blog", "name": "Blog", "path": "/blog" },
-    { "id": "certificates", "name": "Certificados", "path": "/certificados" }
+    { "id": "blog", "name": "Blog", "path": "/blog" }
   ],
   "aboutMeDescription": [
     {

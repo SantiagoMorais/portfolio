@@ -1,7 +1,11 @@
 import { IGithubRepos } from "github-automated-repos";
 import { ProjectCard } from "./projectCard";
 
-export const ProjectsList = ({ data }: { data: IGithubRepos[] | undefined }) => (
+export const ProjectsList = ({
+  data,
+}: {
+  data: IGithubRepos[] | undefined;
+}) => (
   <>
     {data && (
       <div className="flex w-full flex-wrap justify-center gap-8">
