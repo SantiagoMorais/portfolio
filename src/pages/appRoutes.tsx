@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PortfolioPage } from "./portfolioPage";
-import { PageNotFound } from "./pageNotFound";
-import { Navbar } from "@components/navbar";
+import { Blog } from "@components/blog";
+import { Post } from "@components/blog/postsList/post";
 import { Footer } from "@components/footer";
-import { BlogPage } from "./blogPage";
-import { PostPage } from "./postPage";
+import { Navbar } from "@components/navbar";
+import { Portfolio } from "@components/portfolio";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { PageNotFound } from "./pageNotFound";
 import { ScrollToTop } from "./scrollToTop";
 
 export const AppRoutes = () => (
@@ -12,9 +12,9 @@ export const AppRoutes = () => (
     <Navbar />
     <ScrollToTop />
     <Routes>
-      <Route path="/" element={<PortfolioPage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/blog/:id" element={<PostPage />} />
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:id" element={<Post />} />
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
     <Footer />
