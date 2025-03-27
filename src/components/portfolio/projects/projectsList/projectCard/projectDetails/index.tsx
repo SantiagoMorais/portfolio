@@ -1,9 +1,9 @@
-import { ProjectProps } from "utils/types";
+import { IGithubRepos } from "github-automated-repos";
 import { ProjectDescription } from "./projectDescription";
-import { ProjectTopics } from "./projectTopics";
 import { ProjectLinks } from "./projectLinks";
+import { ProjectTopics } from "./projectTopics";
 
-export const ProjectDetails = ({ project }: ProjectProps) => (
+export const ProjectDetails = ({ project }: {project: IGithubRepos}) => (
   <div className="flex flex-col items-center h-fit gap-5">
     <ProjectDescription project={project} />
     <ProjectTopics project={project} />

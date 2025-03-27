@@ -1,6 +1,6 @@
-import { ProjectProps } from "utils/types";
+import { IGithubRepos } from "github-automated-repos";
 
-export const ProjectTopics = ({ project }: ProjectProps) => {
+export const ProjectTopics = ({ project }: {project: IGithubRepos}) => {
   const hiddenIcons: string[] = ["portfolio", "contextapi", "tests"];
 
   return (

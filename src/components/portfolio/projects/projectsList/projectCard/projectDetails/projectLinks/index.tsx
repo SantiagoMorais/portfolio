@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ImageDialog } from "./imageDialog";
-import { ProjectProps } from "utils/types";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faRssSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IGithubRepos } from "github-automated-repos";
+import { ImageDialog } from "./imageDialog";
 
-export const ProjectLinks = ({ project }: ProjectProps) => (
+export const ProjectLinks = ({ project }: {project: IGithubRepos}) => (
   <>
     <p className="cursor-default font-bold text-textColor text-center mb-2">
       Acesse o projeto:
@@ -36,7 +36,7 @@ export const ProjectLinks = ({ project }: ProjectProps) => (
       >
         <FontAwesomeIcon icon={faRssSquare} className="text-medium" />
       </a>
-      <ImageDialog projectImage={project.banner} projectName={project.name} />
+      <ImageDialog projectImage={project.banner[0]} projectName={project.name} />
     </div>
   </>
 );

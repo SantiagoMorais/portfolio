@@ -1,13 +1,11 @@
-export interface IProjectsListProps {
-  data: {
-    banner: string;
-    description: string;
-    homepage: string;
-    html_url: string;
-    id: number;
-    name: string;
-    topics: string[];
-  }[];
+export interface IGithubRepos {
+  banner: string;
+  description: string;
+  homepage: string;
+  html_url: string;
+  id: number;
+  name: string;
+  topics: string[];
 }
 
 export type ProjectProps = {
