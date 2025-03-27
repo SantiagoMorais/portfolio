@@ -11,7 +11,7 @@ export const SocialLink: React.FC<ILink> = ({ link }) => (
       <li key={link.id} title={link.title}>
         <a
           href={link.link}
-          className="bg-secondary text-white transition duration-300 opacity-60 hover:opacity-100 flex items-center group p-4 md:p-6"
+          className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
           target="_blank"
           style={{
             clipPath:

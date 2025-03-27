@@ -9,7 +9,7 @@ interface IBannerProps {
 }
 
 export const Banner = ({ imagesList, subtitle, title }: IBannerProps) => (
-  <div className="size-full relative flex">
+  <div className="relative flex size-full">
     <BannerCarousel imagesList={imagesList} />
     <BannerDescription subtitle={subtitle} title={title} />
   </div>

@@ -18,14 +18,14 @@ export const SocialMediaLinks = ({
       {isArray ? (
         <div
           className={twMerge(
-            "flex gap-5 mt-5 items-center flex-wrap",
+            "mt-5 flex flex-wrap items-center gap-5",
             className
           )}
         >
-          <p className="text-textColor mr-5 text-small text-center transition-colors duration-150 md:text-base">
+          <p className="mr-5 text-center text-small text-textColor transition-colors duration-150 md:text-base">
             Cheque minhas redes:
           </p>
-          <ul className="flex gap-2 items-center flex-wrap md:gap-5">
+          <ul className="flex flex-wrap items-center gap-2 md:gap-5">
             {(socialMedia as SocialMediaType[]).map((link) => (
               <SocialLink key={link.id} link={link} />
             ))}

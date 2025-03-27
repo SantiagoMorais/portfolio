@@ -15,13 +15,13 @@ export const FilterForm = () => {
 
   return (
     <div
-      className="flex flex-col flex-1 relative gap-2"
+      className="relative flex flex-1 flex-col gap-2"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <div className="flex flex-1 md:w-full items-center min-w-0 cursor-pointer duration-300 hover:shadow-allAround hover:shadow-secondary bg-secondaryPanel border-primary border rounded-md">
+      <div className="flex min-w-0 flex-1 cursor-pointer items-center rounded-md border border-primary bg-secondaryPanel duration-300 hover:shadow-allAround hover:shadow-secondary md:w-full">
         <p
-          className={`h-16 flex items-center px-4 flex-1 text-textColor min-w-0 ${!filter && "opacity-50"}`}
+          className={`flex h-16 min-w-0 flex-1 items-center px-4 text-textColor ${!filter && "opacity-50"}`}
         >
           {!filter ? "Selecione um filtro" : filter}
         </p>

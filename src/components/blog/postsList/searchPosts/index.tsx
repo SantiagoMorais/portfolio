@@ -22,7 +22,7 @@ export const SearchPosts = ({
   const { filter } = useFilterPosts();
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex w-full flex-col">
       <div className="flex flex-col gap-4 p-4 pt-10 md:flex-row md:px-10">
         <TitleForm />
         <FilterForm />

@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  @apply text-small bg-bg;
+  @apply bg-bg text-small;
 }
 
 .ReactCollapse--collapse {
@@ -47,7 +47,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply text-textColor font-bold text-medium mb-5 relative first-letter:capitalize inline-block md:text-large;
+    @apply relative mb-5 inline-block text-medium font-bold text-textColor first-letter:capitalize md:text-large;
   }
 
   h2::after,
@@ -56,51 +56,51 @@ body {
   h5::after,
   h6::after {
     content: "";
-    @apply absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary to-transparent;
+    @apply absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-primary to-transparent;
   }
 
   p {
-    @apply text-justify text-base w-fit mb-8 leading-snug text-textColor last-of-type:mb-0;
+    @apply mb-8 w-fit text-justify text-base leading-snug text-textColor last-of-type:mb-0;
 
     a {
-      @apply text-primary underline font-medium duration-300 hover:opacity-70;
+      @apply font-medium text-primary underline duration-300 hover:opacity-70;
     }
   }
 
   blockquote {
-    @apply border-l-4 border-primary bg-secondaryPanel text-primary p-4 rounded-r-lg text-small mb-4;
+    @apply mb-4 rounded-r-lg border-l-4 border-primary bg-secondaryPanel p-4 text-small text-primary;
   }
 
   ul {
-    @apply list-disc ml-8 mb-4 text-textColor text-base;
+    @apply mb-4 ml-8 list-disc text-base text-textColor;
   }
 
   ol {
-    @apply list-decimal ml-8 mb-4 text-textColor text-base;
+    @apply mb-4 ml-8 list-decimal text-base text-textColor;
   }
 
   img {
-    @apply w-fit h-fit max-w-[50%] max-h-[30rem] block border border-primary shadow-allAround shadow-secondary rounded-lg mb-8 m-auto object-cover object-center;
+    @apply m-auto mb-8 block h-fit max-h-[30rem] w-fit max-w-[50%] rounded-lg border border-primary object-cover object-center shadow-allAround shadow-secondary;
   }
 
   #postBanner {
-    @apply w-full max-w-full md:max-w-[80rem] md:h-fit md:max-h-full;
+    @apply w-full max-w-full md:h-fit md:max-h-full md:max-w-[80rem];
   }
 
   iframe {
-    @apply w-[60vw] max-w-[80rem] h-[calc(60vw*9/16)] max-h-[calc(80rem*9/16)] rounded-lg;
+    @apply h-[calc(60vw*9/16)] max-h-[calc(80rem*9/16)] w-[60vw] max-w-[80rem] rounded-lg;
   }
 
   pre {
-    @apply w-full bg-panel border border-primary rounded-lg overflow-auto mb-6 text-textColor md:w-fit md:mb-10;
+    @apply mb-6 w-full overflow-auto rounded-lg border border-primary bg-panel text-textColor md:mb-10 md:w-fit;
 
     code {
-      @apply font-mono text-[3dvw] font-normal md:text-small border-0 bg-panel p-4;
+      @apply border-0 bg-panel p-4 font-mono text-[3dvw] font-normal md:text-small;
     }
   }
 
   code {
-    @apply font-mono text-small text-primary md:text-base bg-panel font-semibold border border-secondary rounded-md px-2 border-none;
+    @apply rounded-md border border-none border-secondary bg-panel px-2 font-mono text-small font-semibold text-primary md:text-base;
   }
 
   pre code {
@@ -109,14 +109,14 @@ body {
   }
 
   table {
-    @apply w-full my-10 md:w-fit;
+    @apply my-10 w-full md:w-fit;
   }
 
   table thead tr th {
-    @apply bg-secondaryPanel border border-primary md:py-2 md:px-5;
+    @apply border border-primary bg-secondaryPanel md:px-5 md:py-2;
   }
 
   tbody tr td {
-    @apply border border-textColor md:py-2 md:px-5 w-full text-center;
+    @apply w-full border border-textColor text-center md:px-5 md:py-2;
   }
 }

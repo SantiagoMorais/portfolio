@@ -12,10 +12,10 @@ export const CertificateCard = ({ cardInfo }: ICertificateCard) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <li className="relative group overflow-hidden bg-secondaryPanel border border-primary rounded-xl duration-300 flex flex-col justify-between items-center select-none hover:shadow-allAround hover:shadow-secondary hover:scale-105">
-      <div className="relative w-full h-auto">
+    <li className="group relative flex select-none flex-col items-center justify-between overflow-hidden rounded-xl border border-primary bg-secondaryPanel duration-300 hover:scale-105 hover:shadow-allAround hover:shadow-secondary">
+      <div className="relative h-auto w-full">
         <a
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-none opacity-0 group-hover:opacity-100 flex flex-col items-center size-28 justify-center border-2 border-primary duration-300 rounded-full text-white bg-black bg-opacity-80 shadow-allAround shadow-primary cursor:pointer hover:bg-white hover:border-primary hover:scale-125 hover:text-primary hover:bg-opacity-100"
+          className="cursor:pointer absolute left-1/2 top-1/2 flex size-28 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-2 border-primary bg-black bg-opacity-80 bg-none text-white opacity-0 shadow-allAround shadow-primary duration-300 hover:scale-125 hover:border-primary hover:bg-white hover:bg-opacity-100 hover:text-primary group-hover:opacity-100"
           target="_blank"
           href={cardInfo.certificateFile.url}
         >
@@ -25,19 +25,19 @@ export const CertificateCard = ({ cardInfo }: ICertificateCard) => {
           src={cardInfo.image.url}
           title={cardInfo.title}
           alt={`Certificado do curso: ${cardInfo.title}`}
-          className="min-w-full h-auto md:h-[30rem] object-cover object-center border-b border-primary mb-2"
+          className="mb-2 h-auto min-w-full border-b border-primary object-cover object-center md:h-[30rem]"
         />
       </div>
-      <h3 className="text-textColor font-medium text-base text-center px-4 mb-2">
+      <h3 className="mb-2 px-4 text-center text-base font-medium text-textColor">
         {cardInfo.title}
       </h3>
       <button
-        className="duration-300 group bg-textColor rounded-t-full hover:bg-primary hover:shadow-allAround hover:shadow-secondary mt-auto z-20 w-24 pt-4 group text-secondaryPanel hover:text-white"
+        className="group z-20 mt-auto w-24 rounded-t-full bg-textColor pt-4 text-secondaryPanel duration-300 hover:bg-primary hover:text-white hover:shadow-allAround hover:shadow-secondary"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FontAwesomeIcon
           icon={isOpen ? faTimes : faAdd}
-          className={`transition-transform duration-300 text-base ${isOpen ? "rotate-180" : "rotate-0"}`}
+          className={`text-base transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
         />
       </button>
       <CertificateInfo cardInfo={cardInfo} isOpen={isOpen} />

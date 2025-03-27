@@ -3,16 +3,16 @@ import { ScrollButton } from "@components/ui/scrollButton";
 import { AppRoutes } from "@pages/appRoutes";
 
 export const App = () => (
-  <section className="p-10 pb-20 w-full overflow-x-hidden flex justify-center transition-colors duration-150 md:px-20 md:py-24 shadow">
+  <section className="flex w-full justify-center overflow-x-hidden p-10 pb-20 shadow transition-colors duration-150 md:px-20 md:py-24">
     <div
       style={{
         background: `url(${customBg}) no-repeat center center`,
         backgroundSize: "cover",
       }}
-      className="size-full fixed z-0 opacity-40 top-0 transition-colors duration-150"
+      className="fixed top-0 z-0 size-full opacity-40 transition-colors duration-150"
     />
     <div
-      className="z-10 w-full max-w-screen-2xl h-full bg-panel shadow-lg shadow-black ring-1 ring-secondaryPanel flex flex-col min-h-dvh"
+      className="z-10 flex h-full min-h-dvh w-full max-w-screen-2xl flex-col bg-panel shadow-lg shadow-black ring-1 ring-secondaryPanel"
       style={{ transition: "background-color .15s, box-shadow .15s" }}
     >
       <AppRoutes />

@@ -4,18 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IGithubRepos } from "github-automated-repos";
 import { ImageDialog } from "./imageDialog";
 
-export const ProjectLinks = ({ project }: {project: IGithubRepos}) => (
+export const ProjectLinks = ({ project }: { project: IGithubRepos }) => (
   <>
-    <p className="cursor-default font-bold text-textColor text-center mb-2">
+    <p className="mb-2 cursor-default text-center font-bold text-textColor">
       Acesse o projeto:
     </p>
-    <div className="flex gap-5 items-center flex-wrap">
+    <div className="flex flex-wrap items-center gap-5">
       {project.homepage !== "" && (
         <a
           href={project.html_url}
           target="_blank"
           title="Repositório Github"
-          className="bg-secondary text-white transition duration-300 opacity-60 hover:opacity-100 flex items-center group p-4 md:p-6"
+          className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
           style={{
             clipPath:
               "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -28,7 +28,7 @@ export const ProjectLinks = ({ project }: {project: IGithubRepos}) => (
         href={project.homepage}
         target="_blank"
         title="Página web"
-        className="bg-secondary text-white transition duration-300 opacity-60 hover:opacity-100 flex items-center group p-4 md:p-6"
+        className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
         style={{
           clipPath:
             "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -36,7 +36,10 @@ export const ProjectLinks = ({ project }: {project: IGithubRepos}) => (
       >
         <FontAwesomeIcon icon={faRssSquare} className="text-medium" />
       </a>
-      <ImageDialog projectImage={project.banner[0]} projectName={project.name} />
+      <ImageDialog
+        projectImage={project.banner[0]}
+        projectName={project.name}
+      />
     </div>
   </>
 );

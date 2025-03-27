@@ -9,15 +9,15 @@ interface IPolygonEmojiProps {
 
 export const PolygonEmoji = ({ icon, message }: IPolygonEmojiProps) => (
   <div
-    className="max-w-[60rem] max-h-[60rem] size-contain p-20 flex flex-col items-center justify-center"
+    className="size-contain flex max-h-[60rem] max-w-[60rem] flex-col items-center justify-center p-20"
     style={{
       background: `url(${vector}) no-repeat center center`,
       backgroundSize: "contain",
     }}
   >
-    <FontAwesomeIcon icon={icon} className="size-2/3 text-white m-10" />
+    <FontAwesomeIcon icon={icon} className="m-10 size-2/3 text-white" />
     {message && (
-      <p className="text-center text-large md:text-giant font-extrabold text-white mb-10 leading-none">
+      <p className="mb-10 text-center text-large font-extrabold leading-none text-white md:text-giant">
         {message}
       </p>
     )}

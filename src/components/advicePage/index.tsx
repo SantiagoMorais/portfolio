@@ -20,14 +20,14 @@ export const AdvicePage = ({
   title,
   polygonEmojiMessage,
 }: AdvicePageProps) => (
-  <div className=" flex flex-col w-full items-center p-10 pb-20 gap-10">
+  <div className="flex w-full flex-col items-center gap-10 p-10 pb-20">
     <h2
-      className={`text-textColor text-large md:text-extraLarge text-center pb-2 ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
+      className={`pb-2 text-center text-large text-textColor md:text-extraLarge ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
     >
       {title}
     </h2>
     <PolygonEmoji icon={icon} message={polygonEmojiMessage} />
-    <p className="text-textColor text-base md:text-medium text-center">
+    <p className="text-center text-base text-textColor md:text-medium">
       {adviceMessage}
     </p>
     <ReturnButton buttonText={buttonText} route={route} />

@@ -12,8 +12,8 @@ export const PostsNotFound = ({ searchType }: PostNotFoundProps) => {
   const { filter } = useFilterPosts();
 
   return (
-    <div className="px-5 py-14 flex flex-col gap-5 items-center">
-      <h3 className="text-center font-medium text-textColor text-medium">
+    <div className="flex flex-col items-center gap-5 px-5 py-14">
+      <h3 className="text-center text-medium font-medium text-textColor">
         {searchType === "searchingByTitle" ? (
           <>
             Posts com o título{" "}

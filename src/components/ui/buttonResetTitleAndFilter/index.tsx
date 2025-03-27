@@ -14,10 +14,10 @@ export const ButtonResetTitleAndFilter = ({ message }: { message: string }) => {
   };
 
   return (
-    <div className="flex justify-center leading-tight px-5 md:px-10">
+    <div className="flex justify-center px-5 leading-tight md:px-10">
       <button
         onClick={() => handleResetInput()}
-        className={`flex items-center gap-x-5 text-base md:text-medium text-textColor group text-center ${button({ withBackground: "primaryColor" })}`}
+        className={`group flex items-center gap-x-5 text-center text-base text-textColor md:text-medium ${button({ withBackground: "primaryColor" })}`}
       >
         <FontAwesomeIcon
           icon={faUndo}

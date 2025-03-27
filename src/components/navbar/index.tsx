@@ -21,11 +21,11 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className="w-full flex justify-center p-10 md:px-20 md:py-16">
-      <div className="max-w-screen-2xl w-full flex items-center flex-col gap-4 md:flex-row md:justify-between">
+    <header className="flex w-full justify-center p-10 md:px-20 md:py-16">
+      <div className="flex w-full max-w-screen-2xl flex-col items-center gap-4 md:flex-row md:justify-between">
         <Link
           to="/"
-          className="duration-300 hover:opacity-70 hover:scale-110 cursor-pointer"
+          className="cursor-pointer duration-300 hover:scale-110 hover:opacity-70"
         >
           <Logo className="text-large first-letter:text-extraLarge" />
         </Link>
@@ -34,7 +34,7 @@ export const Navbar = () => {
           {isAccordion ? (
             <AccordionMenu isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
           ) : (
-            <ul className="flex gap-4 items-center">
+            <ul className="flex items-center gap-4">
               <ThemeToggleButton />
               {navbar &&
                 navbar.map((item) => (

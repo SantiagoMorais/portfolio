@@ -11,7 +11,7 @@ type ReturnButtonProps = {
 export const ReturnButton = ({ buttonText, route }: ReturnButtonProps) => (
   <Link
     to={route}
-    className={`flex items-center gap-5 text-medium text-textColor group ${button({ withBackground: "primaryColor" })}`}
+    className={`group flex items-center gap-5 text-medium text-textColor ${button({ withBackground: "primaryColor" })}`}
   >
     <FontAwesomeIcon
       icon={faUndo}

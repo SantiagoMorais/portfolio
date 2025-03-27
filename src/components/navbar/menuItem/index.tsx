@@ -16,7 +16,7 @@ export const MenuItem = ({ navbarInfo }: MenuItemProps) => (
       className={({ isActive }) =>
         button({
           afterHover: !isActive ? "primary" : "secondary",
-          className: `whitespace-nowrap mx-4 last-of-type:mr-0 last-of-type:ml-4 ${isActive ? "text-primary" : "text-textColor"}`,
+          className: `mx-4 whitespace-nowrap last-of-type:ml-4 last-of-type:mr-0 ${isActive ? "text-primary" : "text-textColor"}`,
         })
       }
     >

@@ -14,7 +14,7 @@ export const CertificatesContent = ({
   fetchMorePosts,
   isLoading,
 }: ICertificatesContent) => (
-  <div className="flex flex-col items-center pt-10 px-5 pb-16 gap-10 md:pb-20 md:px-10">
+  <div className="flex flex-col items-center gap-10 px-5 pb-16 pt-10 md:px-10 md:pb-20">
     {isLoading ? (
       <Loading />
     ) : (

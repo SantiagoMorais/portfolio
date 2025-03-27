@@ -21,12 +21,12 @@ export const AccordionContent = ({
 
   return (
     <Collapse isOpened={isOpen}>
-      <div className="flex flex-col bg-secondaryPanel py-2 px-2 rounded-md border border-primary">
+      <div className="flex flex-col rounded-md border border-primary bg-secondaryPanel px-2 py-2">
         {data.filters.map((filter) => (
           <button
             onClick={() => handleSelectFilter(filter.title)}
             key={filter.id}
-            className="text-small relative text-textColor w-full flex px-4 py-2 rounded-md duration-300 mb-1 last-of-type:mb-0 hover:bg-secondary after:border-b after:border-secondary after:w-full after:absolute after:bottom-0 after:left-0 after:last-of-type:border-b-0 after:duration-300 hover:after:opacity-0"
+            className="relative mb-1 flex w-full rounded-md px-4 py-2 text-small text-textColor duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:border-b after:border-secondary after:duration-300 last-of-type:mb-0 after:last-of-type:border-b-0 hover:bg-secondary hover:after:opacity-0"
           >
             {filter.title}
           </button>

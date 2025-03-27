@@ -10,22 +10,22 @@ type PostAuthorProps = {
 export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => (
   <>
     {data && (
-      <div className="flex flex-col gap-6 w-full px-5 items-center sm:flex-row sm:px-20 sm:justify-center sm:gap-10 sm:flex-wrap pt-10 relative before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r from-transparent via-primary to-transparent before:top-0 before:left-0">
+      <div className="relative flex w-full flex-col items-center gap-6 from-transparent via-primary to-transparent px-5 pt-10 before:absolute before:left-0 before:top-0 before:h-[2px] before:w-full before:bg-gradient-to-r sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10 sm:px-20">
         <img
           src={data.avatar.url}
           alt={`Avatar do autor ${data.name}`}
           className="size-[60dvw] rounded-full border-2 border-secondary shadow-allAround shadow-secondary sm:size-[25rem]"
         />
-        <div className="flex flex-col items-center gap-5 sm:items-start sm:w-full sm:max-w-[60rem]">
-          <h4 className="text-medium text-center capitalize text-textColor font-medium $">
-            <span className="first-letter:uppercase text-primary">Autor:</span>{" "}
+        <div className="flex flex-col items-center gap-5 sm:w-full sm:max-w-[60rem] sm:items-start">
+          <h4 className="$ text-center text-medium font-medium capitalize text-textColor">
+            <span className="text-primary first-letter:uppercase">Autor:</span>{" "}
             {data.name}
           </h4>
-          <p className="px-5 py-2 bg-secondaryPanel rounded-xl text-textColor first-letter:uppercase text-small w-full">
+          <p className="w-full rounded-xl bg-secondaryPanel px-5 py-2 text-small text-textColor first-letter:uppercase">
             {data.description}
           </p>
-          <div className="flex flex-col items-center gap-2 sm:w-">
-            <p className="font-medium text-textColor first-letter:capitalize text-center sm:hidden">
+          <div className="sm:w- flex flex-col items-center gap-2">
+            <p className="text-center font-medium text-textColor first-letter:capitalize sm:hidden">
               {data.github
                 ? !data.linkedin
                   ? "Acesse meu Github:"

@@ -41,7 +41,7 @@ export const Post = () => {
       ) : !data?.post ? (
         pageNotFound
       ) : (
-        <div className="w-full h-full pb-10 flex flex-col items-center gap-10">
+        <div className="flex h-full w-full flex-col items-center gap-10 pb-10">
           <PostContent data={data} />
           <ReturnButton buttonText="Retornar" route="/blog" />
           <PostAuthor data={data?.post.author} />

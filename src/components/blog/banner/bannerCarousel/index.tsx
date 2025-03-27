@@ -7,13 +7,13 @@ interface IBannerCarouselProps {
 
 export const BannerCarousel = ({ imagesList }: IBannerCarouselProps) => (
   <Swiper
-    className="size-full z-10 absolute top-0 left-0 border-t-2 border-b-2 border-secondary overflow-hidden shadow-allAround shadow-secondary"
+    className="absolute left-0 top-0 z-10 size-full overflow-hidden border-b-2 border-t-2 border-secondary shadow-allAround shadow-secondary"
     modules={[Autoplay]}
     autoplay={{ disableOnInteraction: false, delay: 5000 }}
     loop={true}
     allowTouchMove={false}
   >
-    <div className="absolute top-0 left-0 size-full bg-[rgba(0,0,0,.6)] z-10"></div>
+    <div className="absolute left-0 top-0 z-10 size-full bg-[rgba(0,0,0,.6)]"></div>
     {imagesList.map((slide) => (
       <SwiperSlide key={slide} className="size-full">
         <img

@@ -11,7 +11,7 @@ export const Logo = ({ className, iconSize, padding }: LogoProps) => (
   <div className={twMerge("flex", padding)}>
     <p
       className={twJoin(
-        "font-extrabold mt-2 select-none text-textColor transition-colors duration-150",
+        "mt-2 select-none font-extrabold text-textColor transition-colors duration-150",
         className
       )}
     >

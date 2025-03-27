@@ -2,9 +2,9 @@ import { paragraph, subtitle } from "@styles/index";
 import { projectRepository } from "utils/variables";
 
 export const ProjectHeader = () => (
-  <div className="flex flex-col w-full gap-5 px-5">
+  <div className="flex w-full flex-col gap-5 px-5">
     <h2
-      className={`text-textColor text-large ${subtitle({ afterContent: "primary" })}`}
+      className={`text-large text-textColor ${subtitle({ afterContent: "primary" })}`}
     >
       Meus <span className="text-primary">Projetos</span>
     </h2>
@@ -20,7 +20,7 @@ export const ProjectHeader = () => (
       <a
         href={projectRepository}
         target="_blank"
-        className="text-primary font-bold duration-300 hover:text-textColor hover:tracking-wider"
+        className="font-bold text-primary duration-300 hover:tracking-wider hover:text-textColor"
         style={{ filter: "drop-shadow(0 0 10px #19584f)" }}
       >
         Clicando Aqui!

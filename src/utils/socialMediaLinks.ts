@@ -1,5 +1,10 @@
 import { createId } from "@paralleldrive/cuid2";
-import { email, githubProfile, linkedinUrl, whatsAppLink } from "utils/variables";
+import {
+  email,
+  githubProfile,
+  linkedinUrl,
+  whatsAppLink,
+} from "utils/variables";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithub,

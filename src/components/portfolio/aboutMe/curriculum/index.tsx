@@ -13,7 +13,7 @@ export const Curriculum = () => (
     >
       Baixe o meu <span className="text-primary">Currículo</span>
     </h2>
-    <div className="flex gap-8 w-full justify-center flex-wrap md:gap-10">
+    <div className="flex w-full flex-wrap justify-center gap-8 md:gap-10">
       <a
         className={button({
           withBackground: "primaryColor",

@@ -36,25 +36,25 @@ export const TitleForm = () => {
       onSubmit={handleSubmit(handleSearchPost)}
       className="flex flex-1 flex-col"
     >
-      <div className="flex flex-row w-full">
-        <label htmlFor="" className="flex flex-1 h-16 md:w-full min-w-0">
+      <div className="flex w-full flex-row">
+        <label htmlFor="" className="flex h-16 min-w-0 flex-1 md:w-full">
           <input
             type="text"
             id="postTitle"
             placeholder="Procure um Post"
             {...register("postTitle")}
-            className="py-2 px-4 h-full bg-secondaryPanel border-primary border rounded-md flex-1 rounded-r-none text-textColor min-w-0"
+            className="h-full min-w-0 flex-1 rounded-md rounded-r-none border border-primary bg-secondaryPanel px-4 py-2 text-textColor"
           />
         </label>
         <button
           type="submit"
-          className="text-textColor w-16 rounded border border-l-0 border-primary bg-secondary rounded-l-none h-16 duration-300 hover:shadow-allAround hover:shadow-secondary"
+          className="h-16 w-16 rounded rounded-l-none border border-l-0 border-primary bg-secondary text-textColor duration-300 hover:shadow-allAround hover:shadow-secondary"
         >
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
       </div>
       <p
-        className={`text-red-500 text-small flex items-center gap-2 h-0 duration-300 opacity-0 ${errors.postTitle && "h-14 opacity-100"}`}
+        className={`flex h-0 items-center gap-2 text-small text-red-500 opacity-0 duration-300 ${errors.postTitle && "h-14 opacity-100"}`}
       >
         {errors.postTitle && `! ${errors.postTitle.message}`}
       </p>

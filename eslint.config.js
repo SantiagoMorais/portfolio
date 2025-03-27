@@ -31,13 +31,16 @@ export default tseslint.config(
       ],
       "no-unused-vars": "warn",
       "no-console": ["warn", { allow: ["warn", "error"] }],
-      "prettier/prettier": ["error", {
-        singleQuote: false,
-        semi: true,
-        trailingComma: "es5",
-        endOfLine: "lf",
-        tabWidth: 2
-      }]
+      "prettier/prettier": [
+        "error",
+        {
+          singleQuote: false,
+          semi: true,
+          trailingComma: "es5",
+          endOfLine: "lf",
+          tabWidth: 2,
+        },
+      ],
     },
   }
 );

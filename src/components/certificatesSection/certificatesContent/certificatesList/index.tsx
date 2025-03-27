@@ -14,7 +14,7 @@ export const CertificatesList = ({ certificates }: ICertificatesContent) => {
   });
 
   return (
-    <ul className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-10">
+    <ul className="grid w-full grid-cols-1 gap-8 py-10 sm:grid-cols-2 lg:grid-cols-3">
       {sortedCertificates.map((certificate) => (
         <CertificateCard
           key={certificate.node.id}

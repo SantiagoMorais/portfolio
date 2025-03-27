@@ -1,25 +1,3 @@
-export interface IGithubRepos {
-  banner: string;
-  description: string;
-  homepage: string;
-  html_url: string;
-  id: number;
-  name: string;
-  topics: string[];
-}
-
-export type ProjectProps = {
-  project: {
-    banner: string;
-    description: string;
-    homepage: string;
-    html_url: string;
-    id: number;
-    name: string;
-    topics: string[];
-  };
-};
-
 // QUERY_INTERFACES
 
 export interface IAuthorName {
@@ -100,10 +78,10 @@ export interface ICertificateNode {
   courseDuration: string;
   dateConclusion: string;
   certificateFile: {
-    url: string
+    url: string;
   };
   image: {
-    url: string
+    url: string;
   };
 }
 

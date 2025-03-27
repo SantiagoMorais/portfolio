@@ -1,15 +1,15 @@
 import { IGithubRepos } from "github-automated-repos";
 
-export const ProjectTopics = ({ project }: {project: IGithubRepos}) => {
+export const ProjectTopics = ({ project }: { project: IGithubRepos }) => {
   const hiddenIcons: string[] = ["portfolio", "contextapi", "tests"];
 
   return (
-    <div className="w-full flex flex-wrap justify-center gap-2 h-full">
+    <div className="flex h-full w-full flex-wrap justify-center gap-2">
       {project.topics
         .filter((topic) => !hiddenIcons.includes(topic))
         .map((icon) => (
           <p
-            className="cursor-default bg-primary h-fit px-4 py-2 rounded-xl capitalize flex-1 min-w-fit text-center text-textColor font-bold  max-w-80"
+            className="h-fit min-w-fit max-w-80 flex-1 cursor-default rounded-xl bg-primary px-4 py-2 text-center font-bold capitalize text-textColor"
             key={icon}
           >
             {icon}

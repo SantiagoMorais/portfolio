@@ -3,14 +3,14 @@ import { subtitle } from "@styles/index";
 import { SkillDetails } from "./skillDetails";
 
 export const Skills = () => (
-  <section className="w-full px-5 py-10 mb-5 md:px-10 md:py-16">
-    <div className="flex flex-col w-full">
+  <section className="mb-5 w-full px-5 py-10 md:px-10 md:py-16">
+    <div className="flex w-full flex-col">
       <h2
-        className={`${subtitle({ afterContent: "primaryOnCleanBg", size: "large" })} text-textColor mb-12`}
+        className={`${subtitle({ afterContent: "primaryOnCleanBg", size: "large" })} mb-12 text-textColor`}
       >
         Habilidades
       </h2>
-      <div className="flex flex-wrap gap-5 justify-center w-full">
+      <div className="flex w-full flex-wrap justify-center gap-5">
         {skills.map((skill) => (
           <SkillDetails
             key={skill.category}
