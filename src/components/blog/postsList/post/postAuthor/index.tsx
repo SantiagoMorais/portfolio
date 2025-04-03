@@ -10,7 +10,7 @@ type PostAuthorProps = {
 export const PostAuthor: React.FC<PostAuthorProps> = ({ data }) => (
   <>
     {data && (
-      <div className="relative flex w-full flex-col items-center gap-6 from-transparent via-primary to-transparent px-5 pt-10 before:absolute before:left-0 before:top-0 before:h-[2px] before:w-full before:bg-gradient-to-r sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10 sm:px-20">
+      <div className="relative flex w-full flex-col items-center gap-6 from-transparent via-primary to-transparent px-5 pt-10 before:absolute before:left-0 before:top-0 before:h-[2px] before:w-full before:bg-linear-to-r sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10 sm:px-20">
         <img
           src={data.avatar.url}
           alt={`Avatar do autor ${data.name}`}

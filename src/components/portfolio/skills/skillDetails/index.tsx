@@ -21,7 +21,7 @@ export const SkillDetails = ({ category, icon, list }: SkillDetailsProps) => (
     <ul className="flex flex-col gap-1 text-center text-small">
       {list.map((item, idx) => (
         <li
-          className="relative mb-1 from-panel via-primary to-panel pb-1 text-textColor after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-gradient-to-r last-of-type:after:hidden"
+          className="relative mb-1 from-panel via-primary to-panel pb-1 text-textColor after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-linear-to-r last-of-type:after:hidden"
           key={idx}
         >
           {item}

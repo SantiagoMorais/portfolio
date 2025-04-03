@@ -29,7 +29,7 @@ export const ImageDialog = ({
       </button>
     </Dialog.Trigger>
     <Dialog.Portal>
-      <Dialog.Overlay className="fixed inset-0 z-10 bg-black bg-opacity-50 backdrop-blur-sm" />
+      <Dialog.Overlay className="fixed inset-0 z-10 bg-black bg-opacity-50 backdrop-blur-xs" />
       <Dialog.Content className="fixed z-20">
         <div className="fixed right-1/2 top-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl bg-panel p-16 shadow-lg shadow-black md:translate-y-[-45%]">
           <div className="max-h-[80dvw] w-[80dvw] overflow-x-hidden overflow-y-scroll rounded-l-2xl border border-secondary md:max-h-[70dvh]">

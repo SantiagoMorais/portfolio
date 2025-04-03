@@ -26,7 +26,7 @@ export const AccordionContent = ({
           <button
             onClick={() => handleSelectFilter(filter.title)}
             key={filter.id}
-            className="relative mb-1 flex w-full rounded-md px-4 py-2 text-small text-textColor duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:border-b after:border-secondary after:duration-300 last-of-type:mb-0 after:last-of-type:border-b-0 hover:bg-secondary hover:after:opacity-0"
+            className="relative mb-1 flex w-full rounded-md px-4 py-2 text-small text-textColor duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:border-b after:border-secondary after:duration-300 last-of-type:mb-0 last-of-type:after:border-b-0 hover:bg-secondary hover:after:opacity-0"
           >
             {filter.title}
           </button>

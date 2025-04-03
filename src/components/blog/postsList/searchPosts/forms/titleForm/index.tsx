@@ -48,7 +48,7 @@ export const TitleForm = () => {
         </label>
         <button
           type="submit"
-          className="h-16 w-16 rounded rounded-l-none border border-l-0 border-primary bg-secondary text-textColor duration-300 hover:shadow-allAround hover:shadow-secondary"
+          className="h-16 w-16 rounded-sm rounded-l-none border border-l-0 border-primary bg-secondary text-textColor duration-300 hover:shadow-allAround hover:shadow-secondary"
         >
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>

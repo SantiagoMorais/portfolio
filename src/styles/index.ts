@@ -14,9 +14,9 @@ export const button = tv({
     },
     withBackground: {
       primaryColor:
-        "bg-primary rounded-3xl shadow-secondary shadow-lg w-fit px-10 py-6 focus:ring focus:ring-secondary duration-300 hover:bg-hoverEffect hover:shadow-xl hover:shadow-secondary",
+        "bg-primary rounded-3xl shadow-secondary shadow-lg w-fit px-10 py-6 focus:ring-3 focus:ring-secondary duration-300 hover:bg-hoverEffect hover:shadow-xl hover:shadow-secondary",
       secondaryColor:
-        "durarion-500 transition-all rounded-lg shadow-secondary shadow-md w-full py-2 px-6 focus:ring focus:ring-primary hover:bg-hoverEffect hover:shadow-lg hover:shadow-secondary",
+        "duration-500 transition-all rounded-lg shadow-secondary shadow-md w-full py-2 px-6 focus:ring-3 focus:ring-primary hover:bg-hoverEffect hover:shadow-lg hover:shadow-secondary",
     },
   },
 });
@@ -47,13 +47,13 @@ export const subtitle = tv({
   variants: {
     afterContent: {
       primary:
-        "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-secondaryPanel duration-300",
+        "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-linear-to-r from-primary to-secondaryPanel duration-300",
       primaryOnCleanBg:
-        "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-gradient-to-r from-primary to-tertiary",
+        "relative after:absolute after:h-[.2rem] after:w-full after:bg-primary after:left-0 after:bottom-0 after:bg-linear-to-r from-primary to-tertiary",
       secondary:
-        "relative after:absolute after:h-[.2rem] after:w-2/3 after:bg-primary after:left-[16.5%] after:bottom-0 after:bg-gradient-to-r from-secondaryPanel via-primary to-secondaryPanel",
+        "relative after:absolute after:h-[.2rem] after:w-2/3 after:bg-primary after:left-[16.5%] after:bottom-0 after:bg-linear-to-r from-secondaryPanel via-primary to-secondaryPanel",
       secondaryOnCleanBg:
-        "relative after:absolute after:h-[.2rem] after:w-2/3 after:bg-primary after:left-[16.5%] after:bottom-0 after:bg-gradient-to-r from-panel via-primary to-tertiary",
+        "relative after:absolute after:h-[.2rem] after:w-2/3 after:bg-primary after:left-[16.5%] after:bottom-0 after:bg-linear-to-r from-panel via-primary to-tertiary",
     },
     size: {
       large: "text-large",
