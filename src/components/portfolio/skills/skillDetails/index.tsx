@@ -3,16 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { defaultIcon, iconMapping } from "@/utils/iconMapping";
 
 export const SkillDetails = ({ category, icon, list }: ISkillDetailsProps) => (
-  <div className="bg-secondaryPanel flex max-w-[40rem] min-w-[20rem] flex-1 flex-col items-center rounded-xl px-4 py-8">
-    <div className="relative mb-4 flex items-center gap-4">
-      <FontAwesomeIcon
-        className="border-primary text-primary mb-4 size-[2.5rem] rounded-full border-2 p-4"
-        icon={iconMapping[icon] || defaultIcon}
-      />
-      <h3 className="text-textColor text-center text-base leading-tight font-bold">
-        {category}
-      </h3>
-    </div>
+  <div className="bg-secondaryPanel flex max-w-[40rem] min-w-[20rem] flex-1 flex-col items-center gap-6 rounded-xl px-4 py-8">
+    <h3 className="text-textColor flex items-center gap-4 text-center text-base leading-tight font-bold">
+      <div className="border-primary flex size-18 items-center justify-center rounded-full border-2 p-4">
+        <FontAwesomeIcon
+          className="text-primary size-full"
+          icon={iconMapping[icon] || defaultIcon}
+        />
+      </div>
+      {category}
+    </h3>
     <ul className="text-small flex flex-col gap-1 text-center">
       {list.map((item, index) => (
         <li
