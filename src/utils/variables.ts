@@ -1,8 +1,10 @@
-function formatMessageForWeb(message: string): string {
-  return encodeURIComponent(message);
-}
+import { env } from "env";
 
-function greetingsHour() {
+const formatMessageForWeb = (message: string): string => {
+  return encodeURIComponent(message);
+};
+
+const greetingsHour = () => {
   const date = new Date();
   const hour = date.getHours();
   const inTheMorning = hour >= 6 && hour < 12;
@@ -19,18 +21,7 @@ function greetingsHour() {
     default:
       return "Olá";
   }
-}
-
-export const phoneNumber: number = 5531996951033;
+};
 
 const defaultWhatsappMessage: string = `${greetingsHour()}, Felipe! Encontrei o seu contato em seu portfólio e gostaria de conversar`;
-
-export const whatsAppLink: string = `https://api.whatsApp.com/send?phone=${phoneNumber}&text=${formatMessageForWeb(defaultWhatsappMessage)}`;
-export const githubRepositoriesLink: string =
-  "https://github.com/SantiagoMorais?tab=repositories";
-export const email: string = "contatofelipesantiago@gmail.com";
-export const linkedinUrl: string =
-  "https://www.linkedin.com/in/felipe-santiago-morais/";
-export const githubProfile: string = "https://github.com/SantiagoMorais";
-export const projectRepository: string =
-  "https://github.com/SantiagoMorais/portfolio";
+export const whatsAppLink: string = `https://api.whatsApp.com/send?phone=${env.VITE_PHONE_NUMBER}&text=${formatMessageForWeb(defaultWhatsappMessage)}`;

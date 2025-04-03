@@ -6,18 +6,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { createId } from "@paralleldrive/cuid2";
-import {
-  email,
-  githubProfile,
-  linkedinUrl,
-  whatsAppLink,
-} from "utils/variables";
+import { env } from "env";
+import { whatsAppLink } from "utils/variables";
 
 export const socialMedia: ISocialMedia[] = [
-  { id: createId(), link: githubProfile, title: "Github", icon: faGithub },
   {
     id: createId(),
-    link: linkedinUrl,
+    link: env.VITE_GITHUB_PROFILE,
+    title: "Github",
+    icon: faGithub,
+  },
+  {
+    id: createId(),
+    link: env.VITE_LINKEDIN_URL,
     title: "Linkedin",
     icon: faLinkedin,
   },
@@ -27,5 +28,10 @@ export const socialMedia: ISocialMedia[] = [
     title: "Whatsapp",
     icon: faWhatsapp,
   },
-  { id: createId(), link: `mailto:${email}`, title: "Email", icon: faAt },
+  {
+    id: createId(),
+    link: `mailto:${env.VITE_EMAIL}`,
+    title: "Email",
+    icon: faAt,
+  },
 ];

@@ -1,5 +1,5 @@
 import { paragraph, subtitle } from "@styles/index";
-import { projectRepository } from "utils/variables";
+import { env } from "env";
 
 export const ProjectHeader = () => (
   <div className="flex w-full flex-col gap-5 px-5">
@@ -18,7 +18,7 @@ export const ProjectHeader = () => (
     <p className={paragraph({ sections: "githubRepository" })}>
       Veja o repositório Github do projeto deste meu Portfólio Pessoal{" "}
       <a
-        href={projectRepository}
+        href={env.VITE_PROJECT_REPOSITORY}
         target="_blank"
         className="text-primary hover:text-textColor font-bold duration-300 hover:tracking-wider"
         style={{ filter: "drop-shadow(0 0 10px #19584f)" }}
