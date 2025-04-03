@@ -14,10 +14,10 @@ export const SkillDetails = ({ category, icon, list }: ISkillDetailsProps) => (
       </h3>
     </div>
     <ul className="text-small flex flex-col gap-1 text-center">
-      {list.map((item, idx) => (
+      {list.map((item, index) => (
         <li
           className="from-panel via-primary to-panel text-textColor relative mb-1 pb-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-linear-to-r last-of-type:after:hidden"
-          key={idx}
+          key={index}
         >
           {item}
         </li>

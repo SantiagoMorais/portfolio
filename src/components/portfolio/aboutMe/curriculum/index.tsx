@@ -36,6 +36,7 @@ export const Curriculum = () => {
         })}
         href={resume.document.url}
         target="_blank"
+        key={resume.title}
       >
         {resume.title}
       </a>

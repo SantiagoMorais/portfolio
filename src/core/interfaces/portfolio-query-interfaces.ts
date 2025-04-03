@@ -8,19 +8,21 @@ export interface IPortfolioNode {
   htmlUrl: string;
   description: string;
   id: string;
-  homePage: string;
-  banner: {
+  homePage: string | null;
+  banner?: {
     url: string;
   };
 }
 
 export interface IPortfolioEdges {
-  edges: {
-    node: Array<IPortfolioNode>;
-  };
+  node: IPortfolioNode;
 }
 
-export interface IPostsConnection {
+export interface IPortfolioConnection {
   pageInfo: IPageInfo;
   edges: Array<IPortfolioEdges>;
+}
+
+export interface IPortfoliosConnection {
+  portfoliosConnection: IPortfolioConnection;
 }

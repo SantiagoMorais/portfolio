@@ -2,12 +2,13 @@ import { faImage, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
 import { button } from "@/styles/index";
+import imageNotFound from "@/assets/imgs/image-not-found.jpg";
 
 export const ImageDialog = ({
   projectImage,
   projectName,
 }: {
-  projectImage: string;
+  projectImage: string | undefined;
   projectName: string;
 }) => (
   <Dialog.Root>
@@ -32,7 +33,7 @@ export const ImageDialog = ({
         <div className="bg-panel fixed top-1/2 right-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl p-16 shadow-lg shadow-black md:translate-y-[-45%]">
           <div className="border-secondary max-h-[80dvw] w-[80dvw] overflow-x-hidden overflow-y-scroll rounded-l-2xl border md:max-h-[70dvh]">
             <img
-              src={projectImage}
+              src={projectImage ? projectImage : imageNotFound}
               alt={`Imagem do projeto ${projectName}`}
               className="h-fit w-full object-cover object-top"
             />

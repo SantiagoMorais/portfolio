@@ -1,11 +1,9 @@
-import { IGithubRepos } from "github-automated-repos";
-
-export const ProjectTopics = ({ project }: { project: IGithubRepos }) => {
+export const ProjectTopics = ({ nodeTopics }: { nodeTopics: string[] }) => {
   const hiddenIcons: string[] = ["portfolio", "contextapi", "tests"];
 
   return (
-    <div className="flex h-full w-full flex-wrap justify-center gap-2">
-      {project.topics
+    <div className="flex h-fit w-full flex-wrap justify-center gap-2">
+      {nodeTopics
         .filter((topic) => !hiddenIcons.includes(topic))
         .map((icon) => (
           <p

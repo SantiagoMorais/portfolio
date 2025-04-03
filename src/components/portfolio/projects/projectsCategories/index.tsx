@@ -1,44 +1,51 @@
+import { IPortfoliosConnection } from "@/core/interfaces/portfolio-query-interfaces";
+import { TCategories } from "@/core/types/categories";
+import { GET_PORTFOLIO_BY_TOPICS } from "@/db/get-portfolio-by-topics";
 import { subtitle } from "@/styles/index";
-import { useState } from "react";
 import { categoryList } from "@/utils/projectsCategories";
-import { useGitHubAutomatedRepos } from "github-automated-repos";
-import { ProjectsList } from "../projectsList";
-import { CategoryItem } from "./categoryItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useQuery } from "@apollo/client";
 import {
   faSpinner,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
-import { TCategories } from "@/core/types/categories";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import { ProjectsList } from "../projectsList";
+import { CategoryItem } from "./categoryItem";
 
 export const ProjectsCategories = () => {
   const [currentCategory, setCurrentCategory] =
     useState<TCategories>("portfolio");
 
-  const { data, isLoading, isLoadingError } = useGitHubAutomatedRepos(
-    "SantiagoMorais",
-    currentCategory
+  const { loading, error, data } = useQuery<IPortfoliosConnection>(
+    GET_PORTFOLIO_BY_TOPICS,
+    {
+      variables: {
+        topic: [currentCategory],
+      },
+    }
   );
 
   const handleCategory = (category: TCategories) =>
     setCurrentCategory(category);
 
   const content = () => {
-    if (isLoading)
+    if (loading)
       return (
         <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
           Carregando...{" "}
           <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
         </p>
       );
-    if (isLoadingError)
+    if (error || !data)
       return (
         <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
           Não foi possível carregar os dados{" "}
           <FontAwesomeIcon icon={faTriangleExclamation} />
         </p>
       );
-    return <ProjectsList data={data} />;
+
+    return <ProjectsList edges={data.portfoliosConnection.edges} />;
   };
 
   return (
