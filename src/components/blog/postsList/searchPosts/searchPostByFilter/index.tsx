@@ -1,5 +1,5 @@
 import { PostsList } from "../..";
-import { GET_FILTERED_POSTS_QUERY } from "@/utils/blogApi";
+import { GET_FILTERED_POSTS_QUERY } from "@/db/get-filtered-posts-query";
 import { useQuery } from "@apollo/client";
 import { Loading } from "@/components/ui/loading";
 import { PostsNotFound } from "../postsNotFound";

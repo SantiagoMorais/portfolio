@@ -1,6 +1,5 @@
 import { useQuery } from "@apollo/client";
 import { Loading } from "@/components/ui/loading";
-import { GET_CURRENTLY_POST_QUERY } from "@/utils/blogApi";
 import { ICurrentlyPost } from "@/core/interfaces/query-interfaces";
 import { useParams } from "react-router-dom";
 import { PostAuthor } from "./postAuthor";
@@ -8,6 +7,7 @@ import { faFrown } from "@fortawesome/free-solid-svg-icons";
 import { PostContent } from "./postContent";
 import { AdvicePage } from "@/components/advicePage";
 import { ReturnButton } from "@/components/ui/returnButton";
+import { GET_CURRENTLY_POST_QUERY } from "@/db/get-currently-post-query";
 
 export const Post = () => {
   const { id } = useParams();
