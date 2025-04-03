@@ -17,9 +17,8 @@ export const HeroDescription = () => (
       </h3>
     </div>
     <p className="mb-5 max-w-[70rem] text-small font-normal text-textColor opacity-70 transition-colors duration-150 md:text-base">
-      Sou apaixonado por criar interfaces amigáveis com React.js e TypeScript,
-      integrando com banco de dados via Node JS. Veja meus projetos aqui e entre
-      em contato comigo pelas minhas redes sociais!
+      Desenvolvedor web com foco em React, Next e desenvolvimento de APIs Node com TypeScript. Veja meus projetos no meu portfólio e entre
+      em contato comigo pelas minhas redes!
     </p>
     <a
       href={whatsAppLink}
