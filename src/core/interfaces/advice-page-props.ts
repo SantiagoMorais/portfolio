@@ -1,6 +1,6 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
-export interface AdvicePageProps {
+export interface IAdvicePageProps {
   title: string;
   adviceMessage: string;
   route: string;

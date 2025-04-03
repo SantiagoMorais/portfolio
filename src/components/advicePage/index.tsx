@@ -1,7 +1,7 @@
 import { PolygonEmoji } from "@components/ui/polygonEmoji";
 import { ReturnButton } from "@components/ui/returnButton";
 import { subtitle } from "@styles/index";
-import { AdvicePageProps } from "core/interfaces/advice-page-props";
+import { IAdvicePageProps } from "core/interfaces/advice-page-props";
 
 export const AdvicePage = ({
   adviceMessage,
@@ -10,7 +10,7 @@ export const AdvicePage = ({
   route,
   title,
   polygonEmojiMessage,
-}: AdvicePageProps) => (
+}: IAdvicePageProps) => (
   <div className="flex w-full flex-col items-center gap-10 p-10 pb-20">
     <h2
       className={`pb-2 text-center text-large text-textColor md:text-extraLarge ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}

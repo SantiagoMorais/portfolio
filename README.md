@@ -197,7 +197,7 @@ Com essa abordagem, o tema é alternado globalmente, simplificando a gestão de 
 Componente reutilizável em todos os locais onde há um aviso, como página não encontrada, página em desenvolvimento, conteúdo não encontrado, entre outros. Já que todos estes avisos seguiam o mesmo padrão de estilização, com pequenas alterações, o componente `AdvicePage` foi criado. Esta é o `type` das props deste componente, que podem ser alternadas.
 
 ```tsx
-type AdvicePageProps = {
+interface IAdvicePageProps {
   title: string;
   adviceMessage: string;
   route: string;
