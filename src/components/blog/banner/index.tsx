@@ -1,12 +1,7 @@
 import "swiper/css";
 import { BannerCarousel } from "./bannerCarousel";
 import { BannerDescription } from "./bannerDescription";
-
-interface IBannerProps {
-  imagesList: string[];
-  title: string;
-  subtitle: string;
-}
+import { IBannerProps } from "core/interfaces/banner-props";
 
 export const Banner = ({ imagesList, subtitle, title }: IBannerProps) => (
   <div className="relative flex size-full">

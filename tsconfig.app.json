@@ -30,7 +30,8 @@
       "@docs/*": ["docs/*"],
       "@contexts/*": ["contexts/*"],
       "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@core/*": ["core/*"]
     }
   },
   "include": ["src"]

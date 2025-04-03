@@ -1,16 +1,12 @@
+import { ISocialMediaLinksProps } from "@core/interfaces/social-media-links-props";
 import { SocialLink } from "./link";
 import { twMerge } from "tailwind-merge";
-import { SocialMediaType } from "@utils/socialMediaLinks";
-
-type SocialMediaLinksProps = {
-  className?: string;
-  socialMedia: SocialMediaType[] | SocialMediaType;
-};
+import { ISocialMedia } from "@core/interfaces/social-media";
 
 export const SocialMediaLinks = ({
   className,
   socialMedia,
-}: SocialMediaLinksProps) => {
+}: ISocialMediaLinksProps) => {
   const isArray = Array.isArray(socialMedia);
 
   return (
@@ -26,13 +22,13 @@ export const SocialMediaLinks = ({
             Cheque minhas redes:
           </p>
           <ul className="flex flex-wrap items-center gap-2 md:gap-5">
-            {(socialMedia as SocialMediaType[]).map((link) => (
+            {(socialMedia as ISocialMedia[]).map((link) => (
               <SocialLink key={link.id} link={link} />
             ))}
           </ul>
         </div>
       ) : (
-        <SocialLink link={socialMedia as SocialMediaType} />
+        <SocialLink link={socialMedia as ISocialMedia} />
       )}
     </>
   );

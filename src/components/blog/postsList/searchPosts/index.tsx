@@ -1,17 +1,11 @@
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { TitleForm } from "./forms/titleForm";
-import { SearchPostsByTitle } from "./searchPostsByTitle";
-import { PostsList } from "..";
-import { IPostsData } from "@utils/types";
-import { FilterForm } from "./forms/filterForm";
 import { useFilterPosts } from "@contexts/filterPostsContext";
+import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
+import { PostsList } from "..";
+import { FilterForm } from "./forms/filterForm";
+import { TitleForm } from "./forms/titleForm";
 import { SearchPostsByFilter } from "./searchPostByFilter";
-
-interface ISearchPostsProps {
-  data: IPostsData;
-  fetchMorePosts: () => void;
-  isLoading: boolean;
-}
+import { SearchPostsByTitle } from "./searchPostsByTitle";
+import { ISearchPostsProps } from "core/interfaces/search-posts-props";
 
 export const SearchPosts = ({
   data,

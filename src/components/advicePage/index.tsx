@@ -1,16 +1,7 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { subtitle } from "@styles/index";
 import { PolygonEmoji } from "@components/ui/polygonEmoji";
 import { ReturnButton } from "@components/ui/returnButton";
-
-type AdvicePageProps = {
-  title: string;
-  adviceMessage: string;
-  route: string;
-  buttonText: string;
-  icon: IconDefinition;
-  polygonEmojiMessage?: string;
-};
+import { subtitle } from "@styles/index";
+import { AdvicePageProps } from "core/interfaces/advice-page-props";
 
 export const AdvicePage = ({
   adviceMessage,

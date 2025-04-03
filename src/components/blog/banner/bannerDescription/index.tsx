@@ -1,14 +1,12 @@
 import { Logo } from "@components/ui/logo";
 
-interface IBannerDescriptionProps {
-  title: string;
-  subtitle: string;
-}
-
 export const BannerDescription = ({
   subtitle,
   title,
-}: IBannerDescriptionProps) => (
+}: {
+  title: string;
+  subtitle: string;
+}) => (
   <div className="z-20 flex h-fit w-full flex-col items-center justify-center p-10 py-20 sm:h-[30dvw]">
     <h2 className="mb-5 text-large font-extrabold uppercase tracking-widest text-white sm:text-[3.2dvw]">
       {title}

@@ -1,11 +1,9 @@
+import { ISocialMedia } from "@core/interfaces/social-media";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SocialMediaType } from "@utils/socialMediaLinks";
 
-interface ILink {
-  link: SocialMediaType;
-}
-
-export const SocialLink: React.FC<ILink> = ({ link }) => (
+export const SocialLink = ({ link }: {
+  link: ISocialMedia;
+}) => (
   <>
     {link && (
       <li key={link.id} title={link.title}>

@@ -1,3 +1,4 @@
+import { ILoadMoreButtonProps } from "@core/interfaces/load-more-button-props";
 import {
   faAdd,
   faSmileWink,
@@ -5,17 +6,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-type LoadMoreButtonProps = {
-  fetchMorePosts: () => void;
-  hasMore: boolean | undefined;
-  isLoading: boolean;
-};
-
 export const LoadMoreButton = ({
   fetchMorePosts,
   hasMore,
   isLoading,
-}: LoadMoreButtonProps) => (
+}: ILoadMoreButtonProps) => (
   <button
     disabled={!hasMore}
     onClick={() => fetchMorePosts()}

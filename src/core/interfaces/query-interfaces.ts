@@ -1,5 +1,3 @@
-// QUERY_INTERFACES
-
 export interface IAuthorName {
   name: string;
 }

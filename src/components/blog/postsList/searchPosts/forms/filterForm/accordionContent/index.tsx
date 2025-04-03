@@ -1,6 +1,6 @@
 import { useFilterPosts } from "@contexts/filterPostsContext";
 import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { IPostsFilters } from "@utils/types";
+import { IPostsFilters } from "@core/interfaces/query-interfaces";
 import { Collapse } from "react-collapse";
 
 export const AccordionContent = ({

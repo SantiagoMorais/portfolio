@@ -5,7 +5,7 @@ import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
 import { PostsNotFound } from "../postsNotFound";
 import { useState } from "react";
-import { IPostsData } from "@utils/types";
+import { IPostsData } from "@core/interfaces/query-interfaces";
 import { AdvicePage } from "@components/advicePage";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
 import { ButtonResetTitleAndFilter } from "@components/ui/buttonResetTitleAndFilter";

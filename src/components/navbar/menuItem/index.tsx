@@ -1,15 +1,8 @@
+import { IMenuItemProps } from "@core/interfaces/menu-item-props";
 import { button } from "@styles/index";
 import { NavLink } from "react-router-dom";
 
-type MenuItemProps = {
-  navbarInfo: {
-    name: string;
-    id: string;
-    path: string;
-  };
-};
-
-export const MenuItem = ({ navbarInfo }: MenuItemProps) => (
+export const MenuItem = ({ navbarInfo }: IMenuItemProps) => (
   <li className="flex flex-1">
     <NavLink
       to={navbarInfo.path}

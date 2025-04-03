@@ -3,11 +3,9 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 import { PolygonEmoji } from "@components/ui/polygonEmoji";
 
-type PostNotFoundProps = {
+export const PostsNotFound = ({ searchType }: {
   searchType: "searchingByFilter" | "searchingByTitle";
-};
-
-export const PostsNotFound = ({ searchType }: PostNotFoundProps) => {
+}) => {
   const { postTitle } = useSearchPostByTitle();
   const { filter } = useFilterPosts();
 

@@ -1,13 +1,8 @@
+import { ILogoProps } from "@core/interfaces/logo-props";
 import { MessageCircleCode } from "lucide-react";
 import { twJoin, twMerge } from "tailwind-merge";
 
-type LogoProps = {
-  className?: string;
-  iconSize?: string;
-  padding?: string;
-};
-
-export const Logo = ({ className, iconSize, padding }: LogoProps) => (
+export const Logo = ({ className, iconSize, padding }: ILogoProps) => (
   <div className={twMerge("flex", padding)}>
     <p
       className={twJoin(

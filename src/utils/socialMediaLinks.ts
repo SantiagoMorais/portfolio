@@ -1,3 +1,10 @@
+import { ISocialMedia } from "@core/interfaces/social-media";
+import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { createId } from "@paralleldrive/cuid2";
 import {
   email,
@@ -5,22 +12,8 @@ import {
   linkedinUrl,
   whatsAppLink,
 } from "utils/variables";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import {
-  faGithub,
-  faLinkedin,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
 
-export type SocialMediaType = {
-  id: string;
-  title: string;
-  link: string;
-  icon: IconDefinition;
-};
-
-export const socialMedia: SocialMediaType[] = [
+export const socialMedia: ISocialMedia[] = [
   { id: createId(), link: githubProfile, title: "Github", icon: faGithub },
   {
     id: createId(),

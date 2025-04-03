@@ -1,13 +1,8 @@
+import { ISkillDetailsProps } from "@core/interfaces/skill-details-props";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { defaultIcon, iconMapping } from "utils/iconMapping";
 
-type SkillDetailsProps = {
-  category: string;
-  icon: string;
-  list: string[];
-};
-
-export const SkillDetails = ({ category, icon, list }: SkillDetailsProps) => (
+export const SkillDetails = ({ category, icon, list }: ISkillDetailsProps) => (
   <div className="flex min-w-[20rem] max-w-[40rem] flex-1 flex-col items-center rounded-xl bg-secondaryPanel px-4 py-8">
     <div className="relative mb-4 flex items-center gap-4">
       <FontAwesomeIcon

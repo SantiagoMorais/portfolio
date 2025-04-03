@@ -1,16 +1,10 @@
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
 import { useFilterPosts } from "@contexts/filterPostsContext";
-
-const searchPostForm = z.object({
-  postTitle: z.string().max(100, "Não exceder 100 caracteres"),
-});
-
-type SearchPostType = z.infer<typeof searchPostForm>;
+import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
+import { searchPostForm, TSearchPost } from "@core/types/search-posts";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
 export const TitleForm = () => {
   const { setPostTitle } = useSearchPostByTitle();
@@ -20,11 +14,11 @@ export const TitleForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<SearchPostType>({
+  } = useForm<TSearchPost>({
     resolver: zodResolver(searchPostForm),
   });
 
-  const handleSearchPost = (data: SearchPostType) => {
+  const handleSearchPost = (data: TSearchPost) => {
     const { postTitle } = data;
     setPostTitle(postTitle);
     setFilter("");

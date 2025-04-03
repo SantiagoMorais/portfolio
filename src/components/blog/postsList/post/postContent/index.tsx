@@ -1,4 +1,4 @@
-import { ICurrentlyPost } from "@utils/types";
+import { ICurrentlyPost } from "@core/interfaces/query-interfaces";
 import parse from "html-react-parser";
 
 export const PostContent = ({ data }: { data: ICurrentlyPost }) => {

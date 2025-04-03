@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { Loading } from "@components/ui/loading";
 import { GET_CURRENTLY_POST_QUERY } from "@utils/blogApi";
-import { ICurrentlyPost } from "@utils/types";
+import { ICurrentlyPost } from "@core/interfaces/query-interfaces";
 import { useParams } from "react-router-dom";
 import "index.css";
 import { PostAuthor } from "./postAuthor";

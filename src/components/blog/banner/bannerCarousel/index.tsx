@@ -1,11 +1,7 @@
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-interface IBannerCarouselProps {
-  imagesList: string[];
-}
-
-export const BannerCarousel = ({ imagesList }: IBannerCarouselProps) => (
+export const BannerCarousel = ({ imagesList }: { imagesList: string[] }) => (
   <Swiper
     className="absolute left-0 top-0 z-10 size-full overflow-hidden border-b-2 border-t-2 border-secondary shadow-allAround shadow-secondary"
     modules={[Autoplay]}

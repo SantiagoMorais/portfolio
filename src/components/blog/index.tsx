@@ -1,6 +1,6 @@
 import { Banner } from "./banner";
 import { useQuery } from "@apollo/client";
-import { IPostsData } from "utils/types";
+import { IPostsData } from "@core/interfaces/query-interfaces";
 import { GET_POSTS_QUERY } from "utils/blogApi";
 import { Loading } from "../ui/loading";
 import { SearchPosts } from "./postsList/searchPosts";

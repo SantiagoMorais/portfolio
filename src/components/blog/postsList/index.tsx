@@ -1,18 +1,12 @@
-import { IPostsData } from "@utils/types";
+import { IPostsListProps } from "@core/interfaces/posts-list-props";
 import { LoadMoreButton } from "../../ui/loadMoreButton";
 import { PostsCards } from "./postsCards";
 
-type PostsListProps = {
-  data: IPostsData | undefined;
-  fetchMorePosts: () => void;
-  isLoading: boolean;
-};
-
-export const PostsList: React.FC<PostsListProps> = ({
+export const PostsList = ({
   data,
   fetchMorePosts,
   isLoading,
-}) => (
+}: IPostsListProps) => (
   <div className="flex flex-col items-center gap-10 px-5 pb-16 pt-10 md:px-10 md:pb-20">
     <PostsCards data={data} />
     <LoadMoreButton

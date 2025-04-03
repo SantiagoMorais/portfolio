@@ -1,21 +1,11 @@
+import { ICategoryItemProps } from "@core/interfaces/category-item-props";
 import { button } from "@styles/index";
-import { TCategory } from "utils/projectsCategories";
-
-type CategoryItemProps = {
-  category: {
-    name: string;
-    topic: TCategory;
-    id: string;
-  };
-  handleCategory: (topic: TCategory) => void;
-  currentCategory: string;
-};
 
 export const CategoryItem = ({
   category,
   handleCategory,
   currentCategory,
-}: CategoryItemProps) => (
+}: ICategoryItemProps) => (
   <li key={category.id} className="min-w-fit max-w-80 flex-1">
     <button
       onClick={() => handleCategory(category.topic)}

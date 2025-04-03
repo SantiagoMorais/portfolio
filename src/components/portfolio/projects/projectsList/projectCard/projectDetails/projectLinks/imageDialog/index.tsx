@@ -3,15 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
 import { button } from "@styles/index";
 
-type ImageDialogProps = {
-  projectImage: string;
-  projectName: string;
-};
-
 export const ImageDialog = ({
   projectImage,
   projectName,
-}: ImageDialogProps) => (
+}: {
+  projectImage: string;
+  projectName: string;
+}) => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
       <button
