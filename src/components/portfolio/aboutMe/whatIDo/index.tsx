@@ -17,17 +17,17 @@ export const WhatIDo = () => (
       {whatIDoList.map((item) => (
         <div
           key={item.id}
-          className="flex w-full min-w-[20rem] max-w-[50rem] flex-1 flex-col items-center gap-5 rounded-lg bg-panel px-5 py-10 pb-5 md:min-w-[30rem]"
+          className="bg-panel flex w-full max-w-[50rem] min-w-[20rem] flex-1 flex-col items-center gap-5 rounded-lg px-5 py-10 pb-5 md:min-w-[30rem]"
         >
           <FontAwesomeIcon
             icon={item.icon}
             className="text-extraLarge text-primary"
           />
           <div className="flex flex-col gap-2">
-            <h4 className="text-center text-base font-bold capitalize text-textColor">
+            <h4 className="text-textColor text-center text-base font-bold capitalize">
               {item.title}
             </h4>
-            <p className="text-center text-small text-textColor first-letter:capitalize">
+            <p className="text-small text-textColor text-center first-letter:capitalize">
               {item.text}
             </p>
           </div>

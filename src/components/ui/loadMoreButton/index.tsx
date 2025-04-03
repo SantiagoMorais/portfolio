@@ -14,7 +14,7 @@ export const LoadMoreButton = ({
   <button
     disabled={!hasMore}
     onClick={() => fetchMorePosts()}
-    className={`flex cursor-pointer items-center gap-4 rounded-2xl bg-primary px-10 py-6 text-medium font-medium text-textColor duration-300 ${hasMore ? "hover:bg-textColor hover:text-primary hover:shadow-allAround hover:shadow-secondary" : "cursor-auto opacity-60"}`}
+    className={`bg-primary text-medium text-textColor flex cursor-pointer items-center gap-4 rounded-2xl px-10 py-6 font-medium duration-300 ${hasMore ? "hover:bg-textColor hover:text-primary hover:shadow-allAround hover:shadow-secondary" : "cursor-auto opacity-60"}`}
   >
     {isLoading ? (
       <FontAwesomeIcon icon={faSpinner} spin />

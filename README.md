@@ -204,7 +204,7 @@ interface IAdvicePageProps {
   buttonText: string;
   icon: IconDefinition;
   polygonEmojiMessage?: string;
-};
+}
 ```
 
 Este é o resultado:

@@ -3,7 +3,9 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useFilterPosts } from "@contexts/filterPostsContext";
 import { PolygonEmoji } from "@components/ui/polygonEmoji";
 
-export const PostsNotFound = ({ searchType }: {
+export const PostsNotFound = ({
+  searchType,
+}: {
   searchType: "searchingByFilter" | "searchingByTitle";
 }) => {
   const { postTitle } = useSearchPostByTitle();
@@ -11,7 +13,7 @@ export const PostsNotFound = ({ searchType }: {
 
   return (
     <div className="flex flex-col items-center gap-5 px-5 py-14">
-      <h3 className="text-center text-medium font-medium text-textColor">
+      <h3 className="text-medium text-textColor text-center font-medium">
         {searchType === "searchingByTitle" ? (
           <>
             Posts com o título{" "}

@@ -1,15 +1,13 @@
 import { ISocialMedia } from "@core/interfaces/social-media";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const SocialLink = ({ link }: {
-  link: ISocialMedia;
-}) => (
+export const SocialLink = ({ link }: { link: ISocialMedia }) => (
   <>
     {link && (
       <li key={link.id} title={link.title}>
         <a
           href={link.link}
-          className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
+          className="group bg-secondary flex items-center p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
           target="_blank"
           style={{
             clipPath:
@@ -18,7 +16,7 @@ export const SocialLink = ({ link }: {
         >
           <FontAwesomeIcon
             icon={link.icon}
-            className="text-base md:text-medium"
+            className="md:text-medium text-base"
           />
         </a>
       </li>

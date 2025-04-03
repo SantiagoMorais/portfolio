@@ -19,7 +19,7 @@ export const ThemeToggleButton = () => {
     >
       <FontAwesomeIcon
         data-testid="themeIcon"
-        className={`text-medium text-textColor transition-all duration-100 hover:text-primary ${themeIsLight ? "rotate-180" : "rotate-0"}`}
+        className={`text-medium text-textColor hover:text-primary transition-all duration-100 ${themeIsLight ? "rotate-180" : "rotate-0"}`}
         icon={faAdjust}
       />
     </button>

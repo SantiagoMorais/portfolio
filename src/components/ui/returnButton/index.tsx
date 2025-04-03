@@ -3,17 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { button } from "@styles/index";
 import { Link } from "react-router-dom";
 
-export const ReturnButton = ({ buttonText, route }: {
+export const ReturnButton = ({
+  buttonText,
+  route,
+}: {
   route: string;
   buttonText: string;
-} ) => (
+}) => (
   <Link
     to={route}
-    className={`group flex items-center gap-5 text-medium text-textColor ${button({ withBackground: "primaryColor" })}`}
+    className={`group text-medium text-textColor flex items-center gap-5 ${button({ withBackground: "primaryColor" })}`}
   >
     <FontAwesomeIcon
       icon={faUndo}
-      className="duration-300 group-hover:rotate-[-360deg] group-hover:scale-110"
+      className="duration-300 group-hover:scale-110 group-hover:rotate-[-360deg]"
     />{" "}
     {buttonText}
   </Link>

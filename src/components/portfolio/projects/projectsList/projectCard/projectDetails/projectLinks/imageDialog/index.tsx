@@ -13,7 +13,7 @@ export const ImageDialog = ({
   <Dialog.Root>
     <Dialog.Trigger asChild>
       <button
-        className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
+        className="group bg-secondary flex items-center p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
         style={{
           clipPath:
             "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -27,17 +27,17 @@ export const ImageDialog = ({
       </button>
     </Dialog.Trigger>
     <Dialog.Portal>
-      <Dialog.Overlay className="fixed inset-0 z-10 bg-black bg-opacity-50 backdrop-blur-xs" />
+      <Dialog.Overlay className="bg-opacity-50 fixed inset-0 z-10 bg-black backdrop-blur-xs" />
       <Dialog.Content className="fixed z-20">
-        <div className="fixed right-1/2 top-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl bg-panel p-16 shadow-lg shadow-black md:translate-y-[-45%]">
-          <div className="max-h-[80dvw] w-[80dvw] overflow-x-hidden overflow-y-scroll rounded-l-2xl border border-secondary md:max-h-[70dvh]">
+        <div className="bg-panel fixed top-1/2 right-1/2 translate-x-1/2 translate-y-[-50%] rounded-2xl p-16 shadow-lg shadow-black md:translate-y-[-45%]">
+          <div className="border-secondary max-h-[80dvw] w-[80dvw] overflow-x-hidden overflow-y-scroll rounded-l-2xl border md:max-h-[70dvh]">
             <img
               src={projectImage}
               alt={`Imagem do projeto ${projectName}`}
               className="h-fit w-full object-cover object-top"
             />
           </div>
-          <Dialog.Close className="absolute left-0 right-0 top-0 flex translate-y-[-8rem] justify-center">
+          <Dialog.Close className="absolute top-0 right-0 left-0 flex translate-y-[-8rem] justify-center">
             <p
               className={button({
                 withBackground: "primaryColor",

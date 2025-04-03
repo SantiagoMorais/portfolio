@@ -24,14 +24,14 @@ export const ProjectsCategories = () => {
   const content = () => {
     if (isLoading)
       return (
-        <p className="flex items-center justify-center gap-2 text-center text-textColor">
+        <p className="text-textColor flex items-center justify-center gap-2 text-center">
           Carregando...{" "}
           <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
         </p>
       );
     if (isLoadingError)
       return (
-        <p className="flex items-center justify-center gap-2 text-center text-textColor">
+        <p className="text-textColor flex items-center justify-center gap-2 text-center">
           Não foi possível carregar os dados{" "}
           <FontAwesomeIcon icon={faTriangleExclamation} />
         </p>

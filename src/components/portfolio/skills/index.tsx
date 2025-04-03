@@ -6,7 +6,7 @@ export const Skills = () => (
   <section className="mb-5 w-full px-5 py-10 md:px-10 md:py-16">
     <div className="flex w-full flex-col">
       <h2
-        className={`${subtitle({ afterContent: "primaryOnCleanBg", size: "large" })} mb-12 text-textColor`}
+        className={`${subtitle({ afterContent: "primaryOnCleanBg", size: "large" })} text-textColor mb-12`}
       >
         Habilidades
       </h2>

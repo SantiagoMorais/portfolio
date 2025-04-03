@@ -7,7 +7,7 @@ export const ResetFilterButton = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <button
-      className={`h-16 w-16 rounded-sm rounded-l-none border-l border-primary bg-secondary text-textColor duration-300 ${filter && "hover:shadow-allAround hover:shadow-primary"}`}
+      className={`border-primary bg-secondary text-textColor h-16 w-16 rounded-sm rounded-l-none border-l duration-300 ${filter && "hover:shadow-allAround hover:shadow-primary"}`}
       onClick={() => setFilter("")}
     >
       <FontAwesomeIcon

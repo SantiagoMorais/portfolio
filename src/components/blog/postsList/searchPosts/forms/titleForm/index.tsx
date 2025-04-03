@@ -37,18 +37,18 @@ export const TitleForm = () => {
             id="postTitle"
             placeholder="Procure um Post"
             {...register("postTitle")}
-            className="h-full min-w-0 flex-1 rounded-md rounded-r-none border border-primary bg-secondaryPanel px-4 py-2 text-textColor"
+            className="border-primary bg-secondaryPanel text-textColor h-full min-w-0 flex-1 rounded-md rounded-r-none border px-4 py-2"
           />
         </label>
         <button
           type="submit"
-          className="h-16 w-16 rounded-sm rounded-l-none border border-l-0 border-primary bg-secondary text-textColor duration-300 hover:shadow-allAround hover:shadow-secondary"
+          className="border-primary bg-secondary text-textColor hover:shadow-allAround hover:shadow-secondary h-16 w-16 rounded-sm rounded-l-none border border-l-0 duration-300"
         >
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
       </div>
       <p
-        className={`flex h-0 items-center gap-2 text-small text-red-500 opacity-0 duration-300 ${errors.postTitle && "h-14 opacity-100"}`}
+        className={`text-small flex h-0 items-center gap-2 text-red-500 opacity-0 duration-300 ${errors.postTitle && "h-14 opacity-100"}`}
       >
         {errors.postTitle && `! ${errors.postTitle.message}`}
       </p>

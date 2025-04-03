@@ -19,9 +19,9 @@ export const FilterForm = () => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <div className="flex min-w-0 flex-1 cursor-pointer items-center rounded-md border border-primary bg-secondaryPanel duration-300 hover:shadow-allAround hover:shadow-secondary md:w-full">
+      <div className="border-primary bg-secondaryPanel hover:shadow-allAround hover:shadow-secondary flex min-w-0 flex-1 cursor-pointer items-center rounded-md border duration-300 md:w-full">
         <p
-          className={`flex h-16 min-w-0 flex-1 items-center px-4 text-textColor ${!filter && "opacity-50"}`}
+          className={`text-textColor flex h-16 min-w-0 flex-1 items-center px-4 ${!filter && "opacity-50"}`}
         >
           {!filter ? "Selecione um filtro" : filter}
         </p>

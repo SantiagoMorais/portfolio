@@ -13,12 +13,12 @@ export const AdvicePage = ({
 }: IAdvicePageProps) => (
   <div className="flex w-full flex-col items-center gap-10 p-10 pb-20">
     <h2
-      className={`pb-2 text-center text-large text-textColor md:text-extraLarge ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
+      className={`text-large text-textColor md:text-extraLarge pb-2 text-center ${subtitle({ afterContent: "secondaryOnCleanBg" })}`}
     >
       {title}
     </h2>
     <PolygonEmoji icon={icon} message={polygonEmojiMessage} />
-    <p className="text-center text-base text-textColor md:text-medium">
+    <p className="text-textColor md:text-medium text-center text-base">
       {adviceMessage}
     </p>
     <ReturnButton buttonText={buttonText} route={route} />

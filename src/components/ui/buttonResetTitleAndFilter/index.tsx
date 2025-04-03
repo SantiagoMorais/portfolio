@@ -17,11 +17,11 @@ export const ButtonResetTitleAndFilter = ({ message }: { message: string }) => {
     <div className="flex justify-center px-5 leading-tight md:px-10">
       <button
         onClick={() => handleResetInput()}
-        className={`group flex items-center gap-x-5 text-center text-base text-textColor md:text-medium ${button({ withBackground: "primaryColor" })}`}
+        className={`group text-textColor md:text-medium flex items-center gap-x-5 text-center text-base ${button({ withBackground: "primaryColor" })}`}
       >
         <FontAwesomeIcon
           icon={faUndo}
-          className="duration-300 group-hover:rotate-[-360deg] group-hover:scale-110"
+          className="duration-300 group-hover:scale-110 group-hover:rotate-[-360deg]"
         />{" "}
         <span className="first-letter:uppercase">{message}</span>
       </button>

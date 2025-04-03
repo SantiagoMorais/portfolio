@@ -11,7 +11,7 @@ export const ScrollButton = () => {
 
   return (
     <button
-      className="group fixed bottom-5 right-5 flex size-[6rem] cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 border-transparent bg-textColor p-3 text-large text-primary opacity-40 duration-500 hover:border-primary hover:opacity-100 hover:shadow-lg hover:shadow-primary md:bottom-10 md:right-10"
+      className="group bg-textColor text-large text-primary hover:border-primary hover:shadow-primary fixed right-5 bottom-5 flex size-[6rem] cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 border-transparent p-3 opacity-40 duration-500 hover:opacity-100 hover:shadow-lg md:right-10 md:bottom-10"
       onClick={() => handleScroll()}
     >
       <FontAwesomeIcon

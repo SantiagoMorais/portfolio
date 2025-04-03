@@ -20,7 +20,7 @@ export const ProjectHeader = () => (
       <a
         href={projectRepository}
         target="_blank"
-        className="font-bold text-primary duration-300 hover:tracking-wider hover:text-textColor"
+        className="text-primary hover:text-textColor font-bold duration-300 hover:tracking-wider"
         style={{ filter: "drop-shadow(0 0 10px #19584f)" }}
       >
         Clicando Aqui!

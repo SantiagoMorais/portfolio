@@ -2,7 +2,10 @@ import vector from "@assets/imgs/vector.png";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const PolygonEmoji = ({ icon, message }: {
+export const PolygonEmoji = ({
+  icon,
+  message,
+}: {
   message?: string;
   icon: IconDefinition;
 }) => (
@@ -15,7 +18,7 @@ export const PolygonEmoji = ({ icon, message }: {
   >
     <FontAwesomeIcon icon={icon} className="m-10 size-2/3 text-white" />
     {message && (
-      <p className="mb-10 text-center text-large font-extrabold leading-none text-white md:text-giant">
+      <p className="text-large md:text-giant mb-10 text-center leading-none font-extrabold text-white">
         {message}
       </p>
     )}

@@ -28,7 +28,7 @@ export const AccordionMenu = ({
       </button>
     </div>
     <ul
-      className={`flex flex-col items-center rounded-lg bg-secondaryPanel px-4 duration-500 ${
+      className={`bg-secondaryPanel flex flex-col items-center rounded-lg px-4 duration-500 ${
         isOpen && "py-4"
       }`}
     >

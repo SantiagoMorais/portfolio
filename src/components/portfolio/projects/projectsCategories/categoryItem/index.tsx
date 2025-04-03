@@ -6,7 +6,7 @@ export const CategoryItem = ({
   handleCategory,
   currentCategory,
 }: ICategoryItemProps) => (
-  <li key={category.id} className="min-w-fit max-w-80 flex-1">
+  <li key={category.id} className="max-w-80 min-w-fit flex-1">
     <button
       onClick={() => handleCategory(category.topic)}
       className={`${button({ withBackground: "secondaryColor" })} ${category.topic === currentCategory ? "bg-hoverEffect text-primary" : "bg-primary text-textColor"}`}

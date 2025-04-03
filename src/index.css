@@ -112,7 +112,7 @@
   }
 
   img {
-    @apply border-primary shadow-allAround shadow-secondary m-auto mb-8 block h-fit max-h-[30rem] w-fit max-w-[50%] rounded-lg border object-cover object-center;
+    @apply border-primary shadow-allAround shadow-secondary m-auto mb-8 block h-fit max-h-[30rem] w-fit max-w-1/2 rounded-lg border object-cover object-center;
   }
 
   #postBanner {

@@ -6,7 +6,7 @@ import { socialMedia } from "@utils/socialMediaLinks";
 import { Link } from "react-router-dom";
 
 export const Footer = () => (
-  <footer className="mt-auto flex flex-col items-center gap-4 bg-secondaryPanel p-10 md:flex-row md:justify-between">
+  <footer className="bg-secondaryPanel mt-auto flex flex-col items-center gap-4 p-10 md:flex-row md:justify-between">
     <Link
       to="/"
       className="cursor-pointer duration-300 hover:scale-110 hover:opacity-70"
@@ -21,7 +21,7 @@ export const Footer = () => (
       socialMedia={socialMedia}
       className="mb-10 flex-col justify-center"
     />
-    <ul className="flex w-full flex-col items-center rounded-lg border border-primary bg-panel py-5 md:w-fit md:items-end md:px-5">
+    <ul className="border-primary bg-panel flex w-full flex-col items-center rounded-lg border py-5 md:w-fit md:items-end md:px-5">
       {navbar.map((item) => (
         <MenuItem key={item.id} navbarInfo={item} />
       ))}

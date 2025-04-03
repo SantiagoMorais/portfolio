@@ -18,7 +18,7 @@ export const SocialMediaLinks = ({
             className
           )}
         >
-          <p className="mr-5 text-center text-small text-textColor transition-colors duration-150 md:text-base">
+          <p className="text-small text-textColor mr-5 text-center transition-colors duration-150 md:text-base">
             Cheque minhas redes:
           </p>
           <ul className="flex flex-wrap items-center gap-2 md:gap-5">

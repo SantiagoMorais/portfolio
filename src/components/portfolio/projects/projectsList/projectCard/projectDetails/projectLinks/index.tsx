@@ -6,7 +6,7 @@ import { ImageDialog } from "./imageDialog";
 
 export const ProjectLinks = ({ project }: { project: IGithubRepos }) => (
   <>
-    <p className="mb-2 cursor-default text-center font-bold text-textColor">
+    <p className="text-textColor mb-2 cursor-default text-center font-bold">
       Acesse o projeto:
     </p>
     <div className="flex flex-wrap items-center gap-5">
@@ -15,7 +15,7 @@ export const ProjectLinks = ({ project }: { project: IGithubRepos }) => (
           href={project.html_url}
           target="_blank"
           title="Repositório Github"
-          className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
+          className="group bg-secondary flex items-center p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
           style={{
             clipPath:
               "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -28,7 +28,7 @@ export const ProjectLinks = ({ project }: { project: IGithubRepos }) => (
         href={project.homepage}
         target="_blank"
         title="Página web"
-        className="group flex items-center bg-secondary p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
+        className="group bg-secondary flex items-center p-4 text-white opacity-60 transition duration-300 hover:opacity-100 md:p-6"
         style={{
           clipPath:
             "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",

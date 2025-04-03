@@ -6,14 +6,14 @@ export const Logo = ({ className, iconSize, padding }: ILogoProps) => (
   <div className={twMerge("flex", padding)}>
     <p
       className={twJoin(
-        "mt-2 select-none font-extrabold text-textColor transition-colors duration-150",
+        "text-textColor mt-2 font-extrabold transition-colors duration-150 select-none",
         className
       )}
     >
       FS<span className="text-primary">.</span>
     </p>
     <MessageCircleCode
-      className={`transition-colors duration-150 ${twMerge("size-12 text-textColor duration-0", iconSize)}`}
+      className={`transition-colors duration-150 ${twMerge("text-textColor size-12 duration-0", iconSize)}`}
     />
   </div>
 );
