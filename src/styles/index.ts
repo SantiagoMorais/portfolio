@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const button = tv({
-  base: "break-normal duration-150 transition-all px-2 py-1 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center flex-wrap",
+  base: "cursor-pointer break-normal duration-150 transition-all px-2 py-1 tracking-wider font-medium hover:text-primary text-center w-full flex items-center justify-center flex-wrap",
   variants: {
     afterHover: {
       primary:
