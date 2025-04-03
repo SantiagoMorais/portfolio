@@ -12,7 +12,7 @@ export const App = () => (
       className="fixed top-0 z-0 size-full opacity-40 transition-colors duration-150"
     />
     <div
-      className="z-10 flex h-full min-h-dvh w-full max-w-(--breakpoint-2xl) flex-col bg-panel shadow-lg shadow-black ring-1 ring-secondaryPanel"
+      className="z-10 flex h-full min-h-dvh w-full max-w-620 flex-col bg-panel shadow-lg shadow-black ring-1 ring-secondaryPanel"
       style={{ transition: "background-color .15s, box-shadow .15s" }}
     >
       <AppRoutes />

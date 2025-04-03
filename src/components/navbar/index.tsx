@@ -22,7 +22,7 @@ export const Navbar = () => {
 
   return (
     <header className="flex w-full justify-center p-10 md:px-20 md:py-16">
-      <div className="flex w-full max-w-(--breakpoint-2xl) flex-col items-center gap-4 md:flex-row md:justify-between">
+      <div className="flex w-full flex-col items-center gap-4 md:flex-row md:justify-between">
         <Link
           to="/"
           className="cursor-pointer duration-300 hover:scale-110 hover:opacity-70"
