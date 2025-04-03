@@ -60,7 +60,7 @@ export const ProjectsCategories = () => {
           <CategoryItem
             category={category}
             handleCategory={handleCategory}
-            key={category.id}
+            key={category.name}
             currentCategory={currentCategory}
           />
         ))}

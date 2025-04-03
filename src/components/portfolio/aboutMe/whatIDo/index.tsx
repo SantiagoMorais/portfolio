@@ -16,7 +16,7 @@ export const WhatIDo = () => (
     <div className="flex flex-wrap justify-center gap-10">
       {whatIDoList.map((item) => (
         <div
-          key={item.id}
+          key={item.title}
           className="bg-panel flex w-full max-w-[50rem] min-w-[20rem] flex-1 flex-col items-center gap-5 rounded-lg px-5 py-10 pb-5 md:min-w-[30rem]"
         >
           <FontAwesomeIcon

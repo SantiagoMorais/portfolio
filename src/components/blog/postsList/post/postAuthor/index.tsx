@@ -1,6 +1,5 @@
 import { SocialMediaLinks } from "@/components/portfolio/hero/heroDescription/socialMediaLinks";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { createId } from "@paralleldrive/cuid2";
 import { IAuthorInfo } from "@/core/interfaces/blog-query-interfaces";
 
 export const PostAuthor = ({ data }: { data: IAuthorInfo | undefined }) => (
@@ -33,7 +32,6 @@ export const PostAuthor = ({ data }: { data: IAuthorInfo | undefined }) => (
                 <SocialMediaLinks
                   socialMedia={{
                     icon: faLinkedin,
-                    id: createId(),
                     link: data.linkedin,
                     title: "Linkedin",
                   }}
@@ -43,7 +41,6 @@ export const PostAuthor = ({ data }: { data: IAuthorInfo | undefined }) => (
                 <SocialMediaLinks
                   socialMedia={{
                     icon: faGithub,
-                    id: createId(),
                     link: data.github,
                     title: "Linkedin",
                   }}

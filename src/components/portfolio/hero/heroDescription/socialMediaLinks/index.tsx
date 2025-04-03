@@ -23,7 +23,7 @@ export const SocialMediaLinks = ({
           </p>
           <ul className="flex flex-wrap items-center gap-2 md:gap-5">
             {(socialMedia as ISocialMedia[]).map((link) => (
-              <SocialLink key={link.id} link={link} />
+              <SocialLink key={link.title} link={link} />
             ))}
           </ul>
         </div>
