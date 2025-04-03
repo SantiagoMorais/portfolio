@@ -20,19 +20,20 @@ export const ProjectsCategories = () => {
     currentCategory
   );
 
-  const handleCategory = (category: TCategories) => setCurrentCategory(category);
+  const handleCategory = (category: TCategories) =>
+    setCurrentCategory(category);
 
   const content = () => {
     if (isLoading)
       return (
-        <p className="text-textColor flex items-center justify-center gap-2 text-center">
+        <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
           Carregando...{" "}
           <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
         </p>
       );
     if (isLoadingError)
       return (
-        <p className="text-textColor flex items-center justify-center gap-2 text-center">
+        <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
           Não foi possível carregar os dados{" "}
           <FontAwesomeIcon icon={faTriangleExclamation} />
         </p>

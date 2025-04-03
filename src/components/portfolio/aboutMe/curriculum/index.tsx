@@ -2,16 +2,19 @@ import { IResumesQuery } from "@/core/interfaces/resumes-query";
 import { GET_RESUMES_QUERY } from "@/db/get-resumes-query";
 import { button, subtitle } from "@/styles/index";
 import { useQuery } from "@apollo/client";
-import { faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSpinner,
+  faTriangleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Curriculum = () => {
   const { loading, error, data } = useQuery<IResumesQuery>(GET_RESUMES_QUERY);
 
   const handleContent = () => {
-    if (loading)
+    if (!loading)
       return (
-        <p className="text-textColor flex items-center justify-center gap-2 text-center text-4xl font-semibold">
+        <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
           Carregando...{" "}
           <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
         </p>
@@ -19,9 +22,9 @@ export const Curriculum = () => {
 
     if (error || !data)
       return (
-        <p className="text-textColor flex items-center justify-center gap-4 text-center text-4xl font-semibold">
-          <FontAwesomeIcon icon={faTimes} className="text-6xl text-red-500" />
-          Não foi possível carregar os currículos
+        <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
+          Não foi possível carregar os dados{" "}
+          <FontAwesomeIcon icon={faTriangleExclamation} />
         </p>
       );
 
