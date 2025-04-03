@@ -1,7 +1,7 @@
-import { ISocialMediaLinksProps } from "@core/interfaces/social-media-links-props";
+import { ISocialMediaLinksProps } from "@/core/interfaces/social-media-links-props";
 import { SocialLink } from "./link";
 import { twMerge } from "tailwind-merge";
-import { ISocialMedia } from "@core/interfaces/social-media";
+import { ISocialMedia } from "@/core/interfaces/social-media";
 
 export const SocialMediaLinks = ({
   className,

@@ -1,4 +1,4 @@
-import { ILogoProps } from "@core/interfaces/logo-props";
+import { ILogoProps } from "@/core/interfaces/logo-props";
 import { MessageCircleCode } from "lucide-react";
 import { twJoin, twMerge } from "tailwind-merge";
 

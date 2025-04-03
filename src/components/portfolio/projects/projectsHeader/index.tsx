@@ -1,5 +1,5 @@
-import { paragraph, subtitle } from "@styles/index";
-import { env } from "env";
+import { paragraph, subtitle } from "@/styles/index";
+import { env } from "@/env";
 
 export const ProjectHeader = () => (
   <div className="flex w-full flex-col gap-5 px-5">

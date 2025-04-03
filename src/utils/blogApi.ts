@@ -1,5 +1,5 @@
 import { ApolloClient, HttpLink, InMemoryCache, gql } from "@apollo/client";
-import { env } from "env";
+import { env } from "@/env";
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),

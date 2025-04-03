@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { subtitle } from "@styles/index";
-import { whatIDoList } from "utils/lists";
+import { subtitle } from "@/styles/index";
+import { whatIDoList } from "@/utils/lists";
 
 export const WhatIDo = () => (
   <div className="flex w-full flex-col">

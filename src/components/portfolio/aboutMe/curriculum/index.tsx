@@ -1,6 +1,6 @@
-import { button, subtitle } from "@styles/index";
-import curriculumPT from "@docs/Currículo atualizado em português.pdf";
-import curriculumEN from "@docs/Currículo atualizado em inglês.pdf";
+import { button, subtitle } from "@/styles/index";
+import curriculumPT from "@/docs/Currículo atualizado em português.pdf";
+import curriculumEN from "@/docs/Currículo atualizado em inglês.pdf";
 
 export const Curriculum = () => (
   <div className="w-full">

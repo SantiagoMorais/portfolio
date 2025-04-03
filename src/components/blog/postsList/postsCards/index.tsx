@@ -1,6 +1,6 @@
 import { faHandPointer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IPostsData } from "@core/interfaces/query-interfaces";
+import { IPostsData } from "@/core/interfaces/query-interfaces";
 import { Link } from "react-router-dom";
 
 export const PostsCards = ({ data }: { data: IPostsData | undefined }) => (

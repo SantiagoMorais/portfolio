@@ -1,4 +1,4 @@
-import { env } from "env";
+import { env } from "@/env";
 
 const formatMessageForWeb = (message: string): string => {
   return encodeURIComponent(message);

@@ -1,11 +1,11 @@
-import { useFilterPosts } from "@contexts/filterPostsContext";
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
+import { useFilterPosts } from "@/contexts/filterPostsContext";
+import { useSearchPostByTitle } from "@/contexts/searchPostByTitleContext";
 import { PostsList } from "..";
 import { FilterForm } from "./forms/filterForm";
 import { TitleForm } from "./forms/titleForm";
 import { SearchPostsByFilter } from "./searchPostByFilter";
 import { SearchPostsByTitle } from "./searchPostsByTitle";
-import { ISearchPostsProps } from "core/interfaces/search-posts-props";
+import { ISearchPostsProps } from "@/core/interfaces/search-posts-props";
 
 export const SearchPosts = ({
   data,

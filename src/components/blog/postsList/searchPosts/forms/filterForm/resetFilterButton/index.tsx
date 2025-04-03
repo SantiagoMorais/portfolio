@@ -1,4 +1,4 @@
-import { useFilterPosts } from "@contexts/filterPostsContext";
+import { useFilterPosts } from "@/contexts/filterPostsContext";
 import { faChevronDown, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

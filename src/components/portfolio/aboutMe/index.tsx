@@ -1,4 +1,4 @@
-import { subtitle } from "@styles/index";
+import { subtitle } from "@/styles/index";
 import { AboutMeDescription } from "./aboutMeDescription";
 import { WhatIDo } from "./whatIDo";
 import { Curriculum } from "./curriculum";

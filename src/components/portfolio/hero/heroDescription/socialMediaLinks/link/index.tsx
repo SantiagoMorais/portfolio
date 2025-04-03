@@ -1,4 +1,4 @@
-import { ISocialMedia } from "@core/interfaces/social-media";
+import { ISocialMedia } from "@/core/interfaces/social-media";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const SocialLink = ({ link }: { link: ISocialMedia }) => (

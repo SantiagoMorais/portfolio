@@ -1,4 +1,4 @@
-import { navbar } from "@json/data.json";
+import { navbar } from "@/json/data.json";
 import { useEffect, useState } from "react";
 import { Logo } from "../ui/logo";
 import { AccordionMenu } from "./accordionMenu";

@@ -1,6 +1,6 @@
-import { subtitle } from "@styles/index";
+import { subtitle } from "@/styles/index";
 import { useState } from "react";
-import { categoryList, TCategory } from "utils/projectsCategories";
+import { categoryList } from "@/utils/projectsCategories";
 import { useGitHubAutomatedRepos } from "github-automated-repos";
 import { ProjectsList } from "../projectsList";
 import { CategoryItem } from "./categoryItem";
@@ -9,17 +9,18 @@ import {
   faSpinner,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
+import { TCategories } from "@/core/types/categories";
 
 export const ProjectsCategories = () => {
   const [currentCategory, setCurrentCategory] =
-    useState<TCategory>("portfolio");
+    useState<TCategories>("portfolio");
 
   const { data, isLoading, isLoadingError } = useGitHubAutomatedRepos(
     "SantiagoMorais",
     currentCategory
   );
 
-  const handleCategory = (category: TCategory) => setCurrentCategory(category);
+  const handleCategory = (category: TCategories) => setCurrentCategory(category);
 
   const content = () => {
     if (isLoading)

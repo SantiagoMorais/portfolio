@@ -1,6 +1,6 @@
-import customBg from "@assets/imgs/custom-background.png";
-import { ScrollButton } from "@components/ui/scrollButton";
-import { AppRoutes } from "@pages/appRoutes";
+import customBg from "@/assets/imgs/custom-background.png";
+import { AppRoutes } from "@/pages/appRoutes";
+import { ScrollButton } from "@/components/ui/scrollButton";
 
 export const App = () => (
   <section className="flex w-full justify-center overflow-x-hidden p-10 pb-20 shadow-sm transition-colors duration-150 md:px-20 md:py-24">

@@ -1,5 +1,5 @@
-import { IMenuItemProps } from "@core/interfaces/menu-item-props";
-import { button } from "@styles/index";
+import { IMenuItemProps } from "@/core/interfaces/menu-item-props";
+import { button } from "@/styles/index";
 import { NavLink } from "react-router-dom";
 
 export const MenuItem = ({ navbarInfo }: IMenuItemProps) => (

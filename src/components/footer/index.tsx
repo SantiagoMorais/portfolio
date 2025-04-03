@@ -1,8 +1,8 @@
-import { Logo } from "@components/ui/logo";
-import { MenuItem } from "@components/navbar/menuItem";
-import { SocialMediaLinks } from "@components/portfolio/hero/heroDescription/socialMediaLinks";
-import { navbar } from "@json/data.json";
-import { socialMedia } from "@utils/socialMediaLinks";
+import { Logo } from "@/components/ui/logo";
+import { MenuItem } from "@/components/navbar/menuItem";
+import { SocialMediaLinks } from "@/components/portfolio/hero/heroDescription/socialMediaLinks";
+import { navbar } from "@/json/data.json";
+import { socialMedia } from "@/utils/socialMediaLinks";
 import { Link } from "react-router-dom";
 
 export const Footer = () => (

@@ -1,13 +1,13 @@
 import { Banner } from "./banner";
 import { useQuery } from "@apollo/client";
-import { IPostsData } from "@core/interfaces/query-interfaces";
-import { GET_POSTS_QUERY } from "utils/blogApi";
+import { IPostsData } from "@/core/interfaces/query-interfaces";
+import { GET_POSTS_QUERY } from "@/utils/blogApi";
 import { Loading } from "../ui/loading";
 import { SearchPosts } from "./postsList/searchPosts";
 import { useState } from "react";
-import { AdvicePage } from "@components/advicePage";
+import { AdvicePage } from "@/components/advicePage";
 import { faFrown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
-import { BannerCarouselSlides } from "utils/lists";
+import { BannerCarouselSlides } from "@/utils/lists";
 
 export const Blog = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);

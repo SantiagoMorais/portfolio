@@ -1,7 +1,7 @@
 import { faImage, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Dialog from "@radix-ui/react-dialog";
-import { button } from "@styles/index";
+import { button } from "@/styles/index";
 
 export const ImageDialog = ({
   projectImage,

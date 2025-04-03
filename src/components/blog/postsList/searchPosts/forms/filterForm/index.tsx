@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
-import { useFilterPosts } from "@contexts/filterPostsContext";
-import { GET_FILTERS_QUERY } from "@utils/blogApi";
-import { IPostsFilters } from "@core/interfaces/query-interfaces";
+import { useFilterPosts } from "@/contexts/filterPostsContext";
+import { GET_FILTERS_QUERY } from "@/utils/blogApi";
+import { IPostsFilters } from "@/core/interfaces/query-interfaces";
 import { useState } from "react";
 import { ResetFilterButton } from "./resetFilterButton";
 import { AccordionContent } from "./accordionContent";

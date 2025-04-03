@@ -1,5 +1,5 @@
-import { skills } from "@json/data.json";
-import { subtitle } from "@styles/index";
+import { skills } from "@/json/data.json";
+import { subtitle } from "@/styles/index";
 import { SkillDetails } from "./skillDetails";
 
 export const Skills = () => (

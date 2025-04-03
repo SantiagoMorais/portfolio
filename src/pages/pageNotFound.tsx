@@ -1,4 +1,4 @@
-import { AdvicePage } from "@components/advicePage";
+import { AdvicePage } from "@/components/advicePage";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
 
 export const PageNotFound = () => (

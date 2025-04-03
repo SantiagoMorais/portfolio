@@ -1,7 +1,7 @@
-import { button } from "@styles/index";
+import { button } from "@/styles/index";
 import { SocialMediaLinks } from "./socialMediaLinks";
-import { whatsAppLink } from "utils/variables";
-import { socialMedia } from "@utils/socialMediaLinks";
+import { whatsAppLink } from "@/utils/variables";
+import { socialMedia } from "@/utils/socialMediaLinks";
 
 export const HeroDescription = () => (
   <div className="flex w-full flex-col gap-10 md:flex-1 md:gap-16">

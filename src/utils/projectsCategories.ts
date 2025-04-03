@@ -1,4 +1,4 @@
-import { TCategories } from "@core/types/categories";
+import { TCategories } from "@/core/types/categories";
 import { createId } from "@paralleldrive/cuid2";
 
 export const categoryList: { name: string; topic: TCategories; id: string }[] =

@@ -1,4 +1,4 @@
-import { IPostsData } from "@core/interfaces/query-interfaces";
+import { IPostsData } from "@/core/interfaces/query-interfaces";
 
 export interface ISearchPostsProps {
   data: IPostsData;

@@ -1,6 +1,6 @@
-import { useFilterPosts } from "@contexts/filterPostsContext";
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { searchPostForm, TSearchPost } from "@core/types/search-posts";
+import { useFilterPosts } from "@/contexts/filterPostsContext";
+import { useSearchPostByTitle } from "@/contexts/searchPostByTitleContext";
+import { searchPostForm, TSearchPost } from "@/core/types/search-posts";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { zodResolver } from "@hookform/resolvers/zod";

@@ -1,8 +1,8 @@
-import { navbar } from "@json/data.json";
+import { navbar } from "@/json/data.json";
 import { SquareMenu } from "lucide-react";
-import { button, icon } from "@styles/index";
+import { button, icon } from "@/styles/index";
 import { Collapse } from "react-collapse";
-import { MenuItem } from "@components/navbar/menuItem";
+import { MenuItem } from "@/components/navbar/menuItem";
 import { ThemeToggleButton } from "../themeTogglerButton";
 
 export const AccordionMenu = ({

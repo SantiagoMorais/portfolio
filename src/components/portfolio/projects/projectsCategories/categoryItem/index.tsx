@@ -1,5 +1,5 @@
-import { ICategoryItemProps } from "@core/interfaces/category-item-props";
-import { button } from "@styles/index";
+import { ICategoryItemProps } from "@/core/interfaces/category-item-props";
+import { button } from "@/styles/index";
 
 export const CategoryItem = ({
   category,

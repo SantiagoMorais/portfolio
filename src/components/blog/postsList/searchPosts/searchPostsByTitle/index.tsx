@@ -1,14 +1,14 @@
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
+import { useSearchPostByTitle } from "@/contexts/searchPostByTitleContext";
 import { PostsList } from "../..";
-import { GET_POSTS_BY_TITLE_QUERY } from "@utils/blogApi";
+import { GET_POSTS_BY_TITLE_QUERY } from "@/utils/blogApi";
 import { useQuery } from "@apollo/client";
-import { Loading } from "@components/ui/loading";
+import { Loading } from "@/components/ui/loading";
 import { PostsNotFound } from "../postsNotFound";
 import { useState } from "react";
-import { IPostsData } from "@core/interfaces/query-interfaces";
-import { AdvicePage } from "@components/advicePage";
+import { IPostsData } from "@/core/interfaces/query-interfaces";
+import { AdvicePage } from "@/components/advicePage";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
-import { ButtonResetTitleAndFilter } from "@components/ui/buttonResetTitleAndFilter";
+import { ButtonResetTitleAndFilter } from "@/components/ui/buttonResetTitleAndFilter";
 
 export const SearchPostsByTitle = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);

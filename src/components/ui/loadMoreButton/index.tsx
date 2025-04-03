@@ -1,4 +1,4 @@
-import { ILoadMoreButtonProps } from "@core/interfaces/load-more-button-props";
+import { ILoadMoreButtonProps } from "@/core/interfaces/load-more-button-props";
 import {
   faAdd,
   faSmileWink,

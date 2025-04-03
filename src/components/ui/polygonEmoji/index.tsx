@@ -1,4 +1,4 @@
-import vector from "@assets/imgs/vector.png";
+import vector from "@/assets/imgs/vector.png";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

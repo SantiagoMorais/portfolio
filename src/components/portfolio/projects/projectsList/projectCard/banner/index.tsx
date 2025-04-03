@@ -1,4 +1,4 @@
-import imageNotFound from "@assets/imgs/image-not-found.jpg";
+import imageNotFound from "@/assets/imgs/image-not-found.jpg";
 import { IGithubRepos } from "github-automated-repos";
 
 export const Banner = ({ project }: { project: IGithubRepos }) => (

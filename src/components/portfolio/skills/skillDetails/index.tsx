@@ -1,6 +1,6 @@
-import { ISkillDetailsProps } from "@core/interfaces/skill-details-props";
+import { ISkillDetailsProps } from "@/core/interfaces/skill-details-props";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { defaultIcon, iconMapping } from "utils/iconMapping";
+import { defaultIcon, iconMapping } from "@/utils/iconMapping";
 
 export const SkillDetails = ({ category, icon, list }: ISkillDetailsProps) => (
   <div className="bg-secondaryPanel flex max-w-[40rem] min-w-[20rem] flex-1 flex-col items-center rounded-xl px-4 py-8">

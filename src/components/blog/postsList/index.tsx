@@ -1,4 +1,4 @@
-import { IPostsListProps } from "@core/interfaces/posts-list-props";
+import { IPostsListProps } from "@/core/interfaces/posts-list-props";
 import { LoadMoreButton } from "../../ui/loadMoreButton";
 import { PostsCards } from "./postsCards";
 

@@ -1,4 +1,4 @@
-import { ISocialMedia } from "@core/interfaces/social-media";
+import { ISocialMedia } from "@/core/interfaces/social-media";
 import {
   faGithub,
   faLinkedin,
@@ -6,8 +6,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { createId } from "@paralleldrive/cuid2";
-import { env } from "env";
-import { whatsAppLink } from "utils/variables";
+import { env } from "@/env";
+import { whatsAppLink } from "@/utils/variables";
 
 export const socialMedia: ISocialMedia[] = [
   {

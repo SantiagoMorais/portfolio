@@ -1,4 +1,4 @@
-import heroImage from "@assets/imgs/hero-image.png";
+import heroImage from "@/assets/imgs/hero-image.png";
 import { HeroDescription } from "./heroDescription";
 
 export const Hero = () => (

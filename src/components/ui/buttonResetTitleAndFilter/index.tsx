@@ -1,8 +1,8 @@
-import { useSearchPostByTitle } from "@contexts/searchPostByTitleContext";
-import { button } from "@styles/index";
+import { useSearchPostByTitle } from "@/contexts/searchPostByTitleContext";
+import { button } from "@/styles/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
-import { useFilterPosts } from "@contexts/filterPostsContext";
+import { useFilterPosts } from "@/contexts/filterPostsContext";
 
 export const ButtonResetTitleAndFilter = ({ message }: { message: string }) => {
   const { setPostTitle } = useSearchPostByTitle();

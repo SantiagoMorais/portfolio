@@ -1,7 +1,7 @@
-import { PolygonEmoji } from "@components/ui/polygonEmoji";
-import { ReturnButton } from "@components/ui/returnButton";
-import { subtitle } from "@styles/index";
-import { IAdvicePageProps } from "core/interfaces/advice-page-props";
+import { PolygonEmoji } from "@/components/ui/polygonEmoji";
+import { ReturnButton } from "@/components/ui/returnButton";
+import { subtitle } from "@/styles/index";
+import { IAdvicePageProps } from "@/core/interfaces/advice-page-props";
 
 export const AdvicePage = ({
   adviceMessage,

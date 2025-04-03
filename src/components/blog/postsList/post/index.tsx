@@ -1,14 +1,13 @@
 import { useQuery } from "@apollo/client";
-import { Loading } from "@components/ui/loading";
-import { GET_CURRENTLY_POST_QUERY } from "@utils/blogApi";
-import { ICurrentlyPost } from "@core/interfaces/query-interfaces";
+import { Loading } from "@/components/ui/loading";
+import { GET_CURRENTLY_POST_QUERY } from "@/utils/blogApi";
+import { ICurrentlyPost } from "@/core/interfaces/query-interfaces";
 import { useParams } from "react-router-dom";
-import "index.css";
 import { PostAuthor } from "./postAuthor";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
 import { PostContent } from "./postContent";
-import { AdvicePage } from "@components/advicePage";
-import { ReturnButton } from "@components/ui/returnButton";
+import { AdvicePage } from "@/components/advicePage";
+import { ReturnButton } from "@/components/ui/returnButton";
 
 export const Post = () => {
   const { id } = useParams();

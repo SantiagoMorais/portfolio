@@ -1,4 +1,4 @@
-import { TCategories } from "@core/types/categories";
+import { TCategories } from "@/core/types/categories";
 
 export interface ICategoryItemProps {
   category: {

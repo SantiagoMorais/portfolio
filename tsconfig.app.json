@@ -21,17 +21,8 @@
     "noFallthroughCasesInSwitch": true,
 
     "rootDir": "./",
-    "baseUrl": "./src",
     "paths": {
-      "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
-      "@json/*": ["json/*"],
-      "@styles/*": ["styles/*"],
-      "@docs/*": ["docs/*"],
-      "@contexts/*": ["contexts/*"],
-      "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"],
-      "@core/*": ["core/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"]
