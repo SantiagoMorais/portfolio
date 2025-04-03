@@ -1,3 +1,5 @@
+import { IPageInfo } from "./page-info";
+
 export interface IAuthorName {
   name: string;
 }
@@ -24,7 +26,7 @@ export interface IPost {
   };
 }
 
-export interface IShortPostData extends IPost {
+export interface IPostNode extends IPost {
   author: IAuthorName;
 }
 
@@ -36,16 +38,9 @@ export interface IAllPostData extends IPost, IAllAuthorData {
   };
 }
 
-export interface IPageInfo {
-  hasNextPage: boolean;
-  endCursor: string;
-}
-
 export interface ICurrentlyPost {
   post: IAllPostData;
 }
-
-export interface IPostNode extends IShortPostData {}
 
 export interface IPostEdge {
   node: IPostNode;
