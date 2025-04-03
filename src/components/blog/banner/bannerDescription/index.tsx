@@ -11,7 +11,7 @@ export const BannerDescription = ({
     <h2 className="mb-5 text-large font-extrabold uppercase tracking-widest text-white sm:text-[3.2dvw]">
       {title}
     </h2>
-    <div className="mb-8 flex size-[12rem] items-center justify-start rounded-full border-2 border-white bg-[rgba(0,0,0,.4)] p-10 shadow-allAround shadow-white sm:size-[12dvw] sm:justify-center sm:border-[.2dvw]">
+    <div className="mb-8 flex size-[12rem] items-center justify-start rounded-full border-2 border-white bg-black/40 p-10 shadow-allAround shadow-white sm:size-[12dvw] sm:justify-center sm:border-[.2dvw]">
       <Logo
         className="text-large text-white first-letter:text-extraLarge sm:text-[2.8dvw] sm:first-letter:text-[4dvw]"
         iconSize="size-large sm:size-[2.8dvw] text-white"
