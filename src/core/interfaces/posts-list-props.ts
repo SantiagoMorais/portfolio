@@ -1,4 +1,4 @@
-import { IPostsData } from "./query-interfaces";
+import { IPostsData } from "./blog-query-interfaces";
 
 export interface IPostsListProps {
   data: IPostsData | undefined;

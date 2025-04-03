@@ -1,6 +1,6 @@
 import { Banner } from "./banner";
 import { useQuery } from "@apollo/client";
-import { IPostsData } from "@/core/interfaces/query-interfaces";
+import { IPostsData } from "@/core/interfaces/blog-query-interfaces";
 import { Loading } from "../ui/loading";
 import { SearchPosts } from "./postsList/searchPosts";
 import { useState } from "react";

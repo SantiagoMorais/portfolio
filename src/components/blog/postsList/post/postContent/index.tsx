@@ -1,4 +1,4 @@
-import { ICurrentlyPost } from "@/core/interfaces/query-interfaces";
+import { ICurrentlyPost } from "@/core/interfaces/blog-query-interfaces";
 import parse from "html-react-parser";
 
 export const PostContent = ({ data }: { data: ICurrentlyPost }) => {

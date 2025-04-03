@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { Loading } from "@/components/ui/loading";
-import { ICurrentlyPost } from "@/core/interfaces/query-interfaces";
+import { ICurrentlyPost } from "@/core/interfaces/blog-query-interfaces";
 import { useParams } from "react-router-dom";
 import { PostAuthor } from "./postAuthor";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
