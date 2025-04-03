@@ -12,7 +12,7 @@ export const Curriculum = () => {
   const { loading, error, data } = useQuery<IResumesQuery>(GET_RESUMES_QUERY);
 
   const handleContent = () => {
-    if (!loading)
+    if (loading)
       return (
         <p className="text-textColor flex items-center justify-center gap-2 text-center text-base">
           Carregando...{" "}
